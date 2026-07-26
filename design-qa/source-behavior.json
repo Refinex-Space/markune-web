@@ -1,0 +1,2585 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "sourceAnimations": [],
+  "sourceButtons": [
+    {
+      "text": "Start Free Trial",
+      "before": {
+        "rect": {
+          "x": 16,
+          "y": 288.59375,
+          "width": 358,
+          "height": 42.203125
+        },
+        "backgroundColor": "rgb(6, 14, 6)",
+        "border": "0px none rgb(0, 0, 238)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "color": "rgb(0, 0, 238)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "all",
+        "child": {
+          "color": "rgb(0, 0, 238)",
+          "transform": "none",
+          "transition": "all"
+        }
+      },
+      "hover": {
+        "rect": {
+          "x": 16,
+          "y": 288.59375,
+          "width": 358,
+          "height": 42.203125
+        },
+        "backgroundColor": "rgb(6, 14, 6)",
+        "border": "0px none rgb(0, 0, 238)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "color": "rgb(0, 0, 238)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "all",
+        "child": {
+          "color": "rgb(0, 0, 238)",
+          "transform": "none",
+          "transition": "all"
+        }
+      },
+      "active": {
+        "rect": {
+          "x": 16,
+          "y": 288.59375,
+          "width": 358,
+          "height": 42.203125
+        },
+        "backgroundColor": "rgb(6, 14, 6)",
+        "border": "0px none rgb(0, 0, 238)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "color": "rgb(0, 0, 238)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "all",
+        "child": {
+          "color": "rgb(0, 0, 238)",
+          "transform": "none",
+          "transition": "all"
+        }
+      }
+    },
+    {
+      "text": "Book a Demo",
+      "before": {
+        "rect": {
+          "x": 16,
+          "y": 342.796875,
+          "width": 358,
+          "height": 42.203125
+        },
+        "backgroundColor": "rgb(224, 255, 194)",
+        "border": "0px none rgb(0, 0, 238)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "color": "rgb(0, 0, 238)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "all",
+        "child": null
+      },
+      "hover": {
+        "rect": {
+          "x": 16,
+          "y": 342.796875,
+          "width": 358,
+          "height": 42.203125
+        },
+        "backgroundColor": "rgb(224, 255, 194)",
+        "border": "0px none rgb(0, 0, 238)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "color": "rgb(0, 0, 238)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "all",
+        "child": null
+      },
+      "active": {
+        "rect": {
+          "x": 16,
+          "y": 342.796875,
+          "width": 358,
+          "height": 42.203125
+        },
+        "backgroundColor": "rgb(224, 255, 194)",
+        "border": "0px none rgb(0, 0, 238)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "color": "rgb(0, 0, 238)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "all",
+        "child": null
+      }
+    }
+  ],
+  "sourceAboutAnchors": [
+    {
+      "label": "Built for teams who ship.",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-ld87gp",
+          "rect": {
+            "x": 16,
+            "y": 186.797,
+            "width": 358,
+            "height": 36.297
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h1",
+          "className": "framer-text framer-styles-preset-w78c2l",
+          "rect": {
+            "x": 16,
+            "y": 186.797,
+            "width": 358,
+            "height": 36.297
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "33px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.99px",
+            "lineHeight": "36.3px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "We built Flowline to help teams focus on what matters — getting things done, not fighting their tools.",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-186g1gw",
+          "rect": {
+            "x": 16,
+            "y": 239.094,
+            "width": 358,
+            "height": 72
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "p",
+          "className": "framer-text framer-styles-preset-19v3zl0",
+          "rect": {
+            "x": 16,
+            "y": 239.094,
+            "width": 358,
+            "height": 72
+          },
+          "style": {
+            "color": "rgba(6, 8, 3, 0.7)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.48px",
+            "lineHeight": "24px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "2.4 million tasks completed through Flowline",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-thtxuc",
+          "rect": {
+            "x": 59.531,
+            "y": 599.234,
+            "width": 270.938,
+            "height": 19.594
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "p",
+          "className": "framer-text framer-styles-preset-1spc9ue",
+          "rect": {
+            "x": 59.531,
+            "y": 599.234,
+            "width": 270.938,
+            "height": 19.594
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.42px",
+            "lineHeight": "19.6px",
+            "textAlign": "left"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-1jiplb6",
+          "rect": {
+            "x": 0,
+            "y": 599.234,
+            "width": 390,
+            "height": 74.672
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Every project management tool we used either buried simple tasks under layers of configuration or fell apart past three people. We built Flowline to sit in the middle — powerful enough for real workflows, simple enough that your whole team actually uses it.",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-1ljbpes",
+          "rect": {
+            "x": 16,
+            "y": 864.703,
+            "width": 358,
+            "height": 280.828
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h2",
+          "className": "framer-text framer-styles-preset-1dq4kem",
+          "rect": {
+            "x": 16,
+            "y": 864.703,
+            "width": 358,
+            "height": 280.828
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "What drives every decision we make.",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-1dqw42w",
+          "rect": {
+            "x": 16,
+            "y": 1302.328,
+            "width": 358,
+            "height": 62.406
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h2",
+          "className": "framer-text framer-styles-preset-1dq4kem",
+          "rect": {
+            "x": 16,
+            "y": 1302.328,
+            "width": 358,
+            "height": 62.406
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Trusted by teams like yours.",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-mfrb31",
+          "rect": {
+            "x": 16,
+            "y": 2459.531,
+            "width": 358,
+            "height": 31.203
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h2",
+          "className": "framer-text framer-styles-preset-1dq4kem",
+          "rect": {
+            "x": 16,
+            "y": 2459.531,
+            "width": 358,
+            "height": 31.203
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "The people behind Flowline.",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-1i075cg",
+          "rect": {
+            "x": 105.5,
+            "y": 3527.531,
+            "width": 179,
+            "height": 62.406
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h2",
+          "className": "framer-text framer-styles-preset-1dq4kem",
+          "rect": {
+            "x": 105.5,
+            "y": 3527.531,
+            "width": 179,
+            "height": 62.406
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Sarah Mitchell",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 4038.313,
+            "width": 127.422,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h3",
+          "className": "framer-text framer-styles-preset-gk3lsa",
+          "rect": {
+            "x": 40,
+            "y": 4038.313,
+            "width": 127.422,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "-0.6px",
+            "lineHeight": "22px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "John Krasinski",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 4526.281,
+            "width": 128.375,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h3",
+          "className": "framer-text framer-styles-preset-gk3lsa",
+          "rect": {
+            "x": 40,
+            "y": 4526.281,
+            "width": 128.375,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "-0.6px",
+            "lineHeight": "22px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Ana Moreno",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 5014.25,
+            "width": 107.594,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h3",
+          "className": "framer-text framer-styles-preset-gk3lsa",
+          "rect": {
+            "x": 40,
+            "y": 5014.25,
+            "width": 107.594,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "-0.6px",
+            "lineHeight": "22px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Daniel Keane",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 5502.219,
+            "width": 115.828,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h3",
+          "className": "framer-text framer-styles-preset-gk3lsa",
+          "rect": {
+            "x": 40,
+            "y": 5502.219,
+            "width": 115.828,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "-0.6px",
+            "lineHeight": "22px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "David Park",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 5990.188,
+            "width": 92.844,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h3",
+          "className": "framer-text framer-styles-preset-gk3lsa",
+          "rect": {
+            "x": 40,
+            "y": 5990.188,
+            "width": 92.844,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "-0.6px",
+            "lineHeight": "22px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "James Okoro",
+      "matches": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 6478.156,
+            "width": 115.734,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(0, 0, 0)",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        {
+          "tag": "h3",
+          "className": "framer-text framer-styles-preset-gk3lsa",
+          "rect": {
+            "x": 40,
+            "y": 6478.156,
+            "width": 115.734,
+            "height": 22
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "Manrope, \"Manrope Placeholder\", sans-serif",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "-0.6px",
+            "lineHeight": "22px",
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Answers to the questions that come up most.",
+      "matches": []
+    }
+  ],
+  "sourceTeamCards": [
+    {
+      "name": "Sarah Mitchell",
+      "ancestors": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 4038.313,
+            "width": 127.422,
+            "height": 22
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-z7q1x0",
+          "rect": {
+            "x": 16,
+            "y": 4014.313,
+            "width": 358,
+            "height": 93.594
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px 0px 12px 12px",
+            "display": "flex",
+            "gap": "4px",
+            "overflow": "visible",
+            "padding": "24px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-ScNSB framer-i6INd framer-r3Uvr framer-1w6csye framer-v-1w6csye",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "0px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-zz2n8s-container",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "ssr-variant",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "contents",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-xg9y6k",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 2907.813
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "20px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "John Krasinski",
+      "ancestors": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 4526.281,
+            "width": 128.375,
+            "height": 22
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-z7q1x0",
+          "rect": {
+            "x": 16,
+            "y": 4502.281,
+            "width": 358,
+            "height": 93.594
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px 0px 12px 12px",
+            "display": "flex",
+            "gap": "4px",
+            "overflow": "visible",
+            "padding": "24px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-ScNSB framer-i6INd framer-r3Uvr framer-1w6csye framer-v-1w6csye",
+          "rect": {
+            "x": 16,
+            "y": 4127.906,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "0px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-1s2i570-container",
+          "rect": {
+            "x": 16,
+            "y": 4127.906,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "ssr-variant",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "contents",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-xg9y6k",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 2907.813
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "20px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ana Moreno",
+      "ancestors": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 5014.25,
+            "width": 107.594,
+            "height": 22
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-z7q1x0",
+          "rect": {
+            "x": 16,
+            "y": 4990.25,
+            "width": 358,
+            "height": 93.594
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px 0px 12px 12px",
+            "display": "flex",
+            "gap": "4px",
+            "overflow": "visible",
+            "padding": "24px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-ScNSB framer-i6INd framer-r3Uvr framer-1w6csye framer-v-1w6csye",
+          "rect": {
+            "x": 16,
+            "y": 4615.875,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "0px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-qq8g70-container",
+          "rect": {
+            "x": 16,
+            "y": 4615.875,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "ssr-variant",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "contents",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-xg9y6k",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 2907.813
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "20px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Daniel Keane",
+      "ancestors": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 5502.219,
+            "width": 115.828,
+            "height": 22
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-z7q1x0",
+          "rect": {
+            "x": 16,
+            "y": 5478.219,
+            "width": 358,
+            "height": 93.594
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px 0px 12px 12px",
+            "display": "flex",
+            "gap": "4px",
+            "overflow": "visible",
+            "padding": "24px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-ScNSB framer-i6INd framer-r3Uvr framer-1w6csye framer-v-1w6csye",
+          "rect": {
+            "x": 16,
+            "y": 5103.844,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "0px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-7lbzba-container",
+          "rect": {
+            "x": 16,
+            "y": 5103.844,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "ssr-variant",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "contents",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-xg9y6k",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 2907.813
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "20px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "David Park",
+      "ancestors": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 5990.188,
+            "width": 92.844,
+            "height": 22
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-z7q1x0",
+          "rect": {
+            "x": 16,
+            "y": 5966.188,
+            "width": 358,
+            "height": 93.594
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px 0px 12px 12px",
+            "display": "flex",
+            "gap": "4px",
+            "overflow": "visible",
+            "padding": "24px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-ScNSB framer-i6INd framer-r3Uvr framer-1w6csye framer-v-1w6csye",
+          "rect": {
+            "x": 16,
+            "y": 5591.813,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "0px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-13iw9k2-container",
+          "rect": {
+            "x": 16,
+            "y": 5591.813,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "ssr-variant",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "contents",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-xg9y6k",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 2907.813
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "20px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "James Okoro",
+      "ancestors": [
+        {
+          "tag": "div",
+          "className": "framer-9wfjcq",
+          "rect": {
+            "x": 40,
+            "y": 6478.156,
+            "width": 115.734,
+            "height": 22
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-z7q1x0",
+          "rect": {
+            "x": 16,
+            "y": 6454.156,
+            "width": 358,
+            "height": 93.594
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px 0px 12px 12px",
+            "display": "flex",
+            "gap": "4px",
+            "overflow": "visible",
+            "padding": "24px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-ScNSB framer-i6INd framer-r3Uvr framer-1w6csye framer-v-1w6csye",
+          "rect": {
+            "x": 16,
+            "y": 6079.781,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gap": "0px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-k5fd1z-container",
+          "rect": {
+            "x": 16,
+            "y": 6079.781,
+            "width": 358,
+            "height": 467.969
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "ssr-variant",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "contents",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "framer-xg9y6k",
+          "rect": {
+            "x": 16,
+            "y": 3639.938,
+            "width": 358,
+            "height": 2907.813
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(0, 0, 0)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "20px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    }
+  ],
+  "implementationButtons": [
+    {
+      "text": "Start Free Trial",
+      "before": {
+        "rect": {
+          "x": 16,
+          "y": 287.59375,
+          "width": 358,
+          "height": 42
+        },
+        "backgroundColor": "rgb(6, 14, 6)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "color": "rgb(255, 255, 255)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s",
+        "child": {
+          "color": "rgb(255, 255, 255)",
+          "transform": "none",
+          "transition": "all"
+        }
+      },
+      "hover": {
+        "rect": {
+          "x": 16,
+          "y": 287.59375,
+          "width": 358,
+          "height": 42
+        },
+        "backgroundColor": "rgb(6, 14, 6)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "color": "rgb(255, 255, 255)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s",
+        "child": {
+          "color": "rgb(255, 255, 255)",
+          "transform": "none",
+          "transition": "all"
+        }
+      },
+      "active": {
+        "rect": {
+          "x": 16,
+          "y": 287.59375,
+          "width": 358,
+          "height": 42
+        },
+        "backgroundColor": "rgb(6, 14, 6)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "color": "rgb(255, 255, 255)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s",
+        "child": {
+          "color": "rgb(255, 255, 255)",
+          "transform": "none",
+          "transition": "all"
+        }
+      }
+    },
+    {
+      "text": "Book a Demo",
+      "before": {
+        "rect": {
+          "x": 16,
+          "y": 341.59375,
+          "width": 358,
+          "height": 42
+        },
+        "backgroundColor": "rgb(203, 255, 151)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "color": "rgb(6, 8, 3)",
+        "opacity": "1",
+        "transform": "none",
+        "transition": "background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s",
+        "child": null
+      },
+      "hover": {
+        "rect": {
+          "x": 16,
+          "y": 340.59765625,
+          "width": 358,
+          "height": 42
+        },
+        "backgroundColor": "rgb(185, 255, 114)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "color": "rgb(6, 8, 3)",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, -0.996103)",
+        "transition": "background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s",
+        "child": null
+      },
+      "active": {
+        "rect": {
+          "x": 16,
+          "y": 341.00213623046875,
+          "width": 358,
+          "height": 42
+        },
+        "backgroundColor": "rgb(185, 255, 114)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "color": "rgb(6, 8, 3)",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, -0.591611)",
+        "transition": "background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s",
+        "child": null
+      }
+    }
+  ],
+  "implementationAboutAnchors": [
+    {
+      "label": "Built for teams who ship.",
+      "matches": [
+        {
+          "tag": "h1",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 152.797,
+            "width": 358,
+            "height": 36.297
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "33px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.99px",
+            "lineHeight": "36.3px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "We built Flowline to help teams focus on what matters — getting things done, not fighting their tools.",
+      "matches": [
+        {
+          "tag": "p",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 205.094,
+            "width": 358,
+            "height": 72
+          },
+          "style": {
+            "color": "rgb(80, 82, 78)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "normal",
+            "lineHeight": "24px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "2.4 million tasks completed through Flowline",
+      "matches": [
+        {
+          "tag": "p",
+          "className": "about-stat",
+          "rect": {
+            "x": 0,
+            "y": 555.234,
+            "width": 390,
+            "height": 20
+          },
+          "style": {
+            "color": "rgb(80, 82, 78)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "normal",
+            "lineHeight": "20px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Every project management tool we used either buried simple tasks under layers of configuration or fell apart past three people. We built Flowline to sit in the middle — powerful enough for real workflows, simple enough that your whole team actually uses it.",
+      "matches": [
+        {
+          "tag": "h2",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 856.688,
+            "width": 358,
+            "height": 280.828
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "What drives every decision we make.",
+      "matches": [
+        {
+          "tag": "h2",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 1298.313,
+            "width": 358,
+            "height": 62.406
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Trusted by teams like yours.",
+      "matches": [
+        {
+          "tag": "h2",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 2455.5,
+            "width": 358,
+            "height": 31.203
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "The people behind Flowline.",
+      "matches": [
+        {
+          "tag": "h2",
+          "className": "",
+          "rect": {
+            "x": 105.5,
+            "y": 3523.5,
+            "width": 179,
+            "height": 62.406
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "letterSpacing": "-0.78px",
+            "lineHeight": "31.2px",
+            "textAlign": "center"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Sarah Mitchell",
+      "matches": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 4032.469,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.51px",
+            "lineHeight": "21.25px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "John Krasinski",
+      "matches": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 4542.594,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.51px",
+            "lineHeight": "21.25px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Ana Moreno",
+      "matches": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 5052.719,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.51px",
+            "lineHeight": "21.25px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Daniel Keane",
+      "matches": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 5562.844,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.51px",
+            "lineHeight": "21.25px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "David Park",
+      "matches": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 6072.969,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.51px",
+            "lineHeight": "21.25px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "James Okoro",
+      "matches": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 6583.094,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "color": "rgb(6, 8, 3)",
+            "fontFamily": "manrope, \"manrope Fallback\", Manrope, Arial, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "500",
+            "letterSpacing": "-0.51px",
+            "lineHeight": "21.25px",
+            "textAlign": "start"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Answers to the questions that come up most.",
+      "matches": []
+    }
+  ],
+  "implementationTeamCards": [
+    {
+      "name": "Sarah Mitchell",
+      "ancestors": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 4032.469,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "article",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 438.125
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "container team-grid",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 2988.75
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "72px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "section",
+          "className": "section team-section",
+          "rect": {
+            "x": 0,
+            "y": 3400.703,
+            "width": 390,
+            "height": 3207.016
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "90px 0px 60px"
+          }
+        },
+        {
+          "tag": "main",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 390,
+            "height": 8170.859
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "clip",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "body",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 8903.328
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "John Krasinski",
+      "ancestors": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 4542.594,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "article",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 4150.219,
+            "width": 358,
+            "height": 438.125
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "container team-grid",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 2988.75
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "72px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "section",
+          "className": "section team-section",
+          "rect": {
+            "x": 0,
+            "y": 3400.703,
+            "width": 390,
+            "height": 3207.016
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "90px 0px 60px"
+          }
+        },
+        {
+          "tag": "main",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 390,
+            "height": 8170.859
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "clip",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "body",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 8903.328
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ana Moreno",
+      "ancestors": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 5052.719,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "article",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 4660.344,
+            "width": 358,
+            "height": 438.125
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "container team-grid",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 2988.75
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "72px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "section",
+          "className": "section team-section",
+          "rect": {
+            "x": 0,
+            "y": 3400.703,
+            "width": 390,
+            "height": 3207.016
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "90px 0px 60px"
+          }
+        },
+        {
+          "tag": "main",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 390,
+            "height": 8170.859
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "clip",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "body",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 8903.328
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Daniel Keane",
+      "ancestors": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 5562.844,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "article",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 5170.469,
+            "width": 358,
+            "height": 438.125
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "container team-grid",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 2988.75
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "72px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "section",
+          "className": "section team-section",
+          "rect": {
+            "x": 0,
+            "y": 3400.703,
+            "width": 390,
+            "height": 3207.016
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "90px 0px 60px"
+          }
+        },
+        {
+          "tag": "main",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 390,
+            "height": 8170.859
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "clip",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "body",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 8903.328
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "David Park",
+      "ancestors": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 6072.969,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "article",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 5680.594,
+            "width": 358,
+            "height": 438.125
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "container team-grid",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 2988.75
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "72px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "section",
+          "className": "section team-section",
+          "rect": {
+            "x": 0,
+            "y": 3400.703,
+            "width": 390,
+            "height": 3207.016
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "90px 0px 60px"
+          }
+        },
+        {
+          "tag": "main",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 390,
+            "height": 8170.859
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "clip",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "body",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 8903.328
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "James Okoro",
+      "ancestors": [
+        {
+          "tag": "h3",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 6583.094,
+            "width": 358,
+            "height": 21.25
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "article",
+          "className": "",
+          "rect": {
+            "x": 16,
+            "y": 6190.719,
+            "width": 358,
+            "height": 438.125
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "div",
+          "className": "container team-grid",
+          "rect": {
+            "x": 16,
+            "y": 3640.094,
+            "width": 358,
+            "height": 2988.75
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gap": "72px",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "section",
+          "className": "section team-section",
+          "rect": {
+            "x": 0,
+            "y": 3400.703,
+            "width": 390,
+            "height": 3207.016
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "90px 0px 60px"
+          }
+        },
+        {
+          "tag": "main",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 390,
+            "height": 8170.859
+          },
+          "style": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "clip",
+            "padding": "0px"
+          }
+        },
+        {
+          "tag": "body",
+          "className": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 8903.328
+          },
+          "style": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "0px solid rgb(6, 8, 3)",
+            "borderRadius": "0px",
+            "display": "block",
+            "gap": "normal",
+            "overflow": "visible",
+            "padding": "0px"
+          }
+        }
+      ]
+    }
+  ]
+}
