@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="about-top">
-        <div className="container about-hero-copy">
+        <div className="container about-hero-copy page-load-reveal">
           <p className="eyebrow"><Hexagon aria-hidden size={12} />ABOUT</p>
           <h1>Built for teams who ship.</h1>
           <p>We built Flowline to help teams focus on what matters — getting things done, not fighting their tools.</p>
