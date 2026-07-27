@@ -118,8 +118,8 @@ main { overflow: clip; }
 /* Header */
 .site-header { position: relative; z-index: 50; height: 90px; background: #fff; }
 .header-inner { display: flex; height: 90px; align-items: center; justify-content: space-between; }
-.brand { flex: 0 0 auto; }
-.brand img { width: 83px; height: auto; }
+.brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
+.brand img { width: 28px; height: 28px; }
 .desktop-nav { position: absolute; left: 50%; display: flex; align-items: center; gap: 0; transform: translateX(-50%); font-size: 14px; font-weight: 500; letter-spacing: -.03em; line-height: 1.3; }
 .desktop-nav a, .login-link { border-radius: 4px; padding: 8px 16px; transition: background-color .4s cubic-bezier(.22, 1, .36, 1); }
 .desktop-nav a:hover, .login-link:hover { background: #e0ffc2; }
@@ -309,7 +309,8 @@ main { overflow: clip; }
 .cta-dashboard { position: absolute; z-index: 1; top: 39px; left: 670px; width: 660px; max-width: none; height: 391px; border-radius: 12px 0 0; object-fit: cover; }
 .site-footer { height: 469.609px; border-top: 1px solid var(--border); padding: 100px 0; background: #fff; }
 .footer-grid { position: relative; display: grid; grid-template-columns: 590px repeat(3, 183.33px); gap: 20px; }
-.footer-logo { width: 83px; height: auto; }
+.footer-logo-lockup { display: inline-flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
+.footer-logo { width: 28px; height: 28px; }
 .footer-brand > p:not(.footer-copyright) { max-width: 260px; margin-top: 30px; color: var(--muted); font-size: 14px; line-height: 20px; }
 .footer-meta { position: absolute; top: 198px; left: 0; }
 .footer-socials { display: flex; gap: 8px; }
@@ -616,7 +617,7 @@ main { overflow: clip; }
   .split-heading { grid-template-columns: 1fr; gap: 24px; }
   .section-heading { margin-bottom: 42px; }
   .site-header, .header-inner { height: 72px; }
-  .brand img { width: 83px; height: auto; }
+  .brand img { width: 28px; height: 28px; }
   .desktop-nav, .header-trial { display: none; }
   .header-actions { gap: 10px; }
   .login-link { font-size: 13px; font-weight: 600; }

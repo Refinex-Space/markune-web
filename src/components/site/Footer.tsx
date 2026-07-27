@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assets, siteConfig } from "@/content/site";
 
 const columns = [
   { title: "Product", links: [{ label: "Benefits", href: "/#benefits" }, { label: "Features", href: "/#features" }, { label: "Pricing", href: "/#pricing" }] },
@@ -12,7 +13,10 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Image alt="Flowline" className="footer-logo" height={33} src="/assets/flowline-logo.svg" width={130} />
+          <div className="footer-logo-lockup">
+            <Image alt="" aria-hidden className="footer-logo" height={28} src={assets.logo} width={28} />
+            <span>{siteConfig.name}</span>
+          </div>
           <p>Project management platform built for teams that ship fast and stay aligned.</p>
         </div>
         {columns.map((column) => (
@@ -27,7 +31,7 @@ export function Footer() {
             <a aria-label="LinkedIn" href="#"><LinkedinLogo aria-hidden size={19} /></a>
             <a aria-label="YouTube" href="#"><YoutubeLogo aria-hidden size={19} /></a>
           </div>
-          <p className="footer-copyright">© 2026 Flowline - All Rights Reserved</p>
+          <p className="footer-copyright">© 2026 {siteConfig.name} - All Rights Reserved</p>
         </div>
       </div>
     </footer>

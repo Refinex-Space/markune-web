@@ -1,7 +1,7 @@
 import type { AssetKey, NavItem, SiteConfig } from "@/types/site";
 
 export const siteConfig: SiteConfig = {
-  name: "Flowline",
+  name: "Madora",
   description: "Project management platform built for teams that ship fast and stay aligned.",
   loginHref: "/contact/",
   trialHref: "/contact/",
@@ -16,7 +16,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const assets: Record<AssetKey, string> = {
-  logo: "/assets/flowline-logo.svg",
+  logo: "/assets/madora-logo-dark.svg",
   hero: "/assets/hero-task-board.webp",
   featureAutomation: "/assets/feature-automation.webp",
   featureBoard: "/assets/feature-task-board.webp",

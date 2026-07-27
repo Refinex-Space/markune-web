@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { navItems, siteConfig } from "@/content/site";
+import { assets, navItems, siteConfig } from "@/content/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -22,8 +22,9 @@ export function Header() {
   return (
     <header className={`site-header ${open ? "site-header--open" : ""}`}>
       <div className="container header-inner">
-        <Link aria-label="Flowline home" className="brand" href="/" onClick={() => setOpen(false)}>
-          <Image alt="Flowline" height={33} priority src="/assets/flowline-logo.svg" width={130} />
+        <Link aria-label={`${siteConfig.name} home`} className="brand" href="/" onClick={() => setOpen(false)}>
+          <Image alt="" aria-hidden height={28} priority src={assets.logo} width={28} />
+          <span>{siteConfig.name}</span>
         </Link>
         <nav aria-label="Primary navigation" className="desktop-nav">
           {navItems.map((item) => (

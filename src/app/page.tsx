@@ -9,9 +9,10 @@ import { ClientLogoStrip } from "@/components/site/ClientLogoStrip";
 import { FaqSection } from "@/components/site/FaqSection";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { blogPosts } from "@/content/blog";
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Organize work. Align your team. Ship faster.",
+  title: { absolute: `${siteConfig.name} — Organize work. Align your team. Ship faster.` },
   description: "Flowline brings your tasks, timelines, and team communication into one focused workspace.",
 };
 

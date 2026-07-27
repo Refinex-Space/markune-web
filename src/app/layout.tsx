@@ -23,14 +23,20 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
   title: {
-    default: "Flowline — Organize work. Align your team. Ship faster.",
-    template: "%s — Flowline",
+    default: `${siteConfig.name} — Organize work. Align your team. Ship faster.`,
+    template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  icons: { icon: "/assets/flowline-logo.svg" },
+  icons: {
+    icon: [
+      { url: "/assets/madora-logo-dark.svg", media: "(prefers-color-scheme: light)" },
+      { url: "/assets/madora-logo-light.svg", media: "(prefers-color-scheme: dark)" },
+    ],
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
-    title: "Flowline — Organize work. Align your team. Ship faster.",
+    title: `${siteConfig.name} — Organize work. Align your team. Ship faster.`,
     description: siteConfig.description,
     images: siteUrl ? [new URL("/assets/hero-task-board.webp", siteUrl)] : undefined,
   },
