@@ -17,7 +17,7 @@ export const navItems: NavItem[] = [
 
 export const assets: Record<AssetKey, string> = {
   logo: "/assets/madora-logo-dark.svg",
-  hero: "/assets/hero-task-board.webp",
+  hero: "/assets/madora-workspace-hero.png",
   featureAutomation: "/assets/feature-automation.webp",
   featureBoard: "/assets/feature-task-board.webp",
   capabilityComments: "/assets/capability-comments.webp",

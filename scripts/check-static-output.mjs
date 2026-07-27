@@ -19,10 +19,7 @@ const routes = [
 
 const requiredAssets = [
   "flowline-logo.svg",
-  "hero-task-board.webp",
-  "hero-task-board-desktop.webp",
-  "hero-task-board-tablet.webp",
-  "hero-task-board-mobile.webp",
+  "madora-workspace-hero.png",
   "feature-automation.webp",
   "feature-task-board.webp",
   "feature-automation-desktop.avif",

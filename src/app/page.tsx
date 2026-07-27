@@ -60,12 +60,25 @@ export default function HomePage() {
             <ButtonLink href="/contact/" variant="lime">Book a Demo</ButtonLink>
           </div>
         </div>
-        <div className="container hero-image-wrap">
-          <picture>
-            <source media="(max-width: 809px)" srcSet="/assets/hero-task-board-mobile.webp" />
-            <source media="(max-width: 1199px)" srcSet="/assets/hero-task-board-tablet.webp" />
-            <Image alt="Flowline project task board" className="hero-image" height={711} priority src="/assets/hero-task-board-desktop.webp" width={1200} />
-          </picture>
+        <div className="container hero-visual" aria-label="Madora product preview">
+          <Image
+            alt=""
+            aria-hidden="true"
+            className="hero-visual-background"
+            fill
+            priority
+            sizes="(max-width: 809px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 48px), 1200px"
+            src="/assets/pricing-background.webp"
+          />
+          <Image
+            alt="Madora local Markdown workspace with Codex"
+            className="hero-visual-product"
+            height={2676}
+            priority
+            sizes="(max-width: 809px) calc((100vw - 32px) * .88), (max-width: 1199px) calc((100vw - 48px) * .88), 1032px"
+            src="/assets/madora-workspace-hero.png"
+            width={5100}
+          />
         </div>
       </section>
 

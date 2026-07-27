@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     title: `${siteConfig.name} — Organize work. Align your team. Ship faster.`,
     description: siteConfig.description,
-    images: siteUrl ? [new URL("/assets/hero-task-board.webp", siteUrl)] : undefined,
+    images: siteUrl ? [new URL("/assets/madora-workspace-hero.png", siteUrl)] : undefined,
   },
 };
 
