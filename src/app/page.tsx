@@ -49,7 +49,7 @@ export default function HomePage() {
   return (
     <>
       <section className="home-hero">
-        <div className="container hero-copy">
+        <div className="container hero-copy hero-copy--enter">
           <div className="hero-main-copy">
             <h1>Organize work. Align<br />your team. Ship faster.</h1>
             <p>Flowline brings your tasks, timelines, and team communication into one focused workspace.</p>
