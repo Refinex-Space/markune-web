@@ -44,6 +44,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <Header />
         <main>{children}</main>
         <Footer />
+        <div aria-hidden="true" className="progressive-blur">
+          {Array.from({ length: 8 }, (_, index) => <span key={index} />)}
+        </div>
       </body>
     </html>
   );
