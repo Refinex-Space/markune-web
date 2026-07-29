@@ -22,7 +22,7 @@ export interface SiteConfig {
   name: string;
   description: string;
   loginHref: string;
-  trialHref: string;
+  downloadHref: string;
   contactEmail: string;
 }
 

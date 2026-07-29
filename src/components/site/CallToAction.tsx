@@ -1,7 +1,7 @@
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { assets } from "@/content/site";
+import { assets, siteConfig } from "@/content/site";
 
 export function CallToAction() {
   return (
@@ -10,7 +10,7 @@ export function CallToAction() {
         <div className="cta-copy">
           <h2>Ready to get your team on the same page?</h2>
           <p>Join 4,000+ teams already using Flowline to ship work faster, together.</p>
-          <ButtonLink href="/contact/">Start Free Trial <ArrowRight aria-hidden size={15} /></ButtonLink>
+          <ButtonLink href={siteConfig.downloadHref}>Download <ArrowRight aria-hidden size={15} /></ButtonLink>
         </div>
         <picture>
           <source media="(max-width: 809px)" srcSet={assets.ctaDashboardMobile} />

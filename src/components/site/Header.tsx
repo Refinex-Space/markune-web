@@ -33,7 +33,7 @@ export function Header() {
         </nav>
         <div className="header-actions">
           <Link className="login-link" href={siteConfig.loginHref}>Login</Link>
-          <ButtonLink className="header-trial" href={siteConfig.trialHref}>Free Trial <ArrowRight aria-hidden size={15} /></ButtonLink>
+          <ButtonLink className="header-trial" href={siteConfig.downloadHref}>Download <ArrowRight aria-hidden size={15} /></ButtonLink>
           <button
             aria-expanded={open}
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
@@ -51,7 +51,7 @@ export function Header() {
             {navItems.map((item) => (
               <Link href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link>
             ))}
-            <Link className="button button--primary" href={siteConfig.trialHref} onClick={() => setOpen(false)}>Start Free Trial</Link>
+            <Link className="button button--primary" href={siteConfig.downloadHref} onClick={() => setOpen(false)}>Download</Link>
           </div>
         </nav>
       ) : null}

@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   name: "Madora",
   description: "Project management platform built for teams that ship fast and stay aligned.",
   loginHref: "/contact/",
-  trialHref: "/contact/",
+  downloadHref: "/download/",
   contactEmail: "hello@flowline.com",
 };
 

@@ -297,7 +297,7 @@ try {
   const desktopPage = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   for (const [name, origin] of [["source", sourceOrigin], ["implementation", implementationOrigin]]) {
     results.desktopButtons[name] = [];
-    for (const text of ["Start Free Trial", "Book a Demo"]) {
+    for (const text of [name === "source" ? "Start Free Trial" : "Download", "Book a Demo"]) {
       await prepare(desktopPage, `${origin}/`, "no-preference");
       results.desktopButtons[name].push(await inspectDesktopButton(desktopPage, text));
     }

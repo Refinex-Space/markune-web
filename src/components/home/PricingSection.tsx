@@ -4,6 +4,7 @@ import { ArrowRight, Check, Circle, Hexagon, Shield } from "@phosphor-icons/reac
 import { useState } from "react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { pricingPlans } from "@/content/pricing";
+import { siteConfig } from "@/content/site";
 
 export function PricingSection() {
   const [yearly, setYearly] = useState(false);
@@ -39,7 +40,7 @@ export function PricingSection() {
               </div>
               </div>
               <div className="pricing-action">
-                <ButtonLink href="/contact/">Start Free Trial <ArrowRight aria-hidden size={15} /></ButtonLink>
+                <ButtonLink href={siteConfig.downloadHref}>Download <ArrowRight aria-hidden size={15} /></ButtonLink>
               <p className="annual-note">{yearly ? "Billed annually (save 20%)" : "Save with Annual Billing (20% Off)"}</p>
               </div>
               <div className="pricing-features">

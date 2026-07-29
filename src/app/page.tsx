@@ -56,7 +56,7 @@ export default function HomePage() {
             <p>Flowline brings your tasks, timelines, and team communication into one focused workspace.</p>
           </div>
           <div className="hero-actions">
-            <ButtonLink href="/contact/">Start Free Trial <ArrowRight aria-hidden size={15} /></ButtonLink>
+            <ButtonLink href={siteConfig.downloadHref}>Download <ArrowRight aria-hidden size={15} /></ButtonLink>
             <ButtonLink href="/contact/" variant="lime">Book a Demo</ButtonLink>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function HomePage() {
                 <div className="capability-copy">
                   <h3>{item.eyebrow}</h3>
                   <p>{item.title}</p>
-                  <ButtonLink href="/contact/">Start Free Trial <ArrowRight aria-hidden size={15} /></ButtonLink>
+                  <ButtonLink href={siteConfig.downloadHref}>Download <ArrowRight aria-hidden size={15} /></ButtonLink>
                   <ul>{item.features.map((feature, featureIndex) => { const FeatureIcon = item.icons[featureIndex]; return <li key={feature}><FeatureIcon aria-hidden size={20} />{feature}</li>; })}</ul>
                 </div>
               </article>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { assets, siteConfig } from "@/content/site";
 
 const columns = [
-  { title: "Product", links: [{ label: "Benefits", href: "/#benefits" }, { label: "Features", href: "/#features" }, { label: "Pricing", href: "/#pricing" }] },
+  { title: "Product", links: [{ label: "Benefits", href: "/#benefits" }, { label: "Features", href: "/#features" }, { label: "Pricing", href: "/#pricing" }, { label: "Download", href: "/download/" }] },
   { title: "Resources", links: [{ label: "Changelog", href: "/changelog/" }, { label: "Blog", href: "/blog/" }, { label: "FAQ", href: "/#faq" }] },
   { title: "Company", links: [{ label: "About", href: "/about/" }, { label: "Contact", href: "/contact/" }, { label: "Privacy policy", href: "/legal/privacy-policy/" }, { label: "Terms & Conditions", href: "/legal/terms-of-service/" }] },
 ];

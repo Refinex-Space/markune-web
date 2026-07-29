@@ -13,6 +13,7 @@ const routes = [
   "blog/why-your-team-keeps-missing-deadlines",
   "changelog",
   "contact",
+  "download",
   "legal/privacy-policy",
   "legal/terms-of-service",
 ];

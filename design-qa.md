@@ -7,7 +7,7 @@
 - 实现：`http://127.0.0.1:4273/`
 - 浏览器与像素密度：Playwright Chromium，`deviceScaleFactor: 1`
 - CSS 视口：`1440×1000`、`1024×900`、`390×844`
-- 路由：首页、About、Blog 列表、6 篇文章、Changelog、Contact、Privacy Policy、Terms of Service，共 13 个路由。
+- 路由：首页、About、Blog 列表、6 篇文章、Changelog、Contact、Download、Privacy Policy、Terms of Service，共 14 个路由。
 - 对比方式：相同视口分段截图后拼接；Pixelmatch `threshold: 0.1`，不屏蔽正文、图片、组件或 Framer 徽标。
 - 动态处理：源站等待滚动浮现状态稳定后分段采集；实现通过视觉回归标记冻结动画、Ticker、过渡和光标。
 
@@ -55,14 +55,30 @@
 2. 修复后：重做 About 指标/价值观/团队卡片结构，校正文章正文排版与移动端相关推荐几何，加入首页按钮图标换位交互和滚动浮现行为。
 3. 复测结果：About 移动端降至 `4.8252%`，Q1 文章移动端降至 `5.5244%`；仍存在可见 P1/P2 差异，未达到通过条件。
 
+## Download 新增页面 QA（2026-07-29）
+
+- 该页面为 Madora 新增产品页面，Kodama 源站没有 `/download/`，因此不做虚假的源站 Pixelmatch；验收采用同站设计语言、固定视口截图、交互测试和真实 OSS 数据检查。
+- [桌面 `1440×1000`](/Users/refinex/develop/project/madora-web/design-qa/focused/download-desktop.png)、[平板 `1024×900`](/Users/refinex/develop/project/madora-web/design-qa/focused/download-tablet.png)、[移动端 `390×844`](/Users/refinex/develop/project/madora-web/design-qa/focused/download-mobile.png) 均已在 Chromium、`deviceScaleFactor: 1` 下实际采集。
+- 三个视口均无横向溢出或内容横向裁切；苔藓背景、白色下载面板、圆角、阴影、渐进模糊与既有站点设计一致。移动端改为单列面板，系统和架构切换保持完整可操作。
+- 实际页面读取 OSS `downloads/stable.json`，确认版本 `0.1.15`、发布时间、三个安装包文件名/大小/SHA-256 与下载链接均来自实时清单。清单和三个版本化安装包均为 `HTTP 200`，提供 `Access-Control-Allow-Origin: *` 与 GET/HEAD。
+- E2E 通过固定清单覆盖 Windows 自动推荐、macOS/Windows 切换、Apple Silicon/Intel 切换、键盘操作、复制反馈、错误与重试；路由检查未发现 console、page 或资源错误。
+- 新增页面范围无剩余 P0–P3 视觉问题，单页结果为 `passed`。该结果不改变原有 13 页面与 Kodama 比对仍为 `blocked` 的结论。
+
+### Logo 与下载按钮局部修正（2026-07-29）
+
+- 源视觉标注：`/var/folders/0w/8y5fmh897_gc458bn5q2s7240000gp/T/codex-clipboard-8ba62ffe-f662-4993-b049-374f9e3b1c5f.png`，`1824×1368`；目标是移除面板 Logo 卡片阴影，并为 `Download for …` 增加明确 hover 状态。
+- 实现改动：Logo 卡片保留原尺寸、边框、圆角和白色背景，仅删除 `box-shadow`；主下载按钮 hover 切换为站点苔绿色背景与深色文字，下载图标下移 `2px`，active 状态增加轻微亮度反馈，focus-visible 继续复用全站描边。
+- 交互证据：Playwright 在 Chromium 桌面、平板和移动项目中实际执行 hover，均确认背景为 `rgb(203, 255, 151)`、文字为 `rgb(6, 8, 3)`，3 项通过。
+- 浏览器渲染截图：本次尝试在 Codex 内置浏览器以相同视口采集时，本地 URL 被浏览器安全策略阻止；现有三张下载页截图早于该局部修改，不能冒充修改后证据。因此本次局部视觉复验为 `blocked`，阻塞项仅为缺少修改后的浏览器截图，不是已发现的 P0–P3 缺陷。
+
 ## 工程验证
 
 - `pnpm lint`：通过。
 - `pnpm typecheck`：通过。
-- `pnpm test`：通过，5 个测试文件、8 个测试。
-- `pnpm build`：通过，Next.js 成功静态生成 15 个页面（含 `_not-found` 与 13 个计划路由）。
-- `pnpm check:static`：通过，13 个路由与 56 个必需资源完整。
-- `pnpm test:e2e`：本次快速收尾未重跑；此前 45 项通过的结果早于最后一轮视觉代码变更，不能视为当前提交状态的完整证据。
+- `pnpm test`：通过，7 个测试文件、18 个测试。
+- `pnpm build`：通过，Next.js 完成 17 个静态页面生成步骤，路由表确认 14 个计划路由均为静态输出。
+- `pnpm check:static`：通过，14 个路由与 56 个必需资源完整。
+- `pnpm test:e2e`：通过，52 项通过；2 项为平板/移动端重复错误态的预期跳过，错误态在 Chromium 完整执行。
 
 ## Findings
 
