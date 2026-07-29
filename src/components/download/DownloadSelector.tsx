@@ -144,7 +144,7 @@ export function DownloadSelector() {
 
   return (
     <div className="download-panel">
-      <div aria-label="Choose operating system" className="download-os-switch" role="group">
+      <div aria-label="选择操作系统" className="download-os-switch" role="group">
         <button aria-pressed={selectedOs === "macos"} className={selectedOs === "macos" ? "active" : ""} onClick={() => chooseOs("macos")} type="button">
           <AppleLogo aria-hidden size={18} weight="fill" />macOS
         </button>
@@ -160,68 +160,68 @@ export function DownloadSelector() {
             <>
               <div className="download-recommendation-row">
                 <p className="eyebrow">{selectedLabel}</p>
-                {detectedOs === selectedOs ? <span className="recommended-badge">Recommended for this device</span> : null}
+                {detectedOs === selectedOs ? <span className="recommended-badge">推荐此设备使用</span> : null}
               </div>
-              <h2>Download Madora</h2>
-              <p className="download-primary-description">A local-first workspace for Markdown, writing, planning, and focused work.</p>
+              <h2>下载 Madora</h2>
+              <p className="download-primary-description">用于 Markdown、写作、规划和专注工作的 Local-first 工作区。</p>
               {selectedOs === "macos" ? (
-                <div aria-label="Choose Mac processor" className="download-architecture-switch" role="group">
+                <div aria-label="选择 Mac 处理器" className="download-architecture-switch" role="group">
                   <button aria-pressed={macArchitecture === "arm64"} className={macArchitecture === "arm64" ? "active" : ""} onClick={() => chooseMacArchitecture("arm64")} type="button">
-                    <strong>Apple Silicon</strong><span>M1 or later</span>
+                    <strong>Apple Silicon</strong><span>M1 或更新机型</span>
                   </button>
                   <button aria-pressed={macArchitecture === "x64"} className={macArchitecture === "x64" ? "active" : ""} onClick={() => chooseMacArchitecture("x64")} type="button">
-                    <strong>Intel</strong><span>Intel processor</span>
+                    <strong>Intel</strong><span>Intel 处理器</span>
                   </button>
                 </div>
               ) : null}
-              {loadState === "loading" ? <p aria-live="polite" className="download-status" role="status">Checking the latest release…</p> : null}
+              {loadState === "loading" ? <p aria-live="polite" className="download-status" role="status">正在检查最新版本…</p> : null}
               {loadState === "ready" && artifact ? (
                 <a className="button button--primary download-main-button" data-testid="download-link" href={artifact.url}>
                   <DownloadSimple aria-hidden size={18} weight="bold" />
-                  Download for {selectedOs === "macos" ? "macOS" : "Windows"}
+                  下载 {selectedOs === "macos" ? "macOS" : "Windows"} 版
                 </a>
               ) : null}
             </>
           ) : detectionComplete ? (
             <div className="download-unknown-platform" aria-live="polite" role="status">
-              <p className="eyebrow">CHOOSE YOUR PLATFORM</p>
-              <h2>Madora supports macOS and Windows.</h2>
-              <p>Select an operating system above to see the right installer for your computer.</p>
+              <p className="eyebrow">选择你的平台</p>
+              <h2>Madora 支持 macOS 和 Windows。</h2>
+              <p>请在上方选择操作系统，查看适合你电脑的安装包。</p>
             </div>
           ) : (
             <div className="download-unknown-platform" aria-live="polite" role="status">
-              <p className="eyebrow">DETECTING YOUR DEVICE</p>
-              <h2>Finding the right Madora installer…</h2>
-              <p>Checking your operating system and the latest stable release.</p>
+              <p className="eyebrow">正在检测设备</p>
+              <h2>正在查找合适的 Madora 安装包…</h2>
+              <p>正在检查你的操作系统与最新稳定版本。</p>
             </div>
           )}
           {loadState === "error" ? (
             <div aria-live="polite" className="download-error" role="alert">
-              <p>We couldn&apos;t load the latest release. Check your connection and try again.</p>
+              <p>无法加载最新版本，请检查网络连接后重试。</p>
               <div>
-                <button className="button button--primary" onClick={() => void retryManifest()} type="button"><ArrowClockwise aria-hidden size={17} />Retry</button>
-                <a className="text-link" href={DOWNLOAD_RELEASES_URL} rel="noreferrer" target="_blank">View GitHub Releases</a>
+                <button className="button button--primary" onClick={() => void retryManifest()} type="button"><ArrowClockwise aria-hidden size={17} />重试</button>
+                <a className="text-link" href={DOWNLOAD_RELEASES_URL} rel="noreferrer" target="_blank">查看 GitHub Releases</a>
               </div>
             </div>
           ) : null}
         </div>
 
-        <aside className="download-details" aria-label="Release details">
-          <p className="download-details-title">Latest stable release</p>
+        <aside className="download-details" aria-label="版本详情">
+          <p className="download-details-title">最新稳定版本</p>
           {manifest ? (
             <>
               <dl>
-                <div><dt>Version</dt><dd>{manifest.version}</dd></div>
-                <div><dt>Published</dt><dd>{formatPublishedDate(manifest.publishedAt)}</dd></div>
-                <div><dt>Installer</dt><dd>{artifact?.name ?? "Choose a platform"}</dd></div>
-                <div><dt>Size</dt><dd>{artifact ? formatDownloadSize(artifact.size) : "—"}</dd></div>
+                <div><dt>版本</dt><dd>{manifest.version}</dd></div>
+                <div><dt>发布日期</dt><dd>{formatPublishedDate(manifest.publishedAt)}</dd></div>
+                <div><dt>安装包</dt><dd>{artifact?.name ?? "请选择平台"}</dd></div>
+                <div><dt>大小</dt><dd>{artifact ? formatDownloadSize(artifact.size) : "—"}</dd></div>
               </dl>
               <div className="download-checksum">
                 <span>SHA-256</span>
-                <code>{artifact?.sha256 ?? "Choose a platform to view its checksum"}</code>
-                <button aria-label="Copy SHA-256 checksum" disabled={!artifact} onClick={() => void copyChecksum()} type="button">
+                <code>{artifact?.sha256 ?? "选择平台后查看校验值"}</code>
+                <button aria-label="复制 SHA-256 校验值" disabled={!artifact} onClick={() => void copyChecksum()} type="button">
                   {copied ? <Check aria-hidden size={16} weight="bold" /> : <Copy aria-hidden size={16} />}
-                  {copied ? "Copied" : "Copy"}
+                  {copied ? "已复制" : "复制"}
                 </button>
               </div>
             </>
@@ -230,7 +230,7 @@ export function DownloadSelector() {
               <span /><span /><span /><span />
             </div>
           )}
-          <p className="download-details-note">Installers are delivered directly from Madora&apos;s verified Shanghai OSS release channel.</p>
+          <p className="download-details-note">安装包由 Madora 经验证的上海 OSS 发布通道直接提供。</p>
         </aside>
       </div>
     </div>

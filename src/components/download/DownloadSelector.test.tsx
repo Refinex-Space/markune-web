@@ -42,7 +42,7 @@ describe("DownloadSelector", () => {
     mockSuccessfulManifest();
     render(<DownloadSelector />);
 
-    expect(await screen.findByText("Recommended for this device")).toBeInTheDocument();
+    expect(await screen.findByText("推荐此设备使用")).toBeInTheDocument();
     expect(screen.getByTestId("download-link")).toHaveAttribute("href", `${ossHost}/releases/v${version}/Madora_x64-setup.exe`);
   });
 
@@ -54,7 +54,7 @@ describe("DownloadSelector", () => {
 
     await screen.findByTestId("download-link");
     expect(screen.getByRole("button", { name: /Apple Silicon/ })).toHaveAttribute("aria-pressed", "true");
-    await user.click(screen.getByRole("button", { name: /Intel processor/ }));
+    await user.click(screen.getByRole("button", { name: /Intel 处理器/ }));
     expect(screen.getByTestId("download-link")).toHaveAttribute("href", `${ossHost}/releases/v${version}/Madora_x64.dmg`);
   });
 
@@ -64,7 +64,7 @@ describe("DownloadSelector", () => {
     mockSuccessfulManifest();
     render(<DownloadSelector />);
 
-    expect(await screen.findByText("Madora supports macOS and Windows.")).toBeInTheDocument();
+    expect(await screen.findByText("Madora 支持 macOS 和 Windows。")).toBeInTheDocument();
     expect(screen.queryByTestId("download-link")).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Windows" }));
     expect(await screen.findByTestId("download-link")).toHaveAttribute("href", `${ossHost}/releases/v${version}/Madora_x64-setup.exe`);
@@ -78,8 +78,8 @@ describe("DownloadSelector", () => {
       .mockResolvedValueOnce(new Response(JSON.stringify(manifest()), { status: 200 }));
     render(<DownloadSelector />);
 
-    expect(await screen.findByRole("alert")).toHaveTextContent("couldn't load the latest release");
-    await user.click(screen.getByRole("button", { name: "Retry" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("无法加载最新版本");
+    await user.click(screen.getByRole("button", { name: "重试" }));
     await user.click(screen.getByRole("button", { name: "Windows" }));
     expect(await screen.findByTestId("download-link")).toBeInTheDocument();
   });
@@ -93,8 +93,8 @@ describe("DownloadSelector", () => {
     render(<DownloadSelector />);
 
     await screen.findByTestId("download-link");
-    await user.click(screen.getByRole("button", { name: "Copy SHA-256 checksum" }));
+    await user.click(screen.getByRole("button", { name: "复制 SHA-256 校验值" }));
     await waitFor(() => expect(writeText).toHaveBeenCalledWith("f".repeat(64)));
-    expect(screen.getByRole("button", { name: "Copy SHA-256 checksum" })).toHaveTextContent("Copied");
+    expect(screen.getByRole("button", { name: "复制 SHA-256 校验值" })).toHaveTextContent("已复制");
   });
 });

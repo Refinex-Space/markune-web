@@ -23,7 +23,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
   title: {
-    default: `${siteConfig.name} — Organize work. Align your team. Ship faster.`,
+    default: `${siteConfig.name} — 组织工作，协同团队，高效交付`,
     template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: `${siteConfig.name} — Organize work. Align your team. Ship faster.`,
+    title: `${siteConfig.name} — 组织工作，协同团队，高效交付`,
     description: siteConfig.description,
     images: siteUrl ? [new URL("/assets/madora-workspace-hero.png", siteUrl)] : undefined,
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" className={manrope.variable} data-scroll-behavior="smooth">
+    <html lang="zh-CN" className={manrope.variable} data-scroll-behavior="smooth">
       <body>
         <ScrollRevealObserver />
         <Header />

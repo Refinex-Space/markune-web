@@ -2,17 +2,17 @@ import type { AssetKey, NavItem, SiteConfig } from "@/types/site";
 
 export const siteConfig: SiteConfig = {
   name: "Madora",
-  description: "Project management platform built for teams that ship fast and stay aligned.",
+  description: "面向高效交付与紧密协作团队的项目管理平台。",
   loginHref: "/contact/",
   downloadHref: "/download/",
   contactEmail: "hello@flowline.com",
 };
 
 export const navItems: NavItem[] = [
-  { label: "Features", href: "/#features" },
-  { label: "Pricing", href: "/#pricing" },
-  { label: "Changelog", href: "/changelog/" },
-  { label: "About", href: "/about/" },
+  { label: "功能", href: "/#features" },
+  { label: "定价", href: "/#pricing" },
+  { label: "更新日志", href: "/changelog/" },
+  { label: "关于我们", href: "/about/" },
 ];
 
 export const assets: Record<AssetKey, string> = {

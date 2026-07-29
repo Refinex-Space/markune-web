@@ -11,8 +11,8 @@ const clientLogos = [
 
 export function ClientLogoStrip({ showMetric = false }: { showMetric?: boolean }) {
   return (
-    <section aria-label="Trusted customers" className={`logo-strip ${showMetric ? "" : "logo-strip--logos-only"}`}>
-      {showMetric ? <p>2.4 million tasks completed through Flowline</p> : null}
+    <section aria-label="信任 Madora 的客户" className={`logo-strip ${showMetric ? "" : "logo-strip--logos-only"}`}>
+      {showMetric ? <p>已有 240 万项任务通过 Madora 完成</p> : null}
       <div className="logo-ticker">
         <div className="logo-track">
           {[...clientLogos, ...clientLogos].map(({ label, Icon }, index) => (

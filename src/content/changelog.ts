@@ -1,28 +1,28 @@
 export const changelogEntries = [
   {
-    status: "Improved", date: "Jun 13, 2026", title: "Figma integration", image: "/assets/changelog-figma.webp", tabletImage: "/assets/changelog-figma-tablet.avif", mobileImage: "/assets/changelog-figma-mobile.avif",
+    status: "改进", tone: "improved", date: "2026年6月13日", title: "Figma 集成", image: "/assets/changelog-figma.webp", tabletImage: "/assets/changelog-figma-tablet.avif", mobileImage: "/assets/changelog-figma-mobile.avif",
     paragraphs: [
-      "Flowline now integrates directly with Figma. You can link Figma files to any task and preview designs inline without leaving your workspace.",
-      "When a Figma file is attached, the task displays a live preview thumbnail that updates automatically when the design changes. Team members can click through to the full Figma file, or review the preview directly in the task detail view. This eliminates the need to paste links in comments or switch between tools to check design progress.",
-      "The integration also works with Figma's branching feature. If your design team uses branches for iterations, Flowline will display the branch name alongside the preview so reviewers always know which version they're looking at.",
-      "To connect Figma, go to Settings → Integrations and authorize your Figma workspace. Once connected, you can attach files to any task using the attachment menu.",
+      "Madora 现在可以直接与 Figma 集成。你可以将 Figma 文件关联到任意任务，并直接在工作区内预览设计，无需离开当前页面。",
+      "附加 Figma 文件后，任务会显示实时预览缩略图，并在设计发生变化时自动更新。团队成员既可以打开完整的 Figma 文件，也可以直接在任务详情中审阅预览，无需再把链接粘贴到评论中，或频繁切换工具查看设计进度。",
+      "该集成同样支持 Figma 的分支功能。如果设计团队使用分支进行迭代，Madora 会在预览旁显示分支名称，确保审阅者始终清楚当前查看的是哪个版本。",
+      "如需连接 Figma，请前往“设置 → 集成”并授权你的 Figma 工作区。连接完成后，即可通过附件菜单将文件添加到任意任务。",
     ],
   },
   {
-    status: "New", date: "Jun 1, 2026", title: "Custom automation rules for Business plans", image: "/assets/blog-q1.webp", tabletImage: "/assets/blog-q1-tablet.avif", mobileImage: "/assets/blog-q1-card.avif",
+    status: "新增", tone: "new", date: "2026年6月1日", title: "Business 方案支持自定义自动化规则", image: "/assets/blog-q1.webp", tabletImage: "/assets/blog-q1-tablet.avif", mobileImage: "/assets/blog-q1-card.avif",
     paragraphs: [
-      "Custom automation rules are now available for all Business plan users. This lets you build your own if/then workflows directly inside Flowline — no code, no third-party tools needed.",
-      "You can trigger actions based on status changes, due dates, assignee updates, priority shifts, and more. For example, when a task is marked \"Done,\" Flowline can automatically notify the project lead and move it to the \"Review\" column. When a due date is within 48 hours and the task is still \"In Progress,\" the assignee gets a reminder. When a new task is created in a specific project, it can be auto-assigned to the right person immediately.",
-      "We've also included 12 pre-built automation templates so you don't have to start from scratch. These cover the most common workflows teams use — status notifications, assignment routing, due date reminders, and weekly digests. You can use them as-is or customize them to fit how your team works.",
-      "Custom rules are available under Project Settings → Automations. If you're on a Pro plan and want access, you can upgrade to Business from your account settings.",
+      "所有 Business 方案用户现已可以使用自定义自动化规则。你可以直接在 Madora 中构建自己的 if/then 工作流，无需编写代码，也无需借助第三方工具。",
+      "你可以根据状态变化、截止日期、负责人更新、优先级调整等条件触发操作。例如，当任务被标记为“已完成”时，Madora 可以自动通知项目负责人并将任务移至“审阅”列；当距离截止时间不足 48 小时且任务仍为“进行中”时，负责人会收到提醒；在指定项目中创建新任务后，也可以立即自动分配给合适的成员。",
+      "我们还提供了 12 个预置自动化模板，帮助你快速开始。这些模板覆盖团队最常用的工作流，包括状态通知、任务分派、截止日期提醒和每周摘要。你可以直接使用，也可以根据团队的工作方式进行定制。",
+      "自定义规则位于“项目设置 → 自动化”中。如果你正在使用 Pro 方案，可以在账户设置中升级至 Business。",
     ],
   },
   {
-    status: "Fix", date: "Mar 10, 2026", title: "Notification preferences saving correctly", image: "/assets/changelog-notifications.webp", tabletImage: "/assets/changelog-notifications-tablet.avif", mobileImage: "/assets/changelog-notifications-mobile.avif",
+    status: "修复", tone: "fix", date: "2026年3月10日", title: "通知偏好现在可以正确保存", image: "/assets/changelog-notifications.webp", tabletImage: "/assets/changelog-notifications-tablet.avif", mobileImage: "/assets/changelog-notifications-mobile.avif",
     paragraphs: [
-      "We've fixed an issue where custom notification preferences would reset to default settings after logging out. This affected a small percentage of users, primarily those who had customized their notification settings across multiple projects.",
-      "Previously, if you turned off notifications for a specific project or adjusted your email digest frequency, those changes could revert after your next login. Your preferences now persist correctly across sessions, devices, and browsers.",
-      "If you previously adjusted your notification settings and noticed them reverting, they should now be saved correctly. No action is needed on your end — the fix was applied automatically to all accounts.",
+      "我们修复了退出登录后自定义通知偏好会恢复为默认设置的问题。该问题影响了少量用户，主要涉及曾在多个项目中调整通知设置的账户。",
+      "此前，如果你关闭了某个项目的通知或调整了邮件摘要频率，这些设置可能会在下次登录后恢复。现在，你的偏好可以在不同会话、设备和浏览器之间正确保留。",
+      "如果你之前发现调整后的通知设置会被还原，现在应该已经能够正常保存。无需进行任何操作，该修复已自动应用到所有账户。",
     ],
   },
 ];

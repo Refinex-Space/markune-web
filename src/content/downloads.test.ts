@@ -3,6 +3,7 @@ import {
   detectMacArchitecture,
   detectOperatingSystem,
   formatDownloadSize,
+  formatPublishedDate,
   parseDownloadManifest,
 } from "./downloads";
 
@@ -32,6 +33,7 @@ describe("download manifest", () => {
   it("accepts the stable OSS download schema", () => {
     expect(parseDownloadManifest(manifest()).version).toBe("0.1.15");
     expect(formatDownloadSize(202_422_575)).toBe("202.4 MB");
+    expect(formatPublishedDate("2026-07-26T06:07:09.000Z")).toBe("2026年7月26日");
   });
 
   it("rejects missing artifacts and unexpected download hosts", () => {

@@ -11,11 +11,11 @@ export function FaqSection() {
     <section className="section faq-section" id="faq">
       <div className="container faq-layout">
         <div className="faq-intro scroll-reveal">
-          <div><p className="eyebrow"><Hexagon aria-hidden size={12} />FAQ</p><h2>Answers to the questions that come up most</h2></div>
+          <div><p className="eyebrow"><Hexagon aria-hidden size={12} />常见问题</p><h2>常见问题解答</h2></div>
           <div className="faq-support">
             <div className="faq-avatars"><Image alt="" height={32} src="/assets/testimonial-daniel.jpg" width={32} /><Image alt="" height={32} src="/assets/testimonial-olivia.png" width={32} /></div>
-            <p><strong>Have more questions ?</strong><span>Reach out to our support team.</span></p>
-            <ButtonLink href="/contact/">Contact us <ArrowRight aria-hidden size={16} /></ButtonLink>
+            <p><strong>还有其他问题？</strong><span>欢迎联系我们的支持团队。</span></p>
+            <ButtonLink href="/contact/">联系我们 <ArrowRight aria-hidden size={16} /></ButtonLink>
           </div>
         </div>
         <Accordion.Root className="faq-list scroll-reveal" collapsible type="single">

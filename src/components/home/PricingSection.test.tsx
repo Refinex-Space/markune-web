@@ -10,9 +10,9 @@ describe("PricingSection", () => {
     expect(screen.getByTestId("price-starter")).toHaveTextContent("$9");
     expect(screen.getByTestId("price-pro")).toHaveTextContent("$15");
     expect(screen.getByTestId("price-business")).toHaveTextContent("$35");
-    expect(screen.getAllByRole("link", { name: /Download/ })).toHaveLength(3);
-    expect(screen.getAllByRole("link", { name: /Download/ }).every((link) => link.getAttribute("href") === "/download")).toBe(true);
-    await user.click(screen.getByRole("button", { name: "Yearly" }));
+    expect(screen.getAllByRole("link", { name: /下载/ })).toHaveLength(3);
+    expect(screen.getAllByRole("link", { name: /下载/ }).every((link) => link.getAttribute("href") === "/download")).toBe(true);
+    await user.click(screen.getByRole("button", { name: "年付" }));
     expect(screen.getByTestId("price-starter")).toHaveTextContent("$7");
     expect(screen.getByTestId("price-pro")).toHaveTextContent("$12");
     expect(screen.getByTestId("price-business")).toHaveTextContent("$28");

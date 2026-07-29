@@ -2,6 +2,6 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsSections } from "@/content/legal";
 
-export const metadata: Metadata = { title: "Terms of Service", description: "The terms that govern use of Flowline." };
+export const metadata: Metadata = { title: "服务条款", description: "使用 Madora 时适用的条款。" };
 
-export default function TermsPage() { return <LegalPage date="Apr 14, 2026" sections={termsSections} title="Terms of Service" />; }
+export default function TermsPage() { return <LegalPage date="2026年4月14日" sections={termsSections} title="服务条款" />; }

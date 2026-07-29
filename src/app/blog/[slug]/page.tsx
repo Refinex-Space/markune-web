@@ -50,7 +50,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </picture>
         </div>
         <div className="article-content-layout">
-          <div className="article-meta"><span>by <strong>{post.author}</strong></span><span>{post.date}</span><span>{post.readTime}</span></div>
+          <div className="article-meta"><span>作者：<strong>{post.author}</strong></span><span>{post.date}</span><span>{post.readTime}</span></div>
           <div className="article-body">
             {post.blocks.map((block) => (
               <section className="scroll-reveal" key={block.heading}>
@@ -62,7 +62,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </div>
       </article>
       <section className={`section related-section${hasCompactRelatedSection ? " related-section--compact" : ""}${hasAutomationRelatedSection ? " related-section--automation" : ""}`}>
-        <div className="container section-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />MORE FROM THE BLOG</p><h2>Ideas for better teamwork.</h2></div>
+        <div className="container section-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />更多文章</p><h2>让团队协作更高效的思考。</h2></div>
         <div className="container blog-grid scroll-reveal">{related.map((item) => <BlogCard key={item.slug} post={item} />)}</div>
       </section>
       <CallToAction />

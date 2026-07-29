@@ -22,21 +22,21 @@ export function Header() {
   return (
     <header className={`site-header ${open ? "site-header--open" : ""}`}>
       <div className="container header-inner">
-        <Link aria-label={`${siteConfig.name} home`} className="brand" href="/" onClick={() => setOpen(false)}>
+        <Link aria-label={`${siteConfig.name} 首页`} className="brand" href="/" onClick={() => setOpen(false)}>
           <Image alt="" aria-hidden height={28} priority src={assets.logo} width={28} />
           <span>{siteConfig.name}</span>
         </Link>
-        <nav aria-label="Primary navigation" className="desktop-nav">
+        <nav aria-label="主导航" className="desktop-nav">
           {navItems.map((item) => (
             <Link href={item.href} key={item.label}>{item.label}</Link>
           ))}
         </nav>
         <div className="header-actions">
-          <Link className="login-link" href={siteConfig.loginHref}>Login</Link>
-          <ButtonLink className="header-trial" href={siteConfig.downloadHref}>Download <ArrowRight aria-hidden size={15} /></ButtonLink>
+          <Link className="login-link" href={siteConfig.loginHref}>登录</Link>
+          <ButtonLink className="header-trial" href={siteConfig.downloadHref}>下载 <ArrowRight aria-hidden size={15} /></ButtonLink>
           <button
             aria-expanded={open}
-            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={open ? "关闭导航菜单" : "打开导航菜单"}
             className="menu-toggle"
             onClick={() => setOpen((value) => !value)}
             type="button"
@@ -46,12 +46,12 @@ export function Header() {
         </div>
       </div>
       {open ? (
-        <nav aria-label="Mobile navigation" className="mobile-nav">
+        <nav aria-label="移动端导航" className="mobile-nav">
           <div className="container mobile-nav-inner">
             {navItems.map((item) => (
               <Link href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link>
             ))}
-            <Link className="button button--primary" href={siteConfig.downloadHref} onClick={() => setOpen(false)}>Download</Link>
+            <Link className="button button--primary" href={siteConfig.downloadHref} onClick={() => setOpen(false)}>下载</Link>
           </div>
         </nav>
       ) : null}

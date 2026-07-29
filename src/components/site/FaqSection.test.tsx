@@ -7,11 +7,11 @@ describe("FaqSection", () => {
   it("opens one answer and can collapse it", async () => {
     const user = userEvent.setup();
     render(<FaqSection />);
-    const trigger = screen.getByRole("button", { name: "Is there a free trial?" });
+    const trigger = screen.getByRole("button", { name: "是否提供免费试用？" });
     expect(trigger).toHaveAttribute("aria-expanded", "false");
     await user.click(trigger);
     expect(trigger).toHaveAttribute("aria-expanded", "true");
-    expect(screen.getByText(/Every plan comes with a 14-day free trial/)).toBeVisible();
+    expect(screen.getByText(/每个方案均提供 14 天免费试用/)).toBeVisible();
     await user.click(trigger);
     expect(trigger).toHaveAttribute("aria-expanded", "false");
   });

@@ -7,13 +7,13 @@ describe("Header", () => {
   it("toggles the mobile navigation and closes with Escape", async () => {
     const user = userEvent.setup();
     render(<Header />);
-    const button = screen.getByRole("button", { name: "Open navigation menu" });
-    expect(screen.getByRole("link", { name: /Download/ })).toHaveAttribute("href", "/download");
+    const button = screen.getByRole("button", { name: "打开导航菜单" });
+    expect(screen.getByRole("link", { name: /下载/ })).toHaveAttribute("href", "/download");
     await user.click(button);
-    expect(screen.getByRole("navigation", { name: "Mobile navigation" })).toBeInTheDocument();
-    expect(screen.getByRole("navigation", { name: "Mobile navigation" }).querySelector('a[href="/download"]')).toHaveTextContent("Download");
-    expect(screen.getByRole("button", { name: "Close navigation menu" })).toHaveAttribute("aria-expanded", "true");
+    expect(screen.getByRole("navigation", { name: "移动端导航" })).toBeInTheDocument();
+    expect(screen.getByRole("navigation", { name: "移动端导航" }).querySelector('a[href="/download"]')).toHaveTextContent("下载");
+    expect(screen.getByRole("button", { name: "关闭导航菜单" })).toHaveAttribute("aria-expanded", "true");
     await user.keyboard("{Escape}");
-    expect(screen.queryByRole("navigation", { name: "Mobile navigation" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("navigation", { name: "移动端导航" })).not.toBeInTheDocument();
   });
 });

@@ -30,32 +30,34 @@ for (const route of routes) {
     }
     const response = await page.goto(route);
     expect(response?.ok()).toBeTruthy();
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
     await expect(page.locator("h1")).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth === document.documentElement.clientWidth)).toBe(true);
     expect(errors).toEqual([]);
   });
 }
 
 test("home interactions work with keyboard and links", async ({ page }, testInfo) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "Yearly" }).click();
+  await page.getByRole("button", { name: "年付" }).click();
   await expect(page.getByTestId("price-starter")).toHaveText("$7");
-  const faq = page.getByRole("button", { name: "Is there a free trial?" });
+  const faq = page.getByRole("button", { name: "是否提供免费试用？" });
   await faq.focus();
   await page.keyboard.press("Enter");
   await expect(faq).toHaveAttribute("aria-expanded", "true");
   if (testInfo.project.name !== "chromium") {
-    await page.getByRole("button", { name: "Open navigation menu" }).click();
-    await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toBeVisible();
+    await page.getByRole("button", { name: "打开导航菜单" }).click();
+    await expect(page.getByRole("navigation", { name: "移动端导航" })).toBeVisible();
   }
   const featuresLink = testInfo.project.name === "chromium"
-    ? page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Features" })
-    : page.getByRole("navigation", { name: "Mobile navigation" }).getByRole("link", { name: "Features" });
+    ? page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "功能" })
+    : page.getByRole("navigation", { name: "移动端导航" }).getByRole("link", { name: "功能" });
   await featuresLink.click();
   await expect(page).toHaveURL(/#features$/);
   await expect(page.locator("#features")).toBeInViewport();
-  await page.getByRole("contentinfo").getByRole("link", { name: "Blog" }).click();
+  await page.getByRole("contentinfo").getByRole("link", { name: "博客" }).click();
   await expect(page).toHaveURL(/\/blog\/$/);
-  await page.getByRole("link", { name: "What we shipped in Q1" }).first().click();
+  await page.getByRole("link", { name: "我们在第一季度发布了什么" }).first().click();
   await expect(page).toHaveURL(/\/blog\/what-we-shipped-in-q1\/$/);
 });
 
@@ -70,19 +72,19 @@ test("download page recommends the device and supports explicit installer choice
   await page.route("**/downloads/stable.json", (request) => request.fulfill({ json: downloadManifest }));
   await page.goto("/download/");
 
-  await expect(page.getByText("Recommended for this device")).toBeVisible();
+  await expect(page.getByText("推荐此设备使用")).toBeVisible();
   await expect(page.getByTestId("download-link")).toHaveAttribute("href", downloadManifest.artifacts["windows-x64-exe"].url);
   await page.getByTestId("download-link").hover();
   await expect(page.getByTestId("download-link")).toHaveCSS("background-color", "rgb(203, 255, 151)");
   await expect(page.getByTestId("download-link")).toHaveCSS("color", "rgb(6, 8, 3)");
   await page.getByRole("button", { name: "macOS" }).focus();
   await page.keyboard.press("Enter");
-  await page.getByRole("button", { name: /Intel processor/ }).focus();
+  await page.getByRole("button", { name: /Intel 处理器/ }).focus();
   await page.keyboard.press("Enter");
   await expect(page.getByTestId("download-link")).toHaveAttribute("href", downloadManifest.artifacts["macos-x64-dmg"].url);
   expect(await page.evaluate(() => document.documentElement.scrollWidth === document.documentElement.clientWidth)).toBe(true);
-  await page.getByRole("button", { name: "Copy SHA-256 checksum" }).click();
-  await expect(page.getByRole("button", { name: "Copy SHA-256 checksum" })).toContainText("Copied");
+  await page.getByRole("button", { name: "复制 SHA-256 校验值" }).click();
+  await expect(page.getByRole("button", { name: "复制 SHA-256 校验值" })).toContainText("已复制");
 });
 
 test("download page exposes a retry path when the stable manifest fails", async ({ page }, testInfo) => {
@@ -93,25 +95,25 @@ test("download page exposes a retry path when the stable manifest fails", async 
     return request.fulfill({ json: downloadManifest });
   });
   await page.goto("/download/");
-  await expect(page.getByRole("alert").filter({ hasText: "We couldn't load the latest release" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "View GitHub Releases" })).toHaveAttribute("href", "https://github.com/Refinex-Space/madora-site/releases/latest");
+  await expect(page.getByRole("alert").filter({ hasText: "无法加载最新版本" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "查看 GitHub Releases" })).toHaveAttribute("href", "https://github.com/Refinex-Space/madora-site/releases/latest");
   shouldFail = false;
-  await page.getByRole("button", { name: "Retry" }).click();
+  await page.getByRole("button", { name: "重试" }).click();
   await expect(page.getByTestId("download-link")).toBeVisible();
 });
 
 test("contact validates then reaches success without a network request", async ({ page }) => {
   await page.goto("/contact/");
-  await page.getByRole("button", { name: "Send message" }).click();
-  await expect(page.getByText("Please select a subject.")).toBeVisible();
-  await page.getByLabel("First name*").fill("Ava");
-  await page.getByLabel("Last name*").fill("Chen");
-  await page.getByLabel("Email*").fill("ava@example.com");
-  await page.getByRole("combobox", { name: "Subject*" }).click();
-  await page.getByRole("option", { name: "General inquiry" }).click();
-  await page.getByLabel("Your message*").fill("I would like a demo.");
-  await page.getByText("I'd like to receive updates and news via email.").click();
-  await page.getByRole("button", { name: "Send message" }).click();
-  await expect(page.getByRole("button", { name: "Sending…" })).toBeDisabled();
-  await expect(page.getByRole("status")).toContainText("Request received!");
+  await page.getByRole("button", { name: "发送消息" }).click();
+  await expect(page.getByText("请选择咨询主题。")).toBeVisible();
+  await page.getByLabel("名字*").fill("小明");
+  await page.getByLabel("姓氏*").fill("张");
+  await page.getByLabel("电子邮箱*").fill("ava@example.com");
+  await page.getByRole("combobox", { name: "咨询主题*" }).click();
+  await page.getByRole("option", { name: "一般咨询" }).click();
+  await page.getByLabel("留言内容*").fill("我想预约一次演示。");
+  await page.getByText("我希望通过电子邮件接收产品更新与资讯。").click();
+  await page.getByRole("button", { name: "发送消息" }).click();
+  await expect(page.getByRole("button", { name: "发送中…" })).toBeDisabled();
+  await expect(page.getByRole("status")).toContainText("已收到你的请求！");
 });
