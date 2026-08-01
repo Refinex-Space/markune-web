@@ -82,7 +82,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ClientLogoStrip showMetric />
+      <ClientLogoStrip showMetric showTechnologyStack />
 
       <section className="section feature-section" id="features">
         <div className="container section-heading split-heading scroll-reveal">

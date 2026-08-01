@@ -1,22 +1,53 @@
-import { ArrowUpRight, CircleNotch, Cube, SquaresFour, StarFour, WaveSine } from "@phosphor-icons/react/dist/ssr";
+import CodexOpenaiIcon from "@thesvg/react/codex-openai";
+import NextdotjsIcon from "@thesvg/react/nextdotjs";
+import ReactIcon from "@thesvg/react/react";
+import RustIcon from "@thesvg/react/rust";
+import TailwindCssIcon from "@thesvg/react/tailwind-css";
+import TauriIcon from "@thesvg/react/tauri";
+import TypescriptIcon from "@thesvg/react/typescript";
+import { ArrowUpRight, CircleNotch, Cube, MarkdownLogo, SquaresFour, StarFour, WaveSine } from "@phosphor-icons/react/dist/ssr";
 
 const clientLogos = [
-  { label: "Codecraft_", Icon: SquaresFour },
-  { label: "Frequencii", Icon: WaveSine },
-  { label: "Kintsugi", Icon: StarFour },
-  { label: "CoreOS", Icon: Cube },
-  { label: "Luminary", Icon: CircleNotch },
-  { label: "45 Degrees°", Icon: ArrowUpRight },
+  { label: "Codecraft_", renderIcon: () => <SquaresFour aria-hidden size={28} weight="fill" /> },
+  { label: "Frequencii", renderIcon: () => <WaveSine aria-hidden size={28} weight="fill" /> },
+  { label: "Kintsugi", renderIcon: () => <StarFour aria-hidden size={28} weight="fill" /> },
+  { label: "CoreOS", renderIcon: () => <Cube aria-hidden size={28} weight="fill" /> },
+  { label: "Luminary", renderIcon: () => <CircleNotch aria-hidden size={28} weight="fill" /> },
+  { label: "45 Degrees°", renderIcon: () => <ArrowUpRight aria-hidden size={28} weight="fill" /> },
 ];
 
-export function ClientLogoStrip({ showMetric = false }: { showMetric?: boolean }) {
+const technologyStack = [
+  { label: "Next.js", renderIcon: () => <NextdotjsIcon aria-hidden height={28} variant="mono" width={28} /> },
+  { label: "React", renderIcon: () => <ReactIcon aria-hidden height={28} variant="mono" width={28} /> },
+  { label: "TypeScript", renderIcon: () => <TypescriptIcon aria-hidden height={28} variant="mono" width={28} /> },
+  { label: "Tauri", renderIcon: () => <TauriIcon aria-hidden height={28} variant="mono" width={28} /> },
+  { label: "Rust", renderIcon: () => <RustIcon aria-hidden height={28} variant="mono" width={28} /> },
+  { label: "Tailwind CSS", renderIcon: () => <TailwindCssIcon aria-hidden height={28} variant="mono" width={28} /> },
+  { label: "Markweave", renderIcon: () => <MarkdownLogo aria-hidden size={28} weight="bold" /> },
+  { label: "Codex", renderIcon: () => <CodexOpenaiIcon aria-hidden height={28} variant="mono" width={28} /> },
+];
+
+export function ClientLogoStrip({ showMetric = false, showTechnologyStack = false }: { showMetric?: boolean; showTechnologyStack?: boolean }) {
+  const items = showTechnologyStack ? technologyStack : clientLogos;
+  const sectionLabel = showTechnologyStack ? "Madora 技术栈" : "信任 Madora 的客户";
+  const summary = showTechnologyStack
+    ? "Madora 基于以下核心技术栈构建"
+    : "已有 240 万项任务通过 Madora 完成";
+
   return (
-    <section aria-label="信任 Madora 的客户" className={`logo-strip ${showMetric ? "" : "logo-strip--logos-only"}`}>
-      {showMetric ? <p>已有 240 万项任务通过 Madora 完成</p> : null}
+    <section aria-label={sectionLabel} className={`logo-strip ${showMetric ? "" : "logo-strip--logos-only"} ${showTechnologyStack ? "logo-strip--technology" : ""}`}>
+      {showMetric ? <p>{summary}</p> : null}
       <div className="logo-ticker">
         <div className="logo-track">
-          {[...clientLogos, ...clientLogos].map(({ label, Icon }, index) => (
-            <span className="client-logo" key={`${label}-${index}`}><Icon aria-hidden size={28} weight="fill" />{label}</span>
+          {[...items, ...items].map(({ label, renderIcon }, index) => (
+            <span
+              className={`client-logo ${showTechnologyStack ? "client-logo--technology" : ""}`}
+              data-technology={showTechnologyStack ? label : undefined}
+              key={`${label}-${index}`}
+            >
+              {renderIcon()}
+              {label}
+            </span>
           ))}
         </div>
       </div>

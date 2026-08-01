@@ -39,6 +39,10 @@ for (const route of routes) {
 
 test("home interactions work with keyboard and links", async ({ page }, testInfo) => {
   await page.goto("/");
+  const technologyStack = page.getByRole("region", { name: "Madora 技术栈" });
+  await expect(technologyStack).toContainText("Madora 基于以下核心技术栈构建");
+  await expect(technologyStack.locator(".client-logo--technology")).toHaveCount(16);
+  await expect(page.getByText("已有 240 万项任务通过 Madora 完成")).toHaveCount(0);
   await page.getByRole("button", { name: "年付" }).click();
   await expect(page.getByTestId("price-starter")).toHaveText("$7");
   const faq = page.getByRole("button", { name: "是否提供免费试用？" });
