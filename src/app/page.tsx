@@ -138,10 +138,10 @@ export default function HomePage() {
           })}
         </div>
         <div className="container capability-stats scroll-reveal">
-          <p>以性能为本，<br />经规模化验证。</p>
-          <div><span>稳定运行率</span><strong>98%</strong></div>
-          <div><span>已完成任务</span><strong>240 万</strong></div>
-          <div><span>用户评分</span><strong>4.8/5</strong></div>
+          <p>让记录沉淀在你的目录里，<br />而不是平台的指标里。</p>
+          <div><span>本地文件与附件</span><strong>100%</strong></div>
+          <div><span>支持的桌面平台</span><strong>2</strong></div>
+          <div><span>核心文档格式</span><strong>1</strong></div>
         </div>
       </section>
 
