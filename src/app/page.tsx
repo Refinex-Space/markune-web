@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowsClockwise, At, ChartLineUp, ChatCircleDots, CirclesThreePlus, ClipboardText, DownloadSimple, Fire, GitBranch, GitMerge, Hexagon, ListDashes, Paperclip } from "@phosphor-icons/react/dist/ssr";
+import { ArrowBendUpRight, ArrowRight, ArrowsClockwise, CalendarDots, ChartLineUp, CirclesThreePlus, ClipboardText, FileMagnifyingGlass, FileText, GitBranch, GitMerge, Hexagon, ImageSquare, Tray } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,26 +18,36 @@ export const metadata: Metadata = {
 
 const capabilities = [
   {
-    eyebrow: "团队协作与沟通",
-    title: "无需无休止的状态会议，也能让整个团队保持一致。",
-    features: ["直接在任意任务中评论", "使用 @mentions 提及团队成员", "从桌面或云端添加附件"],
-    image: "/assets/capability-comments-render.avif",
-    icons: [ChatCircleDots, At, Paperclip],
+    eyebrow: "本地 Markdown 工作区",
+    title: "把笔记、图片与画板留在自己的文件夹中，始终可读、可迁移。",
+    features: ["直接打开并编辑现有 Markdown 文件", "全文搜索文档与图稿，快速回到需要的上下文", "在文档中插入并管理本地图片与附件"],
+    image: "/assets/pricing-background.webp",
+    imageClass: "capability-image--workspace",
+    overlayImage: "/assets/capability-local-workspace.png",
+    overlayWidth: 724,
+    overlayHeight: 984,
+    icons: [FileText, FileMagnifyingGlass, ImageSquare],
   },
   {
-    eyebrow: "洞察与绩效",
-    title: "尽早发现瓶颈，让每个项目始终按计划推进。",
-    features: ["按团队或成员跟踪完成率", "在成员不堪重负前发现工作量问题", "一键为相关方导出报告"],
-    image: "/assets/capability-analytics-render.avif",
-    icons: [ListDashes, Fire, DownloadSimple],
+    eyebrow: "Inbox 与 Daily",
+    title: "先捕捉当下，再在合适的时间把零散想法变成清晰的记录。",
+    features: ["在 Inbox 收集零散想法、待办与阅读摘录", "一键提升为笔记，或追加到当天的 Daily", "按日期回顾持续积累的工作脉络"],
+    image: "/assets/pricing-background.webp",
+    imageClass: "capability-image--inbox-daily",
+    overlayImage: "/assets/capability-inbox-daily.png",
+    overlayWidth: 2186,
+    overlayHeight: 1230,
+    icons: [Tray, ArrowBendUpRight, CalendarDots],
   },
   {
     eyebrow: "Git Sync",
-    title: "让工作区在本地与远程仓库之间保持一致。",
+    title: "用熟悉的 Git 工作流，让本地知识库始终有可追溯的同步。",
     features: ["提交、拉取并推送当前工作区", "按设定频率自动同步，也可随时立即同步", "出现差异时明确选择保留本地或远程版本"],
-    image: "/assets/capability-integrations-render.avif",
+    image: "/assets/pricing-background.webp",
     imageClass: "capability-image--git-sync",
-    overlayImage: "/assets/capability-git-sync-overview.png",
+    overlayImage: "/assets/capability-git-sync-panel.png",
+    overlayWidth: 2208,
+    overlayHeight: 1496,
     icons: [GitBranch, ArrowsClockwise, GitMerge],
   },
 ];
@@ -102,8 +112,8 @@ export default function HomePage() {
 
       <section className="capabilities-section" id="benefits">
         <div className="container section-heading split-heading capabilities-heading scroll-reveal">
-          <div><p className="eyebrow eyebrow--light"><Hexagon aria-hidden size={12} />核心能力</p><h2>为团队真实的工作方式而打造。</h2></div>
-          <p>Madora 不会强迫你适应僵化流程，而是灵活配合你的工作流。</p>
+          <div><p className="eyebrow eyebrow--light"><Hexagon aria-hidden size={12} />核心能力</p><h2>把每天的记录，留在自己的工作区里持续生长。</h2></div>
+          <p>从收集灵感到日程回顾，再到 Git 同步，Madora 让 Markdown 文件成为一套可长期维护的个人工作系统。</p>
         </div>
         <div className="container capability-list scroll-reveal">
           {capabilities.map((item, index) => {
@@ -112,8 +122,8 @@ export default function HomePage() {
                 <div className={`capability-image ${item.imageClass ?? ""}`}>
                   <Image alt="" fill sizes="(max-width: 809px) 100vw, 50vw" src={item.image} />
                   {item.overlayImage ? (
-                    <div className="capability-image-git-sync-frame">
-                      <Image alt="" height={1430} sizes="(max-width: 809px) 52vw, 330px" src={item.overlayImage} width={2154} />
+                    <div className="capability-image-overlay-frame">
+                      <Image alt="" height={item.overlayHeight} sizes="(max-width: 809px) 52vw, 460px" src={item.overlayImage} width={item.overlayWidth} />
                     </div>
                   ) : null}
                 </div>
