@@ -53,9 +53,12 @@ export interface BlogPost {
 export interface PricingPlan {
   name: string;
   description: string;
-  monthlyPrice: number;
-  yearlyPrice: number;
+  price: string;
+  priceUnit: string;
+  actionLabel: string;
   popular?: boolean;
+  disabled?: boolean;
+  note: string;
   features: string[];
 }
 

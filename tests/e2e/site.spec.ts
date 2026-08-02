@@ -56,8 +56,9 @@ test("home interactions work with keyboard and links", async ({ page }, testInfo
   await expect(page.getByText("在 Inbox 收集零散想法、待办与阅读摘录")).toBeVisible();
   await expect(page.getByText("用熟悉的 Git 工作流，让本地知识库始终有可追溯的同步。", { exact: true })).toBeVisible();
   await expect(page.getByText("提交、拉取并推送当前工作区")).toBeVisible();
-  await page.getByRole("button", { name: "年付" }).click();
-  await expect(page.getByTestId("price-starter")).toHaveText("$7");
+  await expect(page.getByTestId("price-starter")).toHaveText("¥0");
+  await expect(page.getByTestId("price-pro")).toHaveText("¥89");
+  await expect(page.getByRole("button", { name: "暂未开放" })).toBeDisabled();
   const faq = page.getByRole("button", { name: "我的文档保存在哪里？" });
   await faq.focus();
   await page.keyboard.press("Enter");
