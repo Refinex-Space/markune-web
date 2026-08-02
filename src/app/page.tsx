@@ -12,8 +12,8 @@ import { blogPosts } from "@/content/blog";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: { absolute: `${siteConfig.name} — 组织工作，协同团队，高效交付` },
-  description: "Madora 将任务、时间线与团队沟通集中到一个专注的工作区中。",
+  title: { absolute: `${siteConfig.name} — 写下想法，让工作自然展开` },
+  description: "Madora 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。",
 };
 
 const capabilities = [
@@ -52,8 +52,8 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="container hero-copy hero-copy--enter">
           <div className="hero-main-copy">
-            <h1>组织工作，协同团队，<br />更高效地交付。</h1>
-            <p>Madora 将任务、时间线与团队沟通集中到一个专注的工作区中。</p>
+            <h1>写下想法，<br />让工作自然展开。</h1>
+            <p>Madora 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。</p>
           </div>
           <div className="hero-actions">
             <ButtonLink href={siteConfig.downloadHref}>下载 <ArrowRight aria-hidden size={15} /></ButtonLink>
