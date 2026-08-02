@@ -322,7 +322,7 @@ main { overflow: clip; }
 .cta-card h2 { width: 510px; font-size: 40px; line-height: 48px; }
 .cta-copy > p { width: 510px; margin-top: 24px; color: var(--muted); font-size: 16px; font-weight: 500; letter-spacing: -.03em; line-height: 24px; }
 .cta-card .button { width: max-content; min-height: 42.203px; margin-top: 32px; font-size: 14px; font-weight: 500; }
-.cta-dashboard { position: absolute; z-index: 1; top: 39px; left: 670px; width: 660px; max-width: none; height: 391px; border-radius: 12px 0 0; object-fit: cover; }
+.cta-workspace-preview { position: absolute; z-index: 1; top: 39px; left: 670px; width: 660px; max-width: none; height: 391px; border-radius: 12px 0 0; object-fit: cover; object-position: left top; }
 .site-footer { height: 469.609px; border-top: 1px solid var(--border); padding: 100px 0; background: #fff; }
 .footer-grid { position: relative; display: grid; grid-template-columns: 590px repeat(3, 183.33px); gap: 20px; }
 .footer-logo-lockup { display: inline-flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
@@ -654,7 +654,7 @@ main { overflow: clip; }
   .cta-copy { align-items: center; justify-content: flex-start; padding: 80px 0 0; text-align: center; }
   .cta-card h2 { width: 560px; font-size: 32px; line-height: 38.4px; }
   .cta-copy > p { width: 560px; }
-  .cta-dashboard { top: 327.016px; left: 126.875px; width: 722.234px; height: 427.422px; border-radius: 12px; }
+  .cta-workspace-preview { top: 327.016px; left: 126.875px; width: 722.234px; height: 427.422px; border-radius: 12px; }
 
   .footer-grid { grid-template-columns: 478px repeat(3, minmax(0, 1fr)); }
 
@@ -803,7 +803,7 @@ main { overflow: clip; }
   .cta-card h2 { width: 286px; font-size: 26px; line-height: 31.2px; }
   .cta-copy > p { width: 286px; margin-top: 24px; font-size: 16px; font-weight: 500; line-height: 24px; }
   .cta-card .button { align-self: center; width: max-content; margin-top: 32px; }
-  .cta-dashboard { top: 308.609px; left: 19.688px; width: 318.609px; height: 188.547px; border-radius: 4px; }
+  .cta-workspace-preview { top: 308.609px; left: 19.688px; width: 318.609px; height: 188.547px; border-radius: 4px; }
   .site-footer { height: 660.469px; padding: 60px 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; column-gap: 22px; row-gap: 0; }
   .footer-brand { grid-column: 1 / -1; margin-bottom: 40px; }
