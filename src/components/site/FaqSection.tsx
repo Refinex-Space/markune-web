@@ -13,9 +13,9 @@ export function FaqSection() {
         <div className="faq-intro scroll-reveal">
           <div><p className="eyebrow"><Hexagon aria-hidden size={12} />常见问题</p><h2>常见问题解答</h2></div>
           <div className="faq-support">
-            <div className="faq-avatars"><Image alt="" height={32} src="/assets/testimonial-daniel.jpg" width={32} /><Image alt="" height={32} src="/assets/testimonial-olivia.png" width={32} /></div>
+            <div className="faq-avatars"><Image alt="Madora 支持团队" height={44} src="/assets/madora-support-avatar.png" width={44} /></div>
             <p><strong>还有其他问题？</strong><span>欢迎联系我们的支持团队。</span></p>
-            <ButtonLink href="/contact/">联系我们 <ArrowRight aria-hidden size={16} /></ButtonLink>
+            <ButtonLink href="mailto:refinexcn@gmail.com">联系我们 <ArrowRight aria-hidden size={16} /></ButtonLink>
           </div>
         </div>
         <Accordion.Root className="faq-list scroll-reveal" collapsible type="single">

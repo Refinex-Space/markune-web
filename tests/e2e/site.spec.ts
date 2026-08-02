@@ -47,7 +47,7 @@ test("home interactions work with keyboard and links", async ({ page }, testInfo
   await expect(page.getByText("已有 240 万项任务通过 Madora 完成")).toHaveCount(0);
   await page.getByRole("button", { name: "年付" }).click();
   await expect(page.getByTestId("price-starter")).toHaveText("$7");
-  const faq = page.getByRole("button", { name: "是否提供免费试用？" });
+  const faq = page.getByRole("button", { name: "我的文档保存在哪里？" });
   await faq.focus();
   await page.keyboard.press("Enter");
   await expect(faq).toHaveAttribute("aria-expanded", "true");
