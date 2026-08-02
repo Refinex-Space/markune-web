@@ -33,6 +33,7 @@ const requiredAssets = [
   "capability-comments-render.avif",
   "capability-analytics-render.avif",
   "capability-integrations-render.avif",
+  "capability-git-sync-overview.png",
   "pricing-background.webp",
   "pricing-background-render.avif",
   "testimonial-local-notebooks.jpg",

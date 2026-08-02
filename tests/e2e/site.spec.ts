@@ -47,6 +47,8 @@ test("home interactions work with keyboard and links", async ({ page }, testInfo
   await expect(page.getByText("已有 240 万项任务通过 Madora 完成")).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "让每一次记录，都能继续向前。" })).toBeVisible();
   await expect(page.getByText("文件始终在你手里")).toBeVisible();
+  await expect(page.getByText("让工作区在本地与远程仓库之间保持一致。", { exact: true })).toBeVisible();
+  await expect(page.getByText("提交、拉取并推送当前工作区")).toBeVisible();
   await page.getByRole("button", { name: "年付" }).click();
   await expect(page.getByTestId("price-starter")).toHaveText("$7");
   const faq = page.getByRole("button", { name: "我的文档保存在哪里？" });

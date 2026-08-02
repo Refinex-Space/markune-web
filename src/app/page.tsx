@@ -1,4 +1,4 @@
-import { ArrowRight, At, ChartLineUp, ChatCircleDots, CirclesThreePlus, ClipboardText, DownloadSimple, Fire, HardDrive, Hexagon, ListDashes, Paperclip, Plug, SlackLogo } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, ArrowsClockwise, At, ChartLineUp, ChatCircleDots, CirclesThreePlus, ClipboardText, DownloadSimple, Fire, GitBranch, GitMerge, Hexagon, ListDashes, Paperclip } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,11 +32,13 @@ const capabilities = [
     icons: [ListDashes, Fire, DownloadSimple],
   },
   {
-    eyebrow: "连接与同步",
-    title: "告别频繁切换应用，在一个地方完成工作。",
-    features: ["从 Google Drive 或 Dropbox 自动同步文件", "将任务更新发送到 Slack 频道", "连接 Zapier 构建自定义工作流"],
+    eyebrow: "Git Sync",
+    title: "让工作区在本地与远程仓库之间保持一致。",
+    features: ["提交、拉取并推送当前工作区", "按设定频率自动同步，也可随时立即同步", "出现差异时明确选择保留本地或远程版本"],
     image: "/assets/capability-integrations-render.avif",
-    icons: [HardDrive, SlackLogo, Plug],
+    imageClass: "capability-image--git-sync",
+    overlayImage: "/assets/capability-git-sync-overview.png",
+    icons: [GitBranch, ArrowsClockwise, GitMerge],
   },
 ];
 
@@ -107,7 +109,14 @@ export default function HomePage() {
           {capabilities.map((item, index) => {
             return (
               <article className={`capability ${index % 2 ? "capability--reverse" : ""}`} key={item.eyebrow}>
-                <div className="capability-image"><Image alt="" fill sizes="(max-width: 809px) 100vw, 50vw" src={item.image} /></div>
+                <div className={`capability-image ${item.imageClass ?? ""}`}>
+                  <Image alt="" fill sizes="(max-width: 809px) 100vw, 50vw" src={item.image} />
+                  {item.overlayImage ? (
+                    <div className="capability-image-git-sync-frame">
+                      <Image alt="" height={1430} sizes="(max-width: 809px) 52vw, 330px" src={item.overlayImage} width={2154} />
+                    </div>
+                  ) : null}
+                </div>
                 <div className="capability-copy">
                   <h3>{item.eyebrow}</h3>
                   <p>{item.title}</p>
