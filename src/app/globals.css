@@ -162,9 +162,9 @@ main { overflow: clip; }
 .logo-ticker { overflow: hidden; }
 .logo-track { display: flex; width: max-content; align-items: center; gap: 62px; animation: ticker 25s linear infinite; }
 .client-logo { display: inline-flex; min-width: 139px; align-items: center; gap: 9px; color: var(--ink); opacity: .3; font-size: 20px; font-weight: 700; letter-spacing: -.03em; white-space: nowrap; }
-.logo-strip--technology .logo-track { gap: 20px; animation-duration: 36s; }
-.client-logo--technology { min-width: auto; padding: 10px 16px; border: 1px solid rgba(6, 8, 3, .08); border-radius: 999px; background: #f8faf6; opacity: 1; font-size: 17px; font-weight: 600; letter-spacing: -.02em; }
-.client-logo--technology svg { width: 28px; height: 28px; flex: 0 0 auto; }
+.logo-strip--technology .logo-track { gap: 48px; animation-duration: 36s; }
+.client-logo--technology { min-width: auto; padding: 0; border: 0; border-radius: 0; background: transparent; color: rgba(6, 8, 3, .42); opacity: 1; font-size: 17px; font-weight: 600; letter-spacing: -.02em; }
+.client-logo--technology svg { width: 28px; height: 28px; flex: 0 0 auto; color: inherit; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
 /* Features */

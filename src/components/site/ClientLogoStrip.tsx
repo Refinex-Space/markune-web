@@ -1,11 +1,10 @@
-import CodexOpenaiIcon from "@thesvg/react/codex-openai";
 import NextdotjsIcon from "@thesvg/react/nextdotjs";
 import ReactIcon from "@thesvg/react/react";
 import RustIcon from "@thesvg/react/rust";
 import TailwindCssIcon from "@thesvg/react/tailwind-css";
 import TauriIcon from "@thesvg/react/tauri";
 import TypescriptIcon from "@thesvg/react/typescript";
-import { ArrowUpRight, CircleNotch, Cube, MarkdownLogo, SquaresFour, StarFour, WaveSine } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, CircleNotch, Cube, SquaresFour, StarFour, WaveSine } from "@phosphor-icons/react/dist/ssr";
 
 const clientLogos = [
   { label: "Codecraft_", renderIcon: () => <SquaresFour aria-hidden size={28} weight="fill" /> },
@@ -23,8 +22,6 @@ const technologyStack = [
   { label: "Tauri", renderIcon: () => <TauriIcon aria-hidden height={28} variant="mono" width={28} /> },
   { label: "Rust", renderIcon: () => <RustIcon aria-hidden height={28} variant="mono" width={28} /> },
   { label: "Tailwind CSS", renderIcon: () => <TailwindCssIcon aria-hidden height={28} variant="mono" width={28} /> },
-  { label: "Markweave", renderIcon: () => <MarkdownLogo aria-hidden size={28} weight="bold" /> },
-  { label: "Codex", renderIcon: () => <CodexOpenaiIcon aria-hidden height={28} variant="mono" width={28} /> },
 ];
 
 export function ClientLogoStrip({ showMetric = false, showTechnologyStack = false }: { showMetric?: boolean; showTechnologyStack?: boolean }) {

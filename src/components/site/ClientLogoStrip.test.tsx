@@ -9,8 +9,8 @@ describe("ClientLogoStrip", () => {
     expect(screen.getByRole("region", { name: "Madora 技术栈" })).toHaveTextContent("Madora 基于以下核心技术栈构建");
     const technologyLabels = Array.from(container.querySelectorAll("[data-technology]"), (item) => item.getAttribute("data-technology"));
     expect(technologyLabels).toEqual([
-      "Next.js", "React", "TypeScript", "Tauri", "Rust", "Tailwind CSS", "Markweave", "Codex",
-      "Next.js", "React", "TypeScript", "Tauri", "Rust", "Tailwind CSS", "Markweave", "Codex",
+      "Next.js", "React", "TypeScript", "Tauri", "Rust", "Tailwind CSS",
+      "Next.js", "React", "TypeScript", "Tauri", "Rust", "Tailwind CSS",
     ]);
 
     rerender(<ClientLogoStrip showMetric />);
