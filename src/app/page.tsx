@@ -41,9 +41,9 @@ const capabilities = [
 ];
 
 const testimonials = [
-  { quote: "仅时间线视图一项功能，每周就为我们省下了数小时的状态会议。现在每个人都能直接看到截止事项，无需反复询问。", name: "Daniel Kim", role: "Northbase 工程负责人", image: "/assets/testimonial-daniel.jpg" },
-  { quote: "我们从同时使用三个工具转为只使用 Madora。团队一天内完成上手，一周后整个项目流程对所有人都清晰可见。", name: "Olivia Cheng", role: "Clearwave 运营负责人", image: "/assets/testimonial-olivia.png" },
-  { quote: "我们用一个周末迁移了 40 人团队，没有收到任何抱怨。这种情况以前从未发生过。", name: "Martin Vasquez", role: "Peakform 运营总监", image: "/assets/testimonial-martin.png" },
+  { quote: "不用先把想法整理完美。打开文件夹、写下一句，之后再让它慢慢长成一篇文档。", name: "写作者", role: "从灵感到成文", image: "/assets/testimonial-avatar-writer.png" },
+  { quote: "会议结论、参考资料和下一步动作放在一起，项目交接终于有了大家都能找到的上下文。", name: "项目负责人", role: "让协作回到上下文", image: "/assets/testimonial-avatar-project-lead.png" },
+  { quote: "从一条随手记录开始，链接、日程和项目会逐渐形成可以持续维护的知识结构。", name: "知识工作者", role: "持续积累的工作系统", image: "/assets/testimonial-avatar-knowledge-worker.png" },
 ];
 
 export default function HomePage() {
@@ -127,17 +127,17 @@ export default function HomePage() {
       </section>
 
       <section className="testimonials-section">
-        <div className="container testimonials-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />用户评价</p><h2>听听用户怎么说。</h2></div>
+        <div className="container testimonials-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />使用场景</p><h2>让每一次记录，都能继续向前。</h2></div>
         <div className="container testimonial-showcase scroll-reveal">
           <div className="testimonial-metrics">
             <article className="metric-story">
-              <picture><source media="(max-width: 809px)" srcSet="/assets/team-james-mobile.avif" /><Image alt="微笑的 Madora 用户" fill sizes="(max-width: 809px) 100vw, 66vw" src="/assets/team-james-render.avif" /></picture>
-              <Image alt="ennLabs" className="metric-logo" height={48} src="/assets/customer-northbase.svg" style={{ width: "auto" }} width={162} />
-              <div className="metric-copy"><strong>40%</strong><p>45 人工程团队在一周内全面迁移到 Madora 后，项目交付速度提升。</p></div>
+              <Image alt="多本笔记本象征可持续积累的本地工作记录" fill sizes="(max-width: 809px) 100vw, 66vw" src="/assets/testimonial-local-notebooks.jpg" />
+              <span className="metric-kicker">本地优先</span>
+              <div className="metric-copy"><strong>文件始终在你手里</strong><p>用本地 Markdown 记录想法、沉淀资料；目录清晰、格式开放，也能按自己的方式备份与同步。</p></div>
             </article>
             <div className="metric-stack">
-              <article className="metric-small metric-small--lime"><Image alt="Codecraft" height={48} src="/assets/customer-clearwave.svg" style={{ width: "auto" }} width={202} /><div><strong>3 倍</strong><p>将四个独立工具整合到一个 Madora 工作区后，每季度交付的项目数量提升。</p></div></article>
-              <article className="metric-small metric-small--dark"><Image alt="45 Degrees" height={48} src="/assets/customer-peakform.svg" style={{ width: "auto" }} width={188} /><div><strong>12 小时</strong><p>自动化客户交付工作流后，每周从状态会议和手动更新中节省的时间。</p></div></article>
+              <article className="metric-small metric-small--lime"><span className="metric-kicker">Markdown</span><div><strong>无需迁移</strong><p>已有文件夹可以直接打开；写下的内容不被锁在专有格式里。</p></div></article>
+              <article className="metric-small metric-small--dark"><span className="metric-kicker">连续工作</span><div><strong>离线可用</strong><p>写作、整理与规划都在桌面完成；网络不是开始工作的前提。</p></div></article>
             </div>
           </div>
           <div className="testimonial-grid">

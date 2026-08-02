@@ -43,8 +43,10 @@ test("home interactions work with keyboard and links", async ({ page }, testInfo
   await expect(page.getByText("Madora 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。", { exact: true })).toBeVisible();
   const technologyStack = page.getByRole("region", { name: "Madora 技术栈" });
   await expect(technologyStack).toContainText("Madora 基于以下核心技术栈构建");
-  await expect(technologyStack.locator(".client-logo--technology")).toHaveCount(16);
+  await expect(technologyStack.locator(".client-logo--technology")).toHaveCount(12);
   await expect(page.getByText("已有 240 万项任务通过 Madora 完成")).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "让每一次记录，都能继续向前。" })).toBeVisible();
+  await expect(page.getByText("文件始终在你手里")).toBeVisible();
   await page.getByRole("button", { name: "年付" }).click();
   await expect(page.getByTestId("price-starter")).toHaveText("$7");
   const faq = page.getByRole("button", { name: "我的文档保存在哪里？" });

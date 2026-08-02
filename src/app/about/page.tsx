@@ -26,9 +26,9 @@ const team = [
 ];
 
 const quotes = [
-  { quote: "仅时间线视图一项功能，每周就为我们省下了数小时的状态会议。现在每个人都能直接看到截止事项，无需反复询问。", name: "Daniel Kim", role: "Northbase 工程负责人", image: "/assets/testimonial-daniel.jpg" },
-  { quote: "我们从同时使用三个工具转为只使用 Madora。团队一天内完成上手，一周后整个项目流程对所有人都清晰可见。", name: "Olivia Cheng", role: "Clearwave 运营负责人", image: "/assets/testimonial-olivia.png" },
-  { quote: "我们用一个周末迁移了 40 人团队，没有收到任何抱怨。这种情况以前从未发生过。", name: "Martin Vasquez", role: "Peakform 运营总监", image: "/assets/testimonial-martin.png" },
+  { quote: "仅时间线视图一项功能，每周就为我们省下了数小时的状态会议。现在每个人都能直接看到截止事项，无需反复询问。", name: "Daniel Kim", role: "Northbase 工程负责人", image: "/assets/testimonial-avatar-writer.png" },
+  { quote: "我们从同时使用三个工具转为只使用 Madora。团队一天内完成上手，一周后整个项目流程对所有人都清晰可见。", name: "Olivia Cheng", role: "Clearwave 运营负责人", image: "/assets/testimonial-avatar-project-lead.png" },
+  { quote: "我们用一个周末迁移了 40 人团队，没有收到任何抱怨。这种情况以前从未发生过。", name: "Martin Vasquez", role: "Peakform 运营总监", image: "/assets/testimonial-avatar-knowledge-worker.png" },
 ];
 
 export default function AboutPage() {

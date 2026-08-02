@@ -219,16 +219,15 @@ main { overflow: clip; }
 .metric-story { color: #fff; }
 .metric-story::after { position: absolute; inset: 0; z-index: 1; background: rgba(6,8,3,.5); content: ""; }
 .metric-story > img:first-child { object-fit: cover; }
-.metric-logo { position: absolute; z-index: 2; top: 40px; left: 40px; width: auto; height: 40px; filter: brightness(0) invert(1); }
+.metric-kicker { position: relative; z-index: 2; display: inline-flex; align-items: center; width: max-content; font-size: 14px; font-weight: 600; letter-spacing: -.02em; line-height: 20px; }
+.metric-story > .metric-kicker { position: absolute; top: 40px; left: 40px; }
 .metric-copy { position: absolute; z-index: 2; bottom: 40px; left: 40px; width: 520px; }
 .metric-copy strong, .metric-small strong { display: block; font-size: 52px; font-weight: 400; letter-spacing: -.05em; line-height: 1; }
 .metric-copy p, .metric-small p { margin-top: 12px; font-size: 16px; line-height: 1.5; }
 .metric-stack { display: grid; gap: 20px; }
 .metric-small { display: flex; flex-direction: column; justify-content: space-between; padding: 24px; }
-.metric-small > img { width: auto; height: 36px; align-self: flex-start; }
 .metric-small--lime { background: var(--lime); }
 .metric-small--dark { background: var(--dark); color: #fff; }
-.metric-small--dark > img { filter: brightness(0) invert(1); }
 .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .testimonial-grid blockquote { display: flex; min-height: 280px; flex-direction: column; justify-content: space-between; margin: 0; border-radius: var(--radius-md); padding: 32px; background: var(--off-white); }
 .testimonial-grid blockquote > p { font-size: 16px; line-height: 1.5; letter-spacing: -.02em; }
