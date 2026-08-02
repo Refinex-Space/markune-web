@@ -1,4 +1,4 @@
-import { ArrowBendUpRight, ArrowRight, ArrowsClockwise, CalendarDots, ChartLineUp, CirclesThreePlus, ClipboardText, FileMagnifyingGlass, FileText, GitBranch, GitMerge, Hexagon, ImageSquare, Tray } from "@phosphor-icons/react/dist/ssr";
+import { ArrowBendUpRight, ArrowRight, ArrowsClockwise, CalendarDots, FileMagnifyingGlass, FileText, GitBranch, GitMerge, Hexagon, ImageSquare, Tray } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -98,15 +98,21 @@ export default function HomePage() {
 
       <section className="section feature-section" id="features">
         <div className="container section-heading split-heading scroll-reveal">
-          <div><p className="eyebrow"><Hexagon aria-hidden size={12} />为真实团队打造</p><h2>团队保持同步所需的一切。</h2></div>
-          <p>从日常任务管理到跨团队项目规划，Madora 会适应团队真实的工作方式。</p>
+          <div><p className="eyebrow"><Hexagon aria-hidden size={12} />为真实工作打造</p><h2>让每一份记录，都成为下一步工作的起点。</h2></div>
+          <p>Madora 把 Markdown、Inbox、Daily、图稿与 Git Sync 放在同一个本地工作区中；文件保持开放，工作不被网络或专有格式绑住。</p>
         </div>
         <div className="container feature-grid scroll-reveal">
-          <div className="feature-visual"><picture><source media="(max-width: 1199px)" srcSet="/assets/feature-automation-mobile.avif" /><Image alt="工作流自动化 UI 片段" fill sizes="(max-width: 809px) 100vw, 50vw" src="/assets/feature-automation-desktop.avif" /></picture></div>
-          <div className="feature-visual"><picture><source media="(max-width: 1199px)" srcSet="/assets/feature-task-board-mobile.avif" /><Image alt="带抽象背景的智能任务看板 UI" fill sizes="(max-width: 809px) 100vw, 50vw" src="/assets/feature-task-board-desktop.avif" /></picture></div>
-          <article className="feature-card feature-card--text"><span className="feature-icon"><ClipboardText aria-hidden size={18} /></span><h3>智能任务看板</h3><p>以看板、列表或时间线组织项目，并随时切换视图。</p></article>
-          <article className="feature-card feature-card--text"><span className="feature-icon"><ChartLineUp aria-hidden size={18} /></span><h3>团队分析</h3><p>跟踪完成率、发现逾期工作，并查看哪些成员负担过重。</p></article>
-          <article className="feature-card feature-card--text"><span className="feature-icon"><CirclesThreePlus aria-hidden size={18} /></span><h3>工作流自动化</h3><p>只需设置一次规则，Madora 即可自动分配任务。</p></article>
+          <div className="feature-visual feature-visual--inbox-flow">
+            <Image alt="" aria-hidden fill sizes="(max-width: 809px) 100vw, 50vw" src="/assets/pricing-background.webp" />
+            <div className="feature-visual-overlay"><Image alt="从 Inbox 将一条收集内容提升为笔记或追加到 Daily" fill sizes="(max-width: 809px) 52vw, 300px" src="/assets/feature-inbox-daily-flow.png" /></div>
+          </div>
+          <div className="feature-visual feature-visual--local-workspace">
+            <Image alt="" aria-hidden fill sizes="(max-width: 809px) 100vw, 50vw" src="/assets/pricing-background.webp" />
+            <div className="feature-visual-overlay"><Image alt="在本地 Markdown 工作区中整理文档与资源" fill sizes="(max-width: 809px) 72vw, 450px" src="/assets/feature-local-workspace.png" /></div>
+          </div>
+          <article className="feature-card feature-card--text"><span className="feature-icon"><FileText aria-hidden size={18} /></span><h3>本地 Markdown 工作区</h3><p>直接打开已有文件夹，在同一处写作、搜索、管理本地图片与附件。</p></article>
+          <article className="feature-card feature-card--text"><span className="feature-icon"><Tray aria-hidden size={18} /></span><h3>Inbox 与 Daily</h3><p>先快速收集，再提升为笔记或追加到当天 Daily，让记录与行动保持连续。</p></article>
+          <article className="feature-card feature-card--text"><span className="feature-icon"><GitBranch aria-hidden size={18} /></span><h3>Git Sync</h3><p>提交、拉取或推送当前工作区；出现差异时，明确选择保留本地或远程版本。</p></article>
         </div>
       </section>
 

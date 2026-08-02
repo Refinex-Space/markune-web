@@ -47,6 +47,11 @@ test("home interactions work with keyboard and links", async ({ page }, testInfo
   await expect(page.getByText("已有 240 万项任务通过 Madora 完成")).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "让每一次记录，都能继续向前。" })).toBeVisible();
   await expect(page.getByText("文件始终在你手里")).toBeVisible();
+  const featureSection = page.locator("#features");
+  await expect(featureSection.getByRole("heading", { name: "让每一份记录，都成为下一步工作的起点。" })).toBeVisible();
+  await expect(featureSection.getByRole("heading", { name: "本地 Markdown 工作区" })).toBeVisible();
+  await expect(featureSection.getByRole("heading", { name: "Inbox 与 Daily" })).toBeVisible();
+  await expect(featureSection.getByRole("heading", { name: "Git Sync" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "把每天的记录，留在自己的工作区里持续生长。" })).toBeVisible();
   await expect(page.getByText("在 Inbox 收集零散想法、待办与阅读摘录")).toBeVisible();
   await expect(page.getByText("用熟悉的 Git 工作流，让本地知识库始终有可追溯的同步。", { exact: true })).toBeVisible();

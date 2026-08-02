@@ -27,6 +27,8 @@ const requiredAssets = [
   "feature-automation-mobile.avif",
   "feature-task-board-desktop.avif",
   "feature-task-board-mobile.avif",
+  "feature-inbox-daily-flow.png",
+  "feature-local-workspace.png",
   "capability-comments.webp",
   "capability-analytics.webp",
   "capability-integrations.webp",
