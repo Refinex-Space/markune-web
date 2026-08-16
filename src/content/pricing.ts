@@ -12,7 +12,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "永久版",
-    description: "一次购买，持续更新；为长期使用 Madora 而准备。",
+    description: "一次购买，持续更新；为长期使用 Markune 而准备。",
     price: "¥89",
     priceUnit: "一次性永久授权",
     actionLabel: "下载并试用",

@@ -7,17 +7,18 @@ import type {
   NavigatorPlatformInfo,
 } from "@/types/download";
 
-export const DOWNLOAD_MANIFEST_URL = "https://madora-releases-2026.oss-cn-shanghai.aliyuncs.com/downloads/stable.json";
-export const DOWNLOAD_RELEASES_URL = "https://github.com/Refinex-Space/madora-site/releases/latest";
+export const GITHUB_REPO = "Refinex-Space/markune";
+export const GITHUB_REPO_URL = `https://github.com/${GITHUB_REPO}`;
+export const DOWNLOAD_RELEASES_URL = `${GITHUB_REPO_URL}/releases`;
+export const DOWNLOAD_LATEST_RELEASE_API = `https://api.github.com/repos/${GITHUB_REPO}/releases/latest`;
 
 export const downloadTargetNames: Record<DownloadTarget, string> = {
-  "macos-arm64-dmg": "Madora_aarch64.dmg",
-  "macos-x64-dmg": "Madora_x64.dmg",
-  "windows-x64-exe": "Madora_x64-setup.exe",
+  "macos-arm64-dmg": "Markune_aarch64.dmg",
+  "macos-x64-dmg": "Markune_x64.dmg",
+  "windows-x64-exe": "Markune_x64-setup.exe",
 };
 
 const downloadTargets = Object.keys(downloadTargetNames) as DownloadTarget[];
-const ossHost = "madora-releases-2026.oss-cn-shanghai.aliyuncs.com";
 const versionPattern = /^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/;
 const sha256Pattern = /^[0-9a-f]{64}$/;
 
@@ -25,17 +26,32 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+function parseVersion(tagName: unknown): string {
+  if (typeof tagName !== "string") throw new Error("Invalid release tag");
+  const version = tagName.startsWith("v") ? tagName.slice(1) : tagName;
+  if (!versionPattern.test(version)) throw new Error("Invalid release version");
+  return version;
+}
+
+function parseSha256(digest: unknown): string | null {
+  if (digest == null) return null;
+  if (typeof digest !== "string") throw new Error("Invalid asset digest");
+  const match = /^sha256:([0-9a-f]{64})$/i.exec(digest.trim());
+  if (!match) throw new Error("Invalid SHA-256 digest");
+  return match[1].toLowerCase();
+}
+
 function parseArtifact(value: unknown, target: DownloadTarget, version: string): DownloadArtifact {
   if (!isRecord(value)) throw new Error(`Missing download artifact: ${target}`);
 
   const name = value.name;
   const size = value.size;
-  const sha256 = value.sha256;
-  const url = value.url;
+  const url = value.browser_download_url;
+  const sha256 = parseSha256(value.digest);
   if (name !== downloadTargetNames[target]) throw new Error(`Unexpected file name for ${target}`);
   if (!Number.isInteger(size) || Number(size) <= 0) throw new Error(`Invalid file size for ${target}`);
-  if (typeof sha256 !== "string" || !sha256Pattern.test(sha256)) throw new Error(`Invalid SHA-256 for ${target}`);
   if (typeof url !== "string") throw new Error(`Invalid download URL for ${target}`);
+  if (sha256 !== null && !sha256Pattern.test(sha256)) throw new Error(`Invalid SHA-256 for ${target}`);
 
   let parsedUrl: URL;
   try {
@@ -44,10 +60,10 @@ function parseArtifact(value: unknown, target: DownloadTarget, version: string):
     throw new Error(`Invalid download URL for ${target}`);
   }
 
-  const expectedPath = `/releases/v${version}/${name}`;
+  const expectedPath = `/${GITHUB_REPO}/releases/download/v${version}/${name}`;
   if (
     parsedUrl.protocol !== "https:" ||
-    parsedUrl.hostname !== ossHost ||
+    parsedUrl.hostname !== "github.com" ||
     parsedUrl.username ||
     parsedUrl.password ||
     parsedUrl.port ||
@@ -61,13 +77,12 @@ function parseArtifact(value: unknown, target: DownloadTarget, version: string):
   return { name, size: Number(size), sha256, url };
 }
 
-export function parseDownloadManifest(value: unknown): DownloadManifest {
-  if (!isRecord(value) || value.schemaVersion !== 1) throw new Error("Unsupported download manifest schema");
+export function parseGitHubRelease(value: unknown): DownloadManifest {
+  if (!isRecord(value)) throw new Error("Unsupported GitHub release payload");
 
-  const version = value.version;
-  const publishedAt = value.publishedAt;
-  const releaseUrl = value.releaseUrl;
-  if (typeof version !== "string" || !versionPattern.test(version)) throw new Error("Invalid release version");
+  const version = parseVersion(value.tag_name);
+  const publishedAt = value.published_at;
+  const releaseUrl = value.html_url;
   if (typeof publishedAt !== "string" || Number.isNaN(Date.parse(publishedAt))) throw new Error("Invalid publication date");
   if (typeof releaseUrl !== "string") throw new Error("Invalid release URL");
 
@@ -80,7 +95,7 @@ export function parseDownloadManifest(value: unknown): DownloadManifest {
   if (
     parsedReleaseUrl.protocol !== "https:" ||
     parsedReleaseUrl.hostname !== "github.com" ||
-    parsedReleaseUrl.pathname !== `/Refinex-Space/madora-site/releases/tag/v${version}` ||
+    parsedReleaseUrl.pathname !== `/${GITHUB_REPO}/releases/tag/v${version}` ||
     parsedReleaseUrl.username ||
     parsedReleaseUrl.password ||
     parsedReleaseUrl.search ||
@@ -89,10 +104,15 @@ export function parseDownloadManifest(value: unknown): DownloadManifest {
     throw new Error("Unexpected release URL");
   }
 
-  if (!isRecord(value.artifacts)) throw new Error("Download manifest is missing artifacts");
-  const rawArtifacts = value.artifacts;
+  if (!Array.isArray(value.assets)) throw new Error("Download release is missing assets");
+  const assetsByName = new Map<string, unknown>();
+  for (const asset of value.assets) {
+    if (!isRecord(asset) || typeof asset.name !== "string") throw new Error("Invalid release asset");
+    assetsByName.set(asset.name, asset);
+  }
+
   const artifacts = Object.fromEntries(
-    downloadTargets.map((target) => [target, parseArtifact(rawArtifacts[target], target, version)]),
+    downloadTargets.map((target) => [target, parseArtifact(assetsByName.get(downloadTargetNames[target]), target, version)]),
   ) as Record<DownloadTarget, DownloadArtifact>;
 
   return { schemaVersion: 1, version, publishedAt, releaseUrl, artifacts };

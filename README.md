@@ -1,4 +1,4 @@
-# Madora Web
+# Markune Web
 
 Flowline/Kodama 的 Next.js 静态重建版本。项目使用 Next.js App Router、React、Tailwind CSS、Radix Primitives 与 Phosphor Icons，构建产物输出到 `out/`。
 

@@ -1,4 +1,4 @@
-# Madora Web Design QA
+# Markune Web Design QA
 
 ## 验收范围
 
@@ -37,16 +37,16 @@
 - 同一输入对比：`/Users/refinex/develop/project/madora-web/design-qa/focused/home-hero-madora-comparison.png`，同时包含源图和最新浏览器渲染图。
 - CSS 视口与密度：桌面 `1440×1000`、移动 `390×844`，`deviceScaleFactor: 1`；浏览器可视宽度因滚动条分别为 `1425`、`375`。
 - 状态：页面加载并等待 `1400ms`，确保 Hero 入场动画完成；未进入 hover 状态。
-- 桌面几何：背景框 `1200×711`；Madora 前景图 `1032×542.445`，边界 `196.5–1228.5 / 610.668–1153.113`，完整位于背景框 `112.5–1312.5 / 526.391–1237.391` 内。
-- 移动几何：背景框 `343×203.227`；Madora 前景图 `294.977×155.719`，完整位于背景框内。
-- 图片质量：背景继续使用原始 `2464×1856` 苔藓资源并以 `cover` 填充；Madora 截图保持原始 `5100×2676` 资源并以 `contain` 显示，无左右裁切、无非等比拉伸。
+- 桌面几何：背景框 `1200×711`；Markune 前景图 `1032×542.445`，边界 `196.5–1228.5 / 610.668–1153.113`，完整位于背景框 `112.5–1312.5 / 526.391–1237.391` 内。
+- 移动几何：背景框 `343×203.227`；Markune 前景图 `294.977×155.719`，完整位于背景框内。
+- 图片质量：背景继续使用原始 `2464×1856` 苔藓资源并以 `cover` 填充；Markune 截图保持原始 `5100×2676` 资源并以 `contain` 显示，无左右裁切、无非等比拉伸。
 - 字体、颜色、文案：本轮未更改；与本次 Hero 图层修复无新增漂移。
 - 控制台：仅有 React DevTools 与 HMR 信息，无 error/warn。
 
 局部对比历史：
 
-1. 修复前：Madora 截图直接替换整张 Hero 合成图，原苔藓背景丢失，软件截图在页面中承担了错误的全幅背景角色（P1）。
-2. 修复：将 Hero 改为真实双图层，恢复苔藓背景，把 Madora 截图作为居中的独立前景层，并删除前景上的裁切规则。
+1. 修复前：Markune 截图直接替换整张 Hero 合成图，原苔藓背景丢失，软件截图在页面中承担了错误的全幅背景角色（P1）。
+2. 修复：将 Hero 改为真实双图层，恢复苔藓背景，把 Markune 截图作为居中的独立前景层，并删除前景上的裁切规则。
 3. 修复后：桌面和移动端边界测量均确认前景图完整包含在背景框内；本次局部范围无剩余 P0/P1/P2 问题，局部结果为 `passed`。全站结果仍受下述既有差异影响，保持 `blocked`。
 
 ## 对比历史
@@ -57,7 +57,7 @@
 
 ## Download 新增页面 QA（2026-07-29）
 
-- 该页面为 Madora 新增产品页面，Kodama 源站没有 `/download/`，因此不做虚假的源站 Pixelmatch；验收采用同站设计语言、固定视口截图、交互测试和真实 OSS 数据检查。
+- 该页面为 Markune 新增产品页面，Kodama 源站没有 `/download/`，因此不做虚假的源站 Pixelmatch；验收采用同站设计语言、固定视口截图、交互测试和真实 GitHub Releases 数据检查。
 - [桌面 `1440×1000`](/Users/refinex/develop/project/madora-web/design-qa/focused/download-desktop.png)、[平板 `1024×900`](/Users/refinex/develop/project/madora-web/design-qa/focused/download-tablet.png)、[移动端 `390×844`](/Users/refinex/develop/project/madora-web/design-qa/focused/download-mobile.png) 均已在 Chromium、`deviceScaleFactor: 1` 下实际采集。
 - 三个视口均无横向溢出或内容横向裁切；苔藓背景、白色下载面板、圆角、阴影、渐进模糊与既有站点设计一致。移动端改为单列面板，系统和架构切换保持完整可操作。
 - 实际页面读取 OSS `downloads/stable.json`，确认版本 `0.1.15`、发布时间、三个安装包文件名/大小/SHA-256 与下载链接均来自实时清单。清单和三个版本化安装包均为 `HTTP 200`，提供 `Access-Control-Allow-Origin: *` 与 GET/HEAD。

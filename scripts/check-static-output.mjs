@@ -20,7 +20,7 @@ const routes = [
 
 const requiredAssets = [
   "flowline-logo.svg",
-  "madora-workspace-hero.png",
+  "markune-workspace-hero.png",
   "feature-automation.webp",
   "feature-task-board.webp",
   "feature-automation-desktop.avif",

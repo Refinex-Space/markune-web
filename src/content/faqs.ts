@@ -4,17 +4,17 @@ export const faqs: FaqItem[] = [
   {
     question: "我的文档保存在哪里？",
     answer:
-      "Madora 将文档保存在你选择的本地工作区中，正文是普通 Markdown 文件。你可以随时用文件管理器或其他编辑器访问它们，无需迁移到专有数据库或强制上传到云端。",
+      "Markune 将文档保存在你选择的本地工作区中，正文是普通 Markdown 文件。你可以随时用文件管理器或其他编辑器访问它们，无需迁移到专有数据库或强制上传到云端。",
   },
   {
     question: "可以直接使用已有的 Markdown 文件夹吗？",
     answer:
-      "可以。选择已有文件夹后，Madora 会以磁盘上的 Markdown 文件为准，你可以继续沿用原有目录结构和文件命名，无需导入到封闭空间。",
+      "可以。选择已有文件夹后，Markune 会以磁盘上的 Markdown 文件为准，你可以继续沿用原有目录结构和文件命名，无需导入到封闭空间。",
   },
   {
     question: "支持哪些格式的导入与导出？",
     answer:
-      "Madora 支持导入 Markdown、HTML、DOCX 和 PDF。需要分享时，可将单篇文档导出为 Markdown、HTML、Word 或 PDF，在保留内容结构的同时方便外部阅读与协作。",
+      "Markune 支持导入 Markdown、HTML、DOCX 和 PDF。需要分享时，可将单篇文档导出为 Markdown、HTML、Word 或 PDF，在保留内容结构的同时方便外部阅读与协作。",
   },
   {
     question: "如何备份或同步我的工作区？",

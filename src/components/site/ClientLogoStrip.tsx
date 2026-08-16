@@ -26,10 +26,10 @@ const technologyStack = [
 
 export function ClientLogoStrip({ showMetric = false, showTechnologyStack = false }: { showMetric?: boolean; showTechnologyStack?: boolean }) {
   const items = showTechnologyStack ? technologyStack : clientLogos;
-  const sectionLabel = showTechnologyStack ? "Madora 技术栈" : "信任 Madora 的客户";
+  const sectionLabel = showTechnologyStack ? "Markune 技术栈" : "信任 Markune 的客户";
   const summary = showTechnologyStack
-    ? "Madora 基于以下核心技术栈构建"
-    : "已有 240 万项任务通过 Madora 完成";
+    ? "Markune 基于以下核心技术栈构建"
+    : "已有 240 万项任务通过 Markune 完成";
 
   return (
     <section aria-label={sectionLabel} className={`logo-strip ${showMetric ? "" : "logo-strip--logos-only"} ${showTechnologyStack ? "logo-strip--technology" : ""}`}>

@@ -13,11 +13,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   detectMacArchitecture,
   detectOperatingSystem,
-  DOWNLOAD_MANIFEST_URL,
+  DOWNLOAD_LATEST_RELEASE_API,
   DOWNLOAD_RELEASES_URL,
   formatDownloadSize,
   formatPublishedDate,
-  parseDownloadManifest,
+  parseGitHubRelease,
 } from "@/content/downloads";
 import { assets } from "@/content/site";
 import type {
@@ -40,10 +40,14 @@ function browserPlatformInfo(): NavigatorPlatformInfo {
   };
 }
 
-async function requestDownloadManifest(signal?: AbortSignal): Promise<DownloadManifest> {
-  const response = await fetch(DOWNLOAD_MANIFEST_URL, { cache: "no-store", signal });
-  if (!response.ok) throw new Error(`Download manifest returned ${response.status}`);
-  return parseDownloadManifest(await response.json());
+async function requestLatestRelease(signal?: AbortSignal): Promise<DownloadManifest> {
+  const response = await fetch(DOWNLOAD_LATEST_RELEASE_API, {
+    cache: "no-store",
+    headers: { Accept: "application/vnd.github+json" },
+    signal,
+  });
+  if (!response.ok) throw new Error(`GitHub release returned ${response.status}`);
+  return parseGitHubRelease(await response.json());
 }
 
 async function detectBrowserPlatform() {
@@ -65,10 +69,10 @@ export function DownloadSelector() {
   const manualArchitectureSelection = useRef(false);
   const copyResetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const retryManifest = async () => {
+  const retryRelease = async () => {
     setLoadState("loading");
     try {
-      setManifest(await requestDownloadManifest());
+      setManifest(await requestLatestRelease());
       setLoadState("ready");
     } catch {
       setManifest(null);
@@ -78,7 +82,7 @@ export function DownloadSelector() {
 
   useEffect(() => {
     const controller = new AbortController();
-    void requestDownloadManifest(controller.signal).then((nextManifest) => {
+    void requestLatestRelease(controller.signal).then((nextManifest) => {
       if (!controller.signal.aborted) {
         setManifest(nextManifest);
         setLoadState("ready");
@@ -131,7 +135,7 @@ export function DownloadSelector() {
   };
 
   const copyChecksum = async () => {
-    if (!artifact) return;
+    if (!artifact?.sha256) return;
     try {
       await navigator.clipboard.writeText(artifact.sha256);
       setCopied(true);
@@ -162,7 +166,7 @@ export function DownloadSelector() {
                 <p className="eyebrow">{selectedLabel}</p>
                 {detectedOs === selectedOs ? <span className="recommended-badge">推荐此设备使用</span> : null}
               </div>
-              <h2>下载 Madora</h2>
+              <h2>下载 Markune</h2>
               <p className="download-primary-description">用于 Markdown、写作、规划和专注工作的 Local-first 工作区。</p>
               {selectedOs === "macos" ? (
                 <div aria-label="选择 Mac 处理器" className="download-architecture-switch" role="group">
@@ -185,13 +189,13 @@ export function DownloadSelector() {
           ) : detectionComplete ? (
             <div className="download-unknown-platform" aria-live="polite" role="status">
               <p className="eyebrow">选择你的平台</p>
-              <h2>Madora 支持 macOS 和 Windows。</h2>
+              <h2>Markune 支持 macOS 和 Windows。</h2>
               <p>请在上方选择操作系统，查看适合你电脑的安装包。</p>
             </div>
           ) : (
             <div className="download-unknown-platform" aria-live="polite" role="status">
               <p className="eyebrow">正在检测设备</p>
-              <h2>正在查找合适的 Madora 安装包…</h2>
+              <h2>正在查找合适的 Markune 安装包…</h2>
               <p>正在检查你的操作系统与最新稳定版本。</p>
             </div>
           )}
@@ -199,7 +203,7 @@ export function DownloadSelector() {
             <div aria-live="polite" className="download-error" role="alert">
               <p>无法加载最新版本，请检查网络连接后重试。</p>
               <div>
-                <button className="button button--primary" onClick={() => void retryManifest()} type="button"><ArrowClockwise aria-hidden size={17} />重试</button>
+                <button className="button button--primary" onClick={() => void retryRelease()} type="button"><ArrowClockwise aria-hidden size={17} />重试</button>
                 <a className="text-link" href={DOWNLOAD_RELEASES_URL} rel="noreferrer" target="_blank">查看 GitHub Releases</a>
               </div>
             </div>
@@ -218,8 +222,8 @@ export function DownloadSelector() {
               </dl>
               <div className="download-checksum">
                 <span>SHA-256</span>
-                <code>{artifact?.sha256 ?? "选择平台后查看校验值"}</code>
-                <button aria-label="复制 SHA-256 校验值" disabled={!artifact} onClick={() => void copyChecksum()} type="button">
+                <code>{artifact?.sha256 ?? "发布页未提供校验值"}</code>
+                <button aria-label="复制 SHA-256 校验值" disabled={!artifact?.sha256} onClick={() => void copyChecksum()} type="button">
                   {copied ? <Check aria-hidden size={16} weight="bold" /> : <Copy aria-hidden size={16} />}
                   {copied ? "已复制" : "复制"}
                 </button>
@@ -230,7 +234,7 @@ export function DownloadSelector() {
               <span /><span /><span /><span />
             </div>
           )}
-          <p className="download-details-note">安装包由 Madora 经验证的上海 OSS 发布通道直接提供。</p>
+          <p className="download-details-note">安装包由 GitHub Releases 直接提供，请核对版本与文件名。</p>
         </aside>
       </div>
     </div>

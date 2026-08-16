@@ -13,7 +13,7 @@ export function CallToAction() {
           <ButtonLink href={siteConfig.downloadHref}>下载 <ArrowRight aria-hidden size={15} /></ButtonLink>
         </div>
         <Image
-          alt="Madora 本地 Markdown 工作区预览"
+          alt="Markune 本地 Markdown 工作区预览"
           className="cta-workspace-preview"
           height={2694}
           src={assets.hero}

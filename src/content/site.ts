@@ -1,10 +1,11 @@
 import type { AssetKey, NavItem, SiteConfig } from "@/types/site";
 
 export const siteConfig: SiteConfig = {
-  name: "Madora",
+  name: "Markune",
   description: "面向高效交付与紧密协作团队的项目管理平台。",
   loginHref: "/contact/",
   downloadHref: "/download/",
+  githubHref: "https://github.com/Refinex-Space/markune",
   contactEmail: "hello@flowline.com",
 };
 
@@ -16,8 +17,8 @@ export const navItems: NavItem[] = [
 ];
 
 export const assets: Record<AssetKey, string> = {
-  logo: "/assets/madora-logo-dark.svg",
-  hero: "/assets/madora-workspace-hero.png",
+  logo: "/assets/markune-logo-dark.svg",
+  hero: "/assets/markune-workspace-hero.png",
   featureAutomation: "/assets/feature-automation.webp",
   featureBoard: "/assets/feature-task-board.webp",
   capabilityComments: "/assets/capability-comments.webp",

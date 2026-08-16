@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, List, X } from "@phosphor-icons/react";
+import { ArrowRight, GithubLogo, List, X } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -33,6 +33,15 @@ export function Header() {
         </nav>
         <div className="header-actions">
           <Link className="login-link" href={siteConfig.loginHref}>登录</Link>
+          <a
+            aria-label="在 GitHub 上查看 Markune"
+            className="header-github"
+            href={siteConfig.githubHref}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <GithubLogo aria-hidden size={20} weight="fill" />
+          </a>
           <ButtonLink className="header-trial" href={siteConfig.downloadHref}>下载 <ArrowRight aria-hidden size={15} /></ButtonLink>
           <button
             aria-expanded={open}
@@ -51,6 +60,9 @@ export function Header() {
             {navItems.map((item) => (
               <Link href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link>
             ))}
+            <a className="mobile-nav-github" href={siteConfig.githubHref} onClick={() => setOpen(false)} rel="noreferrer" target="_blank">
+              <GithubLogo aria-hidden size={18} weight="fill" />GitHub
+            </a>
             <Link className="button button--primary" href={siteConfig.downloadHref} onClick={() => setOpen(false)}>下载</Link>
           </div>
         </nav>

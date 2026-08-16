@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   icons: {
     icon: [
-      { url: "/assets/madora-logo-dark.svg", media: "(prefers-color-scheme: light)" },
-      { url: "/assets/madora-logo-light.svg", media: "(prefers-color-scheme: dark)" },
+      { url: "/assets/markune-logo-dark.svg", media: "(prefers-color-scheme: light)" },
+      { url: "/assets/markune-logo-light.svg", media: "(prefers-color-scheme: dark)" },
     ],
     shortcut: "/favicon.ico",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     title: `${siteConfig.name} — 组织工作，协同团队，高效交付`,
     description: siteConfig.description,
-    images: siteUrl ? [new URL("/assets/madora-workspace-hero.png", siteUrl)] : undefined,
+    images: siteUrl ? [new URL("/assets/markune-workspace-hero.png", siteUrl)] : undefined,
   },
 };
 

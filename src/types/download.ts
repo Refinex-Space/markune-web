@@ -8,7 +8,7 @@ export interface DownloadArtifact {
   name: string;
   url: string;
   size: number;
-  sha256: string;
+  sha256: string | null;
 }
 
 export interface DownloadManifest {

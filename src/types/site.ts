@@ -23,6 +23,7 @@ export interface SiteConfig {
   description: string;
   loginHref: string;
   downloadHref: string;
+  githubHref: string;
   contactEmail: string;
 }
 

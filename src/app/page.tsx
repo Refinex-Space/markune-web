@@ -13,7 +13,7 @@ import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
   title: { absolute: `${siteConfig.name} — 写下想法，让工作自然展开` },
-  description: "Madora 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。",
+  description: "Markune 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。",
 };
 
 const capabilities = [
@@ -65,14 +65,14 @@ export default function HomePage() {
         <div className="container hero-copy hero-copy--enter">
           <div className="hero-main-copy">
             <h1>写下想法，<br />让工作自然展开。</h1>
-            <p>Madora 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。</p>
+            <p>Markune 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。</p>
           </div>
           <div className="hero-actions">
             <ButtonLink href={siteConfig.downloadHref}>下载 <ArrowRight aria-hidden size={15} /></ButtonLink>
             <ButtonLink href="/contact/" variant="lime">预约演示</ButtonLink>
           </div>
         </div>
-        <div className="container hero-visual" aria-label="Madora 产品预览">
+        <div className="container hero-visual" aria-label="Markune 产品预览">
           <Image
             alt=""
             aria-hidden="true"
@@ -83,12 +83,12 @@ export default function HomePage() {
             src="/assets/pricing-background.webp"
           />
           <Image
-            alt="集成 Codex 的 Madora 本地 Markdown 工作区"
+            alt="集成 Codex 的 Markune 本地 Markdown 工作区"
             className="hero-visual-product"
             height={2676}
             priority
             sizes="(max-width: 809px) calc((100vw - 32px) * .88), (max-width: 1199px) calc((100vw - 48px) * .88), 1032px"
-            src="/assets/madora-workspace-hero.png"
+            src="/assets/markune-workspace-hero.png"
             width={5100}
           />
         </div>
@@ -99,7 +99,7 @@ export default function HomePage() {
       <section className="section feature-section" id="features">
         <div className="container section-heading split-heading scroll-reveal">
           <div><p className="eyebrow"><Hexagon aria-hidden size={12} />为真实工作打造</p><h2>让每一份记录，都成为下一步工作的起点。</h2></div>
-          <p>Madora 把 Markdown、Inbox、Daily、图稿与 Git Sync 放在同一个本地工作区中；文件保持开放，工作不被网络或专有格式绑住。</p>
+          <p>Markune 把 Markdown、Inbox、Daily、图稿与 Git Sync 放在同一个本地工作区中；文件保持开放，工作不被网络或专有格式绑住。</p>
         </div>
         <div className="container feature-grid scroll-reveal">
           <div className="feature-visual feature-visual--inbox-flow">
@@ -119,7 +119,7 @@ export default function HomePage() {
       <section className="capabilities-section" id="benefits">
         <div className="container section-heading split-heading capabilities-heading scroll-reveal">
           <div><p className="eyebrow eyebrow--light"><Hexagon aria-hidden size={12} />核心能力</p><h2>把每天的记录，留在自己的工作区里持续生长。</h2></div>
-          <p>从收集灵感到日程回顾，再到 Git 同步，Madora 让 Markdown 文件成为一套可长期维护的个人工作系统。</p>
+          <p>从收集灵感到日程回顾，再到 Git 同步，Markune 让 Markdown 文件成为一套可长期维护的个人工作系统。</p>
         </div>
         <div className="container capability-list scroll-reveal">
           {capabilities.map((item, index) => {

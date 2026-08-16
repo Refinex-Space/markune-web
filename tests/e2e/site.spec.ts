@@ -1,15 +1,22 @@
 import { expect, test } from "@playwright/test";
 
-const downloadManifest = {
-  schemaVersion: 1,
-  version: "0.1.15",
-  publishedAt: "2026-07-26T06:07:09.000Z",
-  releaseUrl: "https://github.com/Refinex-Space/madora-site/releases/tag/v0.1.15",
-  artifacts: {
-    "macos-arm64-dmg": { name: "Madora_aarch64.dmg", url: "https://madora-releases-2026.oss-cn-shanghai.aliyuncs.com/releases/v0.1.15/Madora_aarch64.dmg", size: 202422575, sha256: "a".repeat(64) },
-    "macos-x64-dmg": { name: "Madora_x64.dmg", url: "https://madora-releases-2026.oss-cn-shanghai.aliyuncs.com/releases/v0.1.15/Madora_x64.dmg", size: 207847448, sha256: "b".repeat(64) },
-    "windows-x64-exe": { name: "Madora_x64-setup.exe", url: "https://madora-releases-2026.oss-cn-shanghai.aliyuncs.com/releases/v0.1.15/Madora_x64-setup.exe", size: 179845192, sha256: "c".repeat(64) },
-  },
+const version = "0.1.15";
+const githubDownload = (name: string) => `https://github.com/Refinex-Space/markune/releases/download/v${version}/${name}`;
+
+const githubRelease = {
+  tag_name: `v${version}`,
+  published_at: "2026-07-26T06:07:09.000Z",
+  html_url: `https://github.com/Refinex-Space/markune/releases/tag/v${version}`,
+  assets: [
+    { name: "Markune_aarch64.dmg", browser_download_url: githubDownload("Markune_aarch64.dmg"), size: 202422575, digest: `sha256:${"a".repeat(64)}` },
+    { name: "Markune_x64.dmg", browser_download_url: githubDownload("Markune_x64.dmg"), size: 207847448, digest: `sha256:${"b".repeat(64)}` },
+    { name: "Markune_x64-setup.exe", browser_download_url: githubDownload("Markune_x64-setup.exe"), size: 179845192, digest: `sha256:${"c".repeat(64)}` },
+  ],
+};
+
+const downloadUrls = {
+  windows: githubDownload("Markune_x64-setup.exe"),
+  macosIntel: githubDownload("Markune_x64.dmg"),
 };
 
 const routes = [
@@ -26,7 +33,7 @@ for (const route of routes) {
     page.on("pageerror", (error) => errors.push(error.message));
     page.on("requestfailed", (request) => errors.push(`${request.url()} ${request.failure()?.errorText}`));
     if (route === "/download/") {
-      await page.route("**/downloads/stable.json", (request) => request.fulfill({ json: downloadManifest }));
+      await page.route("**/repos/Refinex-Space/markune/releases/latest", (request) => request.fulfill({ json: githubRelease }));
     }
     const response = await page.goto(route);
     expect(response?.ok()).toBeTruthy();
@@ -40,11 +47,12 @@ for (const route of routes) {
 test("home interactions work with keyboard and links", async ({ page }, testInfo) => {
   await page.goto("/");
   await expect(page.locator(".hero-main-copy h1")).toContainText("写下想法，让工作自然展开。");
-  await expect(page.getByText("Madora 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。", { exact: true })).toBeVisible();
-  const technologyStack = page.getByRole("region", { name: "Madora 技术栈" });
-  await expect(technologyStack).toContainText("Madora 基于以下核心技术栈构建");
+  await expect(page.getByText("Markune 是以本地 Markdown 为核心的桌面工作区：写作、知识整理、日程、图谱、画板与 Codex 协作，在同一处连续完成。", { exact: true })).toBeVisible();
+  const technologyStack = page.getByRole("region", { name: "Markune 技术栈" });
+  await expect(technologyStack).toContainText("Markune 基于以下核心技术栈构建");
   await expect(technologyStack.locator(".client-logo--technology")).toHaveCount(12);
-  await expect(page.getByText("已有 240 万项任务通过 Madora 完成")).toHaveCount(0);
+  await expect(page.getByText("已有 240 万项任务通过 Markune 完成")).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "在 GitHub 上查看 Markune" })).toHaveAttribute("href", "https://github.com/Refinex-Space/markune");
   await expect(page.getByRole("heading", { name: "让每一次记录，都能继续向前。" })).toBeVisible();
   await expect(page.getByText("文件始终在你手里")).toBeVisible();
   const featureSection = page.locator("#features");
@@ -87,11 +95,11 @@ test("download page recommends the device and supports explicit installer choice
       value: { writeText: async () => undefined },
     });
   });
-  await page.route("**/downloads/stable.json", (request) => request.fulfill({ json: downloadManifest }));
+  await page.route("**/repos/Refinex-Space/markune/releases/latest", (request) => request.fulfill({ json: githubRelease }));
   await page.goto("/download/");
 
   await expect(page.getByText("推荐此设备使用")).toBeVisible();
-  await expect(page.getByTestId("download-link")).toHaveAttribute("href", downloadManifest.artifacts["windows-x64-exe"].url);
+  await expect(page.getByTestId("download-link")).toHaveAttribute("href", downloadUrls.windows);
   await page.getByTestId("download-link").hover();
   await expect(page.getByTestId("download-link")).toHaveCSS("background-color", "rgb(203, 255, 151)");
   await expect(page.getByTestId("download-link")).toHaveCSS("color", "rgb(6, 8, 3)");
@@ -99,22 +107,22 @@ test("download page recommends the device and supports explicit installer choice
   await page.keyboard.press("Enter");
   await page.getByRole("button", { name: /Intel 处理器/ }).focus();
   await page.keyboard.press("Enter");
-  await expect(page.getByTestId("download-link")).toHaveAttribute("href", downloadManifest.artifacts["macos-x64-dmg"].url);
+  await expect(page.getByTestId("download-link")).toHaveAttribute("href", downloadUrls.macosIntel);
   expect(await page.evaluate(() => document.documentElement.scrollWidth === document.documentElement.clientWidth)).toBe(true);
   await page.getByRole("button", { name: "复制 SHA-256 校验值" }).click();
   await expect(page.getByRole("button", { name: "复制 SHA-256 校验值" })).toContainText("已复制");
 });
 
-test("download page exposes a retry path when the stable manifest fails", async ({ page }, testInfo) => {
+test("download page exposes a retry path when the latest release fails", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "chromium", "One deterministic error-state pass is sufficient.");
   let shouldFail = true;
-  await page.route("**/downloads/stable.json", (request) => {
+  await page.route("**/repos/Refinex-Space/markune/releases/latest", (request) => {
     if (shouldFail) return request.abort("failed");
-    return request.fulfill({ json: downloadManifest });
+    return request.fulfill({ json: githubRelease });
   });
   await page.goto("/download/");
   await expect(page.getByRole("alert").filter({ hasText: "无法加载最新版本" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "查看 GitHub Releases" })).toHaveAttribute("href", "https://github.com/Refinex-Space/madora-site/releases/latest");
+  await expect(page.getByRole("link", { name: "查看 GitHub Releases" })).toHaveAttribute("href", "https://github.com/Refinex-Space/markune/releases");
   shouldFail = false;
   await page.getByRole("button", { name: "重试" }).click();
   await expect(page.getByTestId("download-link")).toBeVisible();

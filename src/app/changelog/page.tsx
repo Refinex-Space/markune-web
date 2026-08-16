@@ -4,12 +4,12 @@ import { CallToAction } from "@/components/site/CallToAction";
 import { PageHero } from "@/components/site/PageHero";
 import { changelogEntries } from "@/content/changelog";
 
-export const metadata: Metadata = { title: "更新日志", description: "记录 Madora 发布的每一项改进、更新与新功能。" };
+export const metadata: Metadata = { title: "更新日志", description: "记录 Markune 发布的每一项改进、更新与新功能。" };
 
 export default function ChangelogPage() {
   return (
     <>
-      <PageHero title="Madora 有哪些新变化。" description="记录每一项改进、更新与新功能的正式发布。" variant="changelog">
+      <PageHero title="Markune 有哪些新变化。" description="记录每一项改进、更新与新功能的正式发布。" variant="changelog">
         <a className="button button--primary" href="/contact/">订阅更新</a>
       </PageHero>
       <section className="changelog-section">

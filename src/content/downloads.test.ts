@@ -4,52 +4,55 @@ import {
   detectOperatingSystem,
   formatDownloadSize,
   formatPublishedDate,
-  parseDownloadManifest,
+  parseGitHubRelease,
 } from "./downloads";
 
-function manifest() {
+function githubRelease(options?: { digest?: string | null; hostileUrl?: boolean; wrongVersionPath?: boolean }) {
   const version = "0.1.15";
-  const host = "https://madora-releases-2026.oss-cn-shanghai.aliyuncs.com";
+  const digest = options?.digest === undefined ? `sha256:${"f".repeat(64)}` : options.digest;
   const artifact = (name: string) => ({
     name,
-    url: `${host}/releases/v${version}/${name}`,
     size: 202_422_575,
-    sha256: "f".repeat(64),
+    browser_download_url: options?.hostileUrl
+      ? `https://example.com/releases/download/v${version}/${name}`
+      : options?.wrongVersionPath
+        ? `https://github.com/Refinex-Space/markune/releases/download/v0.1.14/${name}`
+        : `https://github.com/Refinex-Space/markune/releases/download/v${version}/${name}`,
+    digest,
   });
   return {
-    schemaVersion: 1,
-    version,
-    publishedAt: "2026-07-26T06:07:09.000Z",
-    releaseUrl: "https://github.com/Refinex-Space/madora-site/releases/tag/v0.1.15",
-    artifacts: {
-      "macos-arm64-dmg": artifact("Madora_aarch64.dmg"),
-      "macos-x64-dmg": artifact("Madora_x64.dmg"),
-      "windows-x64-exe": artifact("Madora_x64-setup.exe"),
-    },
+    tag_name: `v${version}`,
+    published_at: "2026-07-26T06:07:09.000Z",
+    html_url: `https://github.com/Refinex-Space/markune/releases/tag/v${version}`,
+    assets: [
+      artifact("Markune_aarch64.dmg"),
+      artifact("Markune_x64.dmg"),
+      artifact("Markune_x64-setup.exe"),
+    ],
   };
 }
 
-describe("download manifest", () => {
-  it("accepts the stable OSS download schema", () => {
-    expect(parseDownloadManifest(manifest()).version).toBe("0.1.15");
+describe("GitHub release payload", () => {
+  it("accepts the latest GitHub Releases schema", () => {
+    const manifest = parseGitHubRelease(githubRelease());
+    expect(manifest.version).toBe("0.1.15");
+    expect(manifest.artifacts["macos-arm64-dmg"].sha256).toBe("f".repeat(64));
     expect(formatDownloadSize(202_422_575)).toBe("202.4 MB");
     expect(formatPublishedDate("2026-07-26T06:07:09.000Z")).toBe("2026年7月26日");
   });
 
-  it("rejects missing artifacts and unexpected download hosts", () => {
-    const missing = manifest();
-    delete (missing.artifacts as Partial<typeof missing.artifacts>)["macos-x64-dmg"];
-    expect(() => parseDownloadManifest(missing)).toThrow("Missing download artifact");
+  it("allows missing digests and rejects missing artifacts or unexpected hosts", () => {
+    expect(parseGitHubRelease(githubRelease({ digest: null })).artifacts["windows-x64-exe"].sha256).toBeNull();
 
-    const hostile = manifest();
-    hostile.artifacts["windows-x64-exe"].url = "https://example.com/releases/v0.1.15/Madora_x64-setup.exe";
-    expect(() => parseDownloadManifest(hostile)).toThrow("Unexpected download URL");
+    const missing = githubRelease();
+    missing.assets = missing.assets.filter((asset) => asset.name !== "Markune_x64.dmg");
+    expect(() => parseGitHubRelease(missing)).toThrow("Missing download artifact");
+
+    expect(() => parseGitHubRelease(githubRelease({ hostileUrl: true }))).toThrow("Unexpected download URL");
   });
 
-  it("rejects artifact paths that do not match the manifest version", () => {
-    const value = manifest();
-    value.artifacts["macos-arm64-dmg"].url = value.artifacts["macos-arm64-dmg"].url.replace("v0.1.15", "v0.1.14");
-    expect(() => parseDownloadManifest(value)).toThrow("Unexpected download URL");
+  it("rejects artifact paths that do not match the release version", () => {
+    expect(() => parseGitHubRelease(githubRelease({ wrongVersionPath: true }))).toThrow("Unexpected download URL");
   });
 });
 
