@@ -55,6 +55,7 @@ export interface PricingPlan {
   name: string;
   description: string;
   price: string;
+  priceWas?: string;
   priceUnit: string;
   actionLabel: string;
   popular?: boolean;

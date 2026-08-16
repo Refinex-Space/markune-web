@@ -1,5 +1,10 @@
 import type { PricingPlan } from "@/types/site";
 
+export const pricingIntro =
+  "入门版与永久版当前均可免费使用；永久版原价 ¥89，现开源免费并持续更新。定制方案正在规划，暂未开放。";
+
+export const pricingFootnote = "Markune 目前开源免费；所有可用方案均从下载页开始。";
+
 export const pricingPlans: PricingPlan[] = [
   {
     name: "入门版",
@@ -12,11 +17,12 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "永久版",
-    description: "一次购买，持续更新；为长期使用 Markune 而准备。",
-    price: "¥89",
-    priceUnit: "一次性永久授权",
-    actionLabel: "下载并试用",
-    note: "下载后可开启 14 天免费试用",
+    description: "完整能力现已开源免费；持续更新，为长期使用 Markune 而准备。",
+    price: "¥0",
+    priceWas: "¥89",
+    priceUnit: "开源免费",
+    actionLabel: "免费下载",
+    note: "无需订阅或付款信息",
     popular: true,
     features: ["包含入门版全部功能", "自定义标题字体与主题", "笔记模板、置顶与笔记类型", "文件夹图标与颜色", "写作助理", "画板与图谱", "Git Sync"],
   },
