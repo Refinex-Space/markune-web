@@ -69,7 +69,7 @@ export default function HomePage() {
           </div>
           <div className="hero-actions">
             <ButtonLink href={siteConfig.downloadHref}>下载 <ArrowRight aria-hidden size={15} /></ButtonLink>
-            <ButtonLink href="/contact/" variant="lime">预约演示</ButtonLink>
+            <ButtonLink href="/blog/" variant="lime">文档</ButtonLink>
           </div>
         </div>
         <div className="container hero-visual" aria-label="Markune 产品预览">
