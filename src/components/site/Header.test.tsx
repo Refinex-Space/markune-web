@@ -9,6 +9,7 @@ describe("Header", () => {
     render(<Header />);
     const button = screen.getByRole("button", { name: "打开导航菜单" });
     expect(screen.getByRole("link", { name: /下载/ })).toHaveAttribute("href", "/download");
+    expect(screen.queryByRole("link", { name: "登录" })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "在 GitHub 上查看 Markune" })).toHaveAttribute("href", "https://github.com/Refinex-Space/markune");
     await user.click(button);
     const mobileNav = screen.getByRole("navigation", { name: "移动端导航" });

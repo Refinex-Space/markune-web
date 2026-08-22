@@ -21,7 +21,6 @@ export type AssetKey =
 export interface SiteConfig {
   name: string;
   description: string;
-  loginHref: string;
   downloadHref: string;
   githubHref: string;
   contactEmail: string;

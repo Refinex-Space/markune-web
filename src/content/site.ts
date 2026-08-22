@@ -3,7 +3,6 @@ import type { AssetKey, NavItem, SiteConfig } from "@/types/site";
 export const siteConfig: SiteConfig = {
   name: "Markune",
   description: "面向高效交付与紧密协作团队的项目管理平台。",
-  loginHref: "/contact/",
   downloadHref: "/download/",
   githubHref: "https://github.com/Refinex-Space/markune",
   contactEmail: "hello@flowline.com",
