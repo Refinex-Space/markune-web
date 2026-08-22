@@ -6,6 +6,8 @@ export const siteConfig: SiteConfig = {
   downloadHref: "/download/",
   githubHref: "https://github.com/Refinex-Space/markune",
   contactEmail: "hello@flowline.com",
+  icpNumber: "黔ICP备2026002771号",
+  icpHref: "https://beian.miit.gov.cn/",
 };
 
 export const navItems: NavItem[] = [

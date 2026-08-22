@@ -24,6 +24,8 @@ export interface SiteConfig {
   downloadHref: string;
   githubHref: string;
   contactEmail: string;
+  icpNumber: string;
+  icpHref: string;
 }
 
 export interface NavItem {

@@ -331,15 +331,18 @@ main { overflow: clip; }
 .cta-copy > p { width: 510px; margin-top: 24px; color: var(--muted); font-size: 16px; font-weight: 500; letter-spacing: -.03em; line-height: 24px; }
 .cta-card .button { width: max-content; min-height: 42.203px; margin-top: 32px; font-size: 14px; font-weight: 500; }
 .cta-workspace-preview { position: absolute; z-index: 1; top: 39px; left: 670px; width: 660px; max-width: none; height: 391px; border-radius: 12px 0 0; object-fit: cover; object-position: left top; }
-.site-footer { height: 469.609px; border-top: 1px solid var(--border); padding: 100px 0; background: #fff; }
-.footer-grid { position: relative; display: grid; grid-template-columns: 590px repeat(3, 183.33px); gap: 20px; }
+.site-footer { position: relative; z-index: 10; min-height: 469.609px; border-top: 1px solid var(--border); padding: 100px 0 48px; background: #fff; }
+.footer-grid { display: grid; grid-template-columns: 590px repeat(3, 183.33px); gap: 20px; }
 .footer-logo-lockup { display: inline-flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
 .footer-logo { width: 28px; height: 28px; }
 .footer-brand > p:not(.footer-copyright) { max-width: 260px; margin-top: 30px; color: var(--muted); font-size: 14px; line-height: 20px; }
-.footer-meta { position: absolute; top: 198px; left: 0; }
+.footer-meta { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
 .footer-socials { display: flex; gap: 8px; }
 .footer-socials a { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); }
-.footer-copyright { margin-top: 18px; color: var(--muted); font-size: 12px; }
+.footer-legal { display: flex; flex-direction: column; gap: 6px; }
+.footer-copyright, .footer-icp { color: var(--ink); font-size: 13px; font-weight: 500; line-height: 1.5; letter-spacing: -.01em; }
+.footer-icp a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(6, 8, 3, .28); }
+.footer-icp a:hover { text-decoration-color: var(--ink); }
 .footer-title { margin-bottom: 30px; color: var(--muted); font-size: 16px; font-weight: 400; }
 .footer-column { display: flex; flex-direction: column; gap: 18px; color: var(--ink); font-size: 14px; }
 .footer-column a:hover { color: var(--ink); }
@@ -812,15 +815,14 @@ main { overflow: clip; }
   .cta-copy > p { width: 286px; margin-top: 24px; font-size: 16px; font-weight: 500; line-height: 24px; }
   .cta-card .button { align-self: center; width: max-content; margin-top: 32px; }
   .cta-workspace-preview { top: 308.609px; left: 19.688px; width: 318.609px; height: 188.547px; border-radius: 4px; }
-  .site-footer { height: 660.469px; padding: 60px 0; }
+  .site-footer { min-height: 660.469px; padding: 60px 0 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; column-gap: 22px; row-gap: 0; }
   .footer-brand { grid-column: 1 / -1; margin-bottom: 40px; }
   .footer-brand > p:not(.footer-copyright) { max-width: none; margin-top: 20px; line-height: 19.6px; }
   .footer-column { gap: 12px; font-size: 14px; line-height: 18.2px; }
   .footer-title { margin-bottom: 8px; line-height: 24px; }
   .footer-column:last-of-type { margin-top: 32px; }
-  .footer-meta { position: static; grid-column: 1 / -1; margin-top: 40px; }
-  .footer-copyright { margin-top: 20px; margin-left: 0; line-height: 16.8px; }
+  .footer-meta { margin-top: 40px; padding-top: 24px; }
   .download-hero { padding: 52px 0 46px; }
   .download-hero .eyebrow { margin-bottom: 16px; }
   .download-hero h1 { font-size: 33px; line-height: 36.3px; }

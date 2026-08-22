@@ -32,7 +32,12 @@ export function Footer() {
             <a aria-label="LinkedIn" href="#"><LinkedinLogo aria-hidden size={19} /></a>
             <a aria-label="YouTube" href="#"><YoutubeLogo aria-hidden size={19} /></a>
           </div>
-          <p className="footer-copyright">© 2026 {siteConfig.name} - 保留所有权利</p>
+          <div className="footer-legal">
+            <p className="footer-copyright">© 2026 {siteConfig.name} - 保留所有权利</p>
+            <p className="footer-icp">
+              <a href={siteConfig.icpHref} rel="noreferrer" target="_blank">{siteConfig.icpNumber}</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
