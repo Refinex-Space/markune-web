@@ -526,9 +526,6 @@ main { overflow: clip; }
 .changelog-list { border-top: 1px solid var(--border); }
 .changelog-list.container { width: 940px; }
 .changelog-entry { display: grid; grid-template-columns: 140px 700px; gap: 80px; border-bottom: 1px solid var(--border); padding: 100px 0; }
-.changelog-entry:nth-child(1) { height: 1008.406px; }
-.changelog-entry:nth-child(2) { height: 1056.406px; }
-.changelog-entry:nth-child(3) { height: 1051.406px; }
 .changelog-entry aside { position: sticky; z-index: 1; top: 180px; display: flex; width: max-content; flex-direction: row; align-items: center; align-self: start; gap: 12px; }
 .changelog-entry time { color: var(--muted); font-size: 13px; }
 .status-badge { border-radius: 999px; padding: 7px 12px; background: var(--warm); font-size: 11px; font-weight: 700; }
@@ -914,9 +911,6 @@ main { overflow: clip; }
   .page-hero--changelog .page-hero-side { margin-top: 16px; }
   .changelog-list.container { width: calc(100% - 32px); }
   .changelog-entry { grid-template-columns: 1fr; gap: 30px; padding: 52px 0 60px; }
-  .changelog-entry:nth-child(1) { height: 1120px; }
-  .changelog-entry:nth-child(2) { height: 1266.406px; }
-  .changelog-entry:nth-child(3) { height: 1071.797px; }
   .changelog-entry aside { position: relative; top: auto; flex-direction: column; align-items: flex-start; gap: 8px; }
   .changelog-content { width: 358px; }
   .changelog-content h2 { margin: 32px 0 24px; font-size: 24px; line-height: 26.4px; }

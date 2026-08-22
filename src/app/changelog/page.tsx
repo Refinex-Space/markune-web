@@ -14,7 +14,7 @@ export default function ChangelogPage() {
       </PageHero>
       <section className="changelog-section">
         <div className="container changelog-list">
-          {changelogEntries.map((entry) => <article className="changelog-entry" key={entry.title}><aside><span className={`status-badge status-badge--${entry.tone}`}>{entry.status}</span><time>{entry.date}</time></aside><div className="changelog-content"><div className="changelog-image"><picture><source media="(max-width: 809px)" srcSet={entry.mobileImage} /><source media="(max-width: 1199px)" srcSet={entry.tabletImage} /><Image alt="" fill sizes="(max-width: 809px) 100vw, 700px" src={entry.image} /></picture></div><h2>{entry.title}</h2>{entry.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}
+          {changelogEntries.map((entry) => <article className="changelog-entry" key={entry.version}><aside><span className={`status-badge status-badge--${entry.tone}`}>{entry.status}</span><time dateTime={entry.date}>{entry.date}</time></aside><div className="changelog-content"><div className="changelog-image"><picture><source media="(max-width: 809px)" srcSet={entry.mobileImage} /><source media="(max-width: 1199px)" srcSet={entry.tabletImage} /><Image alt="" fill sizes="(max-width: 809px) 100vw, 700px" src={entry.image} /></picture></div><h2>{entry.title}</h2>{entry.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}
         </div>
       </section>
       <CallToAction />
