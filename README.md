@@ -116,9 +116,9 @@ out/                构建生成的部署产物，不纳入版本控制
 
 ## 部署
 
-标准流程为：**本地构建 `out/` → 压缩并校验 → SSH 上传 → 解压到版本目录 → 切换 `current` → Nginx 提供静态文件 → 配置 HTTPS 并验收**。
+标准流程为：**本机 `pnpm build` 得到 `out/` → 用 Terminus 等工具把 `out/` 内容上传到服务器 `/var/www/markune-web/` → 配置 Nginx → 需要时再开 HTTPS**。
 
-完整命令、目录权限、Nginx 配置、证书续期及回滚步骤见 [阿里云 Ubuntu 24.04 + Nginx 静态部署手册](docs/deployment-aliyun-nginx.md)。服务器已安装 Nginx 时，从手册的环境检查开始即可。
+上传路径、Nginx 配置和更新步骤见 [阿里云 Ubuntu 24.04 + Nginx 静态部署手册](docs/deployment-aliyun-nginx.md)。
 
 ## 项目关联与许可
 
