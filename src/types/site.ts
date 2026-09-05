@@ -33,24 +33,35 @@ export interface NavItem {
   href: string;
 }
 
+export type GuideCategory = "开始使用" | "日常工作流" | "进阶能力";
+
 export interface BlogBlock {
+  id: string;
   heading: string;
-  paragraphs: string[];
+  paragraphs?: string[];
+  steps?: { title: string; text: string }[];
+  bullets?: string[];
+  code?: { label: string; language: string; content: string };
+  table?: { caption: string; headers: string[]; rows: string[][] };
+  note?: { title: string; text: string; tone?: "tip" | "important" };
+  image?: { src: string; alt: string; caption: string; width: number; height: number };
 }
 
 export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  category: string;
+  category: GuideCategory;
   author: string;
   date: string;
-  readTime: string;
-  image: string;
-  cardImage: string;
-  tabletImage: string;
+  version: string;
+  outcome: string;
+  prerequisites: string;
+  related: string[];
   blocks: BlogBlock[];
 }
+
+export type GuideSummary = Pick<BlogPost, "slug" | "title" | "excerpt" | "category"> & { readTime: number };
 
 export interface PricingPlan {
   name: string;

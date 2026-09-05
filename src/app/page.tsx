@@ -8,7 +8,7 @@ import { CallToAction } from "@/components/site/CallToAction";
 import { ClientLogoStrip } from "@/components/site/ClientLogoStrip";
 import { FaqSection } from "@/components/site/FaqSection";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { blogPosts } from "@/content/blog";
+import { blogPosts, toGuideSummary } from "@/content/blog";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -179,9 +179,9 @@ export default function HomePage() {
       <PricingSection />
 
       <section className="home-blog-section">
-        <div className="container home-blog-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />博客</p><h2>让团队协作更高效的思考。</h2></div>
-        <div className="container blog-grid scroll-reveal">{blogPosts.slice(0, 3).map((post) => <BlogCard key={post.slug} post={post} />)}</div>
-        <Link className="button button--lime home-blog-more" href="/blog/">查看更多文章</Link>
+        <div className="container home-blog-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />博客</p><h2>从第一篇笔记，开始用好 Markune。</h2></div>
+        <div className="container blog-grid scroll-reveal">{blogPosts.slice(0, 3).map((post) => <BlogCard key={post.slug} post={toGuideSummary(post)} />)}</div>
+        <Link className="button button--lime home-blog-more" href="/blog/">查看全部指南</Link>
       </section>
 
       <FaqSection />

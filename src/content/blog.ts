@@ -1,123 +1,22 @@
 import type { BlogPost } from "@/types/site";
+import { startingGuides } from "./guides/starting";
+import { workflowGuides } from "./guides/workflows";
+import { advancedGuides } from "./guides/advanced";
 
-export const blogPosts: BlogPost[] = [
-  {
-    slug: "what-we-shipped-in-q1",
-    title: "我们在第一季度发布了什么",
-    excerpt: "Figma 集成、更快的时间线、重新设计的仪表盘，以及数十项改进。这里汇总了所有已上线的更新。",
-    category: "产品更新",
-    author: "Markune 团队",
-    date: "2026年2月9日",
-    readTime: "阅读约 4 分钟",
-    image: "/assets/blog-q1.webp",
-    cardImage: "/assets/blog-q1-card.avif",
-    tabletImage: "/assets/blog-q1-tablet.avif",
-    blocks: [
-      { heading: "迄今最丰富的一个季度", paragraphs: ["2026 年第一季度是我们迄今发布内容最丰富的一个季度。下面回顾本季度上线的主要功能与改进。"] },
-      { heading: "Figma 集成", paragraphs: ["我们在 2 月初发布了 Figma 集成。现在，你可以把 Figma 文件直接关联到任务，并在不离开 Markune 的情况下内联预览设计。设计团队告诉我们，在不同工具之间切换会造成上下文丢失，这项集成解决了这一问题。发布后的前两周内，已有超过 2,000 个团队连接了 Figma。"] },
-      { heading: "更快的时间线渲染", paragraphs: ["包含 500 个以上任务的项目现在加载速度最高提升至原来的三倍，时间线视图的滚动和拖放也更加流畅。这是大型客户呼声最高的性能改进。"] },
-      { heading: "重新设计的项目仪表盘", paragraphs: ["新的布局更加清晰、加载更快，并增加了进度环，帮助你一眼掌握项目完成情况。我们还加入了快捷操作按钮，无需深入多层菜单即可创建任务、邀请成员和打开设置。"] },
-      { heading: "Bug 修复与细节改进", paragraphs: ["部分用户退出登录后通知偏好会被重置，该问题现已修复。我们还提升了搜索速度，优化了移动端任务详情的响应式表现，改进了 CSV 导出格式，并为高频用户更新了键盘快捷键。"] },
-      { heading: "第二季度预告", paragraphs: ["接下来将推出面向 Business 方案的自定义自动化规则、工作负载热力图，以及焕新的集成市场，敬请期待。"] },
-    ],
-  },
-  {
-    slug: "the-real-cost-of-context-switching",
-    title: "上下文切换的真实成本",
-    excerpt: "每天五次上下文切换，就可能损失两个多小时的专注时间。解决办法不是更强的自律，而是更好的系统。",
-    category: "远程工作",
-    author: "David Park",
-    date: "2026年5月28日",
-    readTime: "阅读约 3 分钟",
-    image: "/assets/blog-context-switching.webp",
-    cardImage: "/assets/blog-context-switching-card.avif",
-    tabletImage: "/assets/blog-context-switching-tablet.avif",
-    blocks: [
-      { heading: "一天中看不见的损耗", paragraphs: ["每次在任务之间切换，大脑都要付出代价。研究显示，一次中断后，重新进入完全专注的状态平均需要 23 分钟。一个普通工作日如果发生五六次上下文切换，损失的时间就会超过两小时——不是花在会议或休息上，而只是消耗在重新进入状态的过程中。", "对使用多种工具的团队来说，问题会进一步放大：在一个应用里看任务，在另一个应用里读消息，再去第三个应用找文件、第四个应用查看更新。每次切换看似微小，累积起来却会让一天变得支离破碎，深度工作几乎无从发生。"] },
-      { heading: "整合你的工具", paragraphs: ["每减少一个应用，就能减少一组每天都会发生的切换。如果任务管理、团队沟通和文件共享可以集中在同一个工作区里，就会少三个应用在一天中不断争夺你的注意力。"] },
-      { heading: "批量处理同类工作", paragraphs: ["不要在消息一到达时立即回复，而是在固定时间集中查看，例如早晨一次、午饭后一次、下班前一次。不要在通知弹出时逐条审阅任务，而是预留 20 分钟一次处理完。批量处理能把十次小中断变成一次专注工作。"] },
-      { heading: "保护深度工作时间", paragraphs: ["每天留出两到三个小时，只保留当前正在处理的任务，关闭其他所有内容。不看 Slack、不看邮件、关闭通知。提前向团队说明，让他们知道你不是在忽略消息，而是在完成真正推动项目进展的工作。"] },
-      { heading: "有意识地设计通知", paragraphs: ["多数人接受默认通知设置，然后困惑于自己为什么总被打断。关闭所有不紧急、与当前工作没有直接关系的通知。你随时可以在准备好时主动查看更新，并不需要所有信息都实时推送。", "上下文切换不是自律问题，而是系统问题。减少工具、批量沟通、保护专注时间并有意识地配置通知，系统得到改善，专注自然会随之而来。"] },
-    ],
-  },
-  {
-    slug: "workflow-automation-start-with-these-5-rules",
-    title: "工作流自动化：从这 5 条规则开始",
-    excerpt: "开始自动化并不需要复杂系统。这五条规则只需十分钟即可设置，却能每周节省数小时。",
-    category: "效率",
-    author: "James Okoro",
-    date: "2026年2月10日",
-    readTime: "阅读约 5 分钟",
-    image: "/assets/blog-automation.webp",
-    cardImage: "/assets/blog-automation-card.avif",
-    tabletImage: "/assets/blog-automation-tablet.avif",
-    blocks: [
-      { heading: "为什么大多数团队没有使用自动化", paragraphs: ["自动化是所有项目管理工具中最容易被忽视的能力。团队建立看板、添加任务，然后每天手动重复相同操作：移动卡片、发送更新、分配任务，周而复始。", "开始自动化并不需要复杂系统。先设置下面五条规则，每周就能节省数小时。"] },
-      { heading: "规则 1：按项目自动分配新任务", paragraphs: ["每个项目都有默认负责人或团队。项目中创建任务时，任务应该自动交给合适的人，不再让任务因为没人清楚责任归属而长期停留在待办列表中。"] },
-      { heading: "规则 2：状态变化时通知团队", paragraphs: ["当任务进入“审阅中”或“已完成”状态时，相关成员应该立即知晓，不必等到第二天晨会，而是马上通过 Slack 或团队正在使用的沟通工具收到通知。"] },
-      { heading: "规则 3：截止日期临近时发送提醒", paragraphs: ["如果任务将在 48 小时内到期且没有任何进展，应向负责人发送一条友好提醒。多数逾期任务并非被遗忘，而是被一再降低优先级，直到来不及处理。自动提醒可以解决这个问题。"] },
-      { heading: "规则 4：自动移动已完成任务", paragraphs: ["任务标记为完成后，自动将其移至“已完成”区域或归档。这样无需人工整理，也能让正在使用的看板保持清晰。"] },
-      { heading: "规则 5：为周期性工作创建重复任务", paragraphs: ["周报、月度复盘、Sprint Planning 准备——凡是按固定周期发生的工作，都应该自动创建。设置一次，以后无需再惦记。", "设置这五条规则大约只需十分钟，却能每周为团队节省数小时的重复劳动，并消除干扰工作流的琐碎任务。从这里开始，你会发现更多值得自动化的环节。", "作者简介：James Okoro，Markune Engineering Lead，专注于自动化、开发者工作流与团队效率。"] },
-    ],
-  },
-  {
-    slug: "how-to-run-a-project-review-that-people-actually-find-useful",
-    title: "如何开展真正有价值的项目复盘",
-    excerpt: "如果复盘无法让下一个项目产生可见改变，它就只是一场表演。下面是改进方法。",
-    category: "领导力",
-    author: "Sarah Mitchell",
-    date: "2026年5月13日",
-    readTime: "阅读约 5 分钟",
-    image: "/assets/blog-project-review.webp",
-    cardImage: "/assets/blog-project-review-card.avif",
-    tabletImage: "/assets/blog-project-review-tablet.webp",
-    blocks: [
-      { heading: "为什么大多数复盘会失败", paragraphs: ["很多项目复盘都在浪费时间。团队坐在会议室里，一个人照着清单回顾发生了什么，大家点头，然后一切照旧。到了下一个项目，同样的错误再次发生。", "一次有效的复盘应完成两件事：找出问题真正的成因，并形成团队承诺执行的具体改变。"] },
-      { heading: "把“发生了什么”与“为什么发生”分开", paragraphs: ["很多复盘把全部时间花在“发生了什么”上：交付物 X 延期了、功能 Y 出现 Bug、客户 Z 不满意。这只是重述结果。继续追问为什么交付物 X 会延期：是范围不清晰？负责人同时承担了太多项目？还是存在未被识别的依赖？"] },
-      { heading: "只保留三项成果与三项改进", paragraphs: ["不是十项，也不是十五项，而是三项。迫使团队确定优先级，才能把注意力放在真正重要的事情上，而不是制作一份无人阅读的长清单。"] },
-      { heading: "让每项改进都可以执行", paragraphs: ["每项改进都要分配给具体人员，并设置明确截止日期。“我们应该加强沟通”不是行动；“David 在周五前完成项目简报模板，并从下一个 Sprint 起用于所有新项目”才是行动。"] },
-      { heading: "控制在 30 分钟内", paragraphs: ["如果复盘耗时更长，通常意味着范围过宽。一次产出三项真实改变的专注复盘，胜过一场持续两小时、最终只留下无人打开文档的会议。", "复盘的目的不是记录过去，而是改变未来。如果复盘无法明显改变下一个项目的运行方式，它就只是一场表演。"] },
-    ],
-  },
-  {
-    slug: "the-async-first-playbook-for-distributed-teams",
-    title: "分布式团队的 Async-first 工作指南",
-    excerpt: "分布式团队如果只是通过摄像头照搬办公室工作方式，往往会陷入困境。采用 Async-first 会改变一切。",
-    category: "远程工作",
-    author: "David Park",
-    date: "2026年5月17日",
-    readTime: "阅读约 7 分钟",
-    image: "/assets/blog-async.webp",
-    cardImage: "/assets/blog-async-card.avif",
-    tabletImage: "/assets/blog-async-tablet.webp",
-    blocks: [
-      { heading: "分布式团队为什么会陷入困境", paragraphs: ["当分布式团队试图通过摄像头照搬办公室工作方式时，往往会失败：会议越来越多，Slack 消息不断堆积，每个人在一天结束时都感觉很忙，却仍然落后。", "解决办法是采用 Async-first。这不意味着取消所有会议，而是让会议成为例外，而不是默认选项。"] },
-      { heading: "把所有信息写下来", paragraphs: ["每个决定、每次项目更新，以及任何人未来可能需要的上下文都应该被记录。如果某件事发生在通话中，请在五分钟内将摘要写进任务评论。没有写下来，就等于没有发生。"] },
-      { heading: "用异步更新替代会议", paragraphs: ["每天进行一次异步同步，每个人只写三行：昨天完成了什么、今天准备做什么、当前受到什么阻碍。写下来需要两分钟，读完只需一分钟。总共三分钟，而不是一场 30 分钟的 Standup。"] },
-      { heading: "明确沟通预期", paragraphs: ["并非所有事情都需要立即回复。明确每类信息应该出现在哪里：任务和项目更新放在项目管理工具中，紧急问题发到 Slack，邮件仅用于外部沟通。当每个人都知道去哪里查找信息，就不会再不断打断彼此。"] },
-      { heading: "有意识地安排重叠工作时间", paragraphs: ["如果团队跨越多个时区，请保留一个所有人都在线的两小时时段，用于真正需要实时进行的协作，例如 Pairing、共同解决问题以及必须通过现场讨论完成的决策。其他工作全部异步进行。", "目标并非消除实时沟通，而是让实时沟通成为主动选择，而不是强制要求。做好这一点，分布式团队不仅能跟上同地办公团队，还可能表现得更加出色。"] },
-    ],
-  },
-  {
-    slug: "why-your-team-keeps-missing-deadlines",
-    title: "为什么你的团队总是错过截止日期",
-    excerpt: "多数团队缺少的不是能力或投入，而是可见性。应该修复的是系统，而不是人。",
-    category: "效率",
-    author: "Sarah Mitchell",
-    date: "2026年5月5日",
-    readTime: "阅读约 6 分钟",
-    image: "/assets/blog-deadlines.webp",
-    cardImage: "/assets/blog-deadlines-card.avif",
-    tabletImage: "/assets/blog-deadlines-tablet.webp",
-    blocks: [
-      { heading: "真正的问题不是投入不足", paragraphs: ["偶尔错过一次截止日期只是意外，反复错过则是系统问题。令人沮丧的是，多数团队并不缺少能力或投入，他们缺少的是可见性。", "当工作分散在不同工具中，优先级会被淹没，也没人能可靠掌握各项工作的截止时间。人们努力做着错误的事情，截止日期则在每个人都以为另一个人正在负责时悄然过去。", "解决办法不是更努力，而是让工作变得可见。"] },
-      { heading: "让工作可见", paragraphs: ["首先，为每个项目建立唯一可信的信息源。每项任务都应有明确负责人、截止日期，以及整个团队都能看到的状态。听起来理所当然，但多数团队并没有始终如一地做到。"] },
-      { heading: "建立每周节奏", paragraphs: ["安排一次 15 分钟的同步，团队共同查看本周到期事项、当前阻碍和风险。这不是状态汇报会，而是优先级会议。目标不是逐项更新，而是达成一致。"] },
-      { heading: "在冲突发生前发现它", paragraphs: ["使用时间线视图尽早发现排期问题。如果两项重要交付安排在同一周，并且都分配给同一个人，你可以提前一周发现，而不是等到截止当天。", "截止日期本身不是问题，缺乏可见性才是。修复这一点，团队就会开始按时完成过去经常延期的工作。"] },
-    ],
-  },
-];
+export const blogPosts: BlogPost[] = [...startingGuides, ...workflowGuides, ...advancedGuides];
+
+export const legacyBlogSlugs: Record<string, string> = {
+  "what-we-shipped-in-q1": "getting-started",
+  "the-real-cost-of-context-switching": "organize-and-search",
+  "workflow-automation-start-with-these-5-rules": "inbox-and-daily",
+  "how-to-run-a-project-review-that-people-actually-find-useful": "markdown-writing",
+  "the-async-first-playbook-for-distributed-teams": "git-sync-and-backup",
+  "why-your-team-keeps-missing-deadlines": "canvas-and-graph",
+};
 
 export function getBlogPost(slug: string) {
-  return blogPosts.find((post) => post.slug === slug);
+  const canonical = Object.hasOwn(legacyBlogSlugs, slug) ? legacyBlogSlugs[slug] : slug;
+  return blogPosts.find((post) => post.slug === canonical);
 }
+
+export { getGuideReadTime, toGuideSummary, filterGuides } from "./guide-utils";

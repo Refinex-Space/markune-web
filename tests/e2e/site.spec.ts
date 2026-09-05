@@ -23,6 +23,14 @@ const routes = [
   "/", "/about/", "/blog/", "/blog/what-we-shipped-in-q1/", "/blog/the-real-cost-of-context-switching/",
   "/blog/workflow-automation-start-with-these-5-rules/", "/blog/how-to-run-a-project-review-that-people-actually-find-useful/",
   "/blog/the-async-first-playbook-for-distributed-teams/", "/blog/why-your-team-keeps-missing-deadlines/", "/changelog/",
+  "/blog/getting-started/",
+  "/blog/markdown-writing/",
+  "/blog/inbox-and-daily/",
+  "/blog/organize-and-search/",
+  "/blog/canvas-and-graph/",
+  "/blog/import-and-export/",
+  "/blog/git-sync-and-backup/",
+  "/blog/codex-workspace/",
   "/contact/", "/download/", "/legal/privacy-policy/", "/legal/terms-of-service/",
 ];
 
@@ -84,8 +92,8 @@ test("home interactions work with keyboard and links", async ({ page }, testInfo
   await expect(page.locator("#features")).toBeInViewport();
   await page.getByRole("contentinfo").getByRole("link", { name: "博客" }).click();
   await expect(page).toHaveURL(/\/blog\/$/);
-  await page.getByRole("link", { name: "我们在第一季度发布了什么" }).first().click();
-  await expect(page).toHaveURL(/\/blog\/what-we-shipped-in-q1\/$/);
+  await page.getByRole("link", { name: "创建工作区，写下第一篇笔记" }).first().click();
+  await expect(page).toHaveURL(/\/blog\/getting-started\/$/);
 });
 
 test("download page recommends the device and supports explicit installer choices", async ({ page }) => {
