@@ -1,71 +1,124 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Hexagon, RadioButton, Timer, UsersThree } from "@phosphor-icons/react/dist/ssr";
-import { CallToAction } from "@/components/site/CallToAction";
-import { ClientLogoStrip } from "@/components/site/ClientLogoStrip";
-import { FaqSection } from "@/components/site/FaqSection";
+import Link from "next/link";
+import { ArrowDown, ArrowRight, ArrowUpRight, Code, GithubLogo, HardDrives, Leaf, Stack } from "@phosphor-icons/react/dist/ssr";
+import { CopyEmailButton } from "@/components/about/CopyEmailButton";
+import { assets, siteConfig } from "@/content/site";
+import styles from "./about.module.css";
+
+const github = "https://github.com/Refinex-Space";
+const description = "认识 Refinex（沉默的老李）：Java 研发工程师、个人开发者，Markune、Markweave 与 AgentArk 的开发者。用代码打磨写作、知识整理与 AI Agent 工具。";
 
 export const metadata: Metadata = {
-  title: "关于我们",
-  description: "我们打造 Markune，是为了帮助团队专注于真正重要的事情：完成工作，而不是与工具对抗。",
+  title: "关于我 · Refinex",
+  description,
+  openGraph: { title: "认识 Refinex · Markune 背后的开发者", description, type: "website" },
 };
 
-const values = [
-  { title: "简洁优先", text: "如果一个功能必须配合教程才能使用，它就还没有准备好。Markune 的每个部分都应该在第一次使用时清晰易懂。", icon: RadioButton },
-  { title: "速度至关重要", text: "缓慢的工具不会被真正使用。我们持续关注性能，让你的工作区始终快速加载、流畅运行。", icon: Timer },
-  { title: "团队重于功能清单", text: "我们不会为了填满功能清单而开发，而是围绕真实团队的工作方式构建产品。", icon: UsersThree },
-];
-
-const team = [
-  { name: "Sarah Mitchell", role: "内容负责人", image: "/assets/team-sarah-render.avif" },
-  { name: "John Krasinski", role: "设计负责人", image: "/assets/team-john-render.avif" },
-  { name: "Ana Moreno", role: "联合创始人兼 CEO", image: "/assets/team-ana-render.avif" },
-  { name: "Daniel Keane", role: "联合创始人兼 CTO", image: "/assets/team-daniel-render.avif" },
-  { name: "David Park", role: "高级产品经理", image: "/assets/team-david-render.avif" },
-  { name: "James Okoro", role: "工程负责人", image: "/assets/team-james-about-render.avif" },
-];
-
-const quotes = [
-  { quote: "仅时间线视图一项功能，每周就为我们省下了数小时的状态会议。现在每个人都能直接看到截止事项，无需反复询问。", name: "Daniel Kim", role: "Northbase 工程负责人", image: "/assets/testimonial-avatar-writer.png" },
-  { quote: "我们从同时使用三个工具转为只使用 Markune。团队一天内完成上手，一周后整个项目流程对所有人都清晰可见。", name: "Olivia Cheng", role: "Clearwave 运营负责人", image: "/assets/testimonial-avatar-project-lead.png" },
-  { quote: "我们用一个周末迁移了 40 人团队，没有收到任何抱怨。这种情况以前从未发生过。", name: "Martin Vasquez", role: "Peakform 运营总监", image: "/assets/testimonial-avatar-knowledge-worker.png" },
+const principles = [
+  { number: "01", icon: HardDrives, title: "内容，留在自己手里。", text: "用本地文件和开放格式承载知识。工具可以迭代，记录应该能够被读取、迁移和长期保存。" },
+  { number: "02", icon: Code, title: "把有用的能力开放出来。", text: "从完整的应用，到可以独立接入的编辑器。让代码能够被阅读、复用，也让改进有机会发生。" },
+  { number: "03", icon: Leaf, title: "让复杂留在实现里。", text: "认真对待底层结构，也认真对待一次输入、一次保存。好的工程，最终应该变成顺手的体验。" },
 ];
 
 export default function AboutPage() {
   return (
-    <>
-      <section className="about-top">
-        <div className="container about-hero-copy page-load-reveal">
-          <p className="eyebrow"><Hexagon aria-hidden size={12} />关于我们</p>
-          <h1>为持续交付的团队而打造。</h1>
-          <p>我们打造 Markune，是为了帮助团队专注于真正重要的事情：完成工作，而不是与工具对抗。</p>
+    <div className={styles.page}>
+      <section aria-labelledby="about-title" className={`${styles.hero} container`}>
+        <div className={styles.heroCopy}>
+          <p className={styles.eyebrow}><span className={styles.dot} /> 关于我 <span className={styles.eyebrowEnglish}>THE PERSON BEHIND MARKUNE</span></p>
+          <h1 id="about-title">你好，我是<br /><span className={styles.name}>Refinex<span className={styles.period}>.</span></span></h1>
+          <p className={styles.identity}>沉默的老李<span aria-hidden="true"> / </span>Java 研发工程师 · 个人开发者</p>
+          <p className={styles.intro}>写代码，也打磨自己想用的工具。<br />我在构建关于写作、知识与 AI 的产品，<br className={styles.desktopBreak} />让想法有地方安放，让技术在日常里发挥作用。</p>
+          <div className={styles.actions}>
+            <a className={styles.primaryLink} href="#projects">看看我在做什么 <ArrowDown aria-hidden size={17} /></a>
+            <a className={styles.quietLink} href={github} rel="noreferrer" target="_blank"><GithubLogo aria-hidden size={19} /> GitHub <ArrowUpRight aria-hidden size={15} /></a>
+          </div>
         </div>
-        <div className="container about-image"><picture><source media="(max-width: 809px)" srcSet="/assets/about-story-mobile.webp" /><source media="(max-width: 1199px)" srcSet="/assets/about-story-tablet.webp" /><Image alt="Markune 团队共同协作" fill priority sizes="100vw" src="/assets/about-story.png" /></picture></div>
+        <figure className={styles.portrait}>
+          <div className={styles.portraitTop}><span>独立构建，持续打磨</span><span>HELLO, WORLD.</span></div>
+          <Image alt="Refinex（沉默的老李）的手绘头像" className={styles.avatar} height={1024} loading="eager" priority sizes="(max-width: 809px) 85vw, 420px" src="/assets/about/refinex-avatar.png" width={1024} />
+          <figcaption><span className={styles.signature}>Refinex</span><span>代码之外，也是一个创造者。</span></figcaption>
+        </figure>
       </section>
-      <ClientLogoStrip showMetric />
-      <section className="about-story-section">
-        <div className="container about-story-copy scroll-reveal">
-          <p className="eyebrow"><Hexagon aria-hidden size={12} />我们的故事</p>
-          <h2>我们用过的项目管理工具，要么把简单任务埋在层层配置之下，要么在团队超过三人后就难以维系。因此我们打造了 Markune：既有能力承载真实工作流，又足够简单，让整个团队愿意真正使用。</h2>
+      <nav aria-label="本页导航" className={`${styles.index} container`}>
+        <span className={styles.indexLabel}>一点关于我</span>
+        <a href="#story"><span>01</span> 从想法开始 <ArrowDown aria-hidden size={14} /></a>
+        <a href="#projects"><span>02</span> 正在构建 <ArrowDown aria-hidden size={14} /></a>
+        <a href="#connect"><span>03</span> 保持联系 <ArrowDown aria-hidden size={14} /></a>
+      </nav>
+      <section aria-labelledby="story-title" className={`${styles.story} container`} id="story">
+        <div><p className={styles.eyebrow}>从想法开始</p><p className={styles.sideNote}>A LITTLE CONTEXT</p></div>
+        <div className={styles.storyBody}>
+          <h2 id="story-title">从写好一段代码，<br />到做好一个<span className={styles.underline}>日常会用的工具。</span></h2>
+          <div className={styles.storyColumns}>
+            <p>我是 Refinex，也叫「沉默的老李」。我的专业是 Java 研发，而个人开发让我有机会把关注点延伸到完整的产品：从底层结构，到屏幕上每一次真实的交互。</p>
+            <p>写作与知识整理、可复用的编辑体验、AI Agent 的工程化，是我正在投入的三个方向。Markune、Markweave 和 AgentArk，就是这些想法逐渐变成软件的过程。</p>
+          </div>
         </div>
       </section>
-      <section className="section values-section">
-        <div className="container split-heading section-heading scroll-reveal">
-          <div><p className="eyebrow"><Hexagon aria-hidden size={12} />价值观</p><h2>驱动每一个决定的原则。</h2></div>
-          <p>这三项原则决定了我们如何构建产品、如何发布功能，以及如何对待每一个将工作托付给我们的团队。</p>
+      <section aria-labelledby="projects-title" className={styles.projects} id="projects">
+        <div className="container">
+          <div className={styles.sectionHeading}>
+            <div><p className={styles.eyebrow}>正在构建 <span className={styles.eyebrowEnglish}>SELECTED PROJECTS</span></p><h2 id="projects-title">三个项目，各有专注。</h2></div>
+            <p>面向使用者的产品，面向开发者的能力。<br />从 Markdown 到 AI，持续探索。</p>
+          </div>
+          <article className={styles.featuredProject}>
+            <div className={styles.featuredCopy}>
+              <div className={styles.projectMeta}><span>01 / 桌面应用</span><span className={styles.badge}>你正在访问的产品</span></div>
+              <Image alt="" aria-hidden className={styles.projectLogo} height={34} src={assets.logo} width={34} />
+              <h3>Markune</h3>
+              <p className={styles.projectTagline}>让想法，留在自己的工作区。</p>
+              <p className={styles.projectDescription}>本地优先的 Markdown 笔记与知识工作区。把写作、日程、图谱、画板与 AI 协作连接起来，让记录和思考围绕你自己的文件展开。</p>
+              <ul aria-label="Markune 特点" className={styles.tags}><li>本地优先</li><li>Markdown</li><li>桌面工作区</li></ul>
+              <div className={styles.projectLinks}>
+                <Link className={styles.primaryLink} href="/download/">体验 Markune <ArrowRight aria-hidden size={16} /></Link>
+                <a className={styles.quietLink} href={`${github}/markune`} rel="noreferrer" target="_blank" aria-label="查看 Markune 源码">查看源码 <ArrowUpRight aria-hidden size={16} /></a>
+              </div>
+            </div>
+            <figure className={styles.productPreview}>
+              <Image alt="Markune 桌面工作区，包含本地文件目录、日程与 Codex 协作面板" height={2694} sizes="(max-width: 809px) 92vw, 700px" src={assets.hero} width={5120} />
+              <figcaption><span className={styles.dot} /> MARKUNE WORKSPACE <span>你的文件，你的工作方式。</span></figcaption>
+            </figure>
+          </article>
+          <div className={styles.projectGrid}>
+            <article className={`${styles.projectCard} ${styles.editorCard}`}>
+              <div className={styles.projectMeta}><span>02 / 编辑器</span><Code aria-hidden size={25} weight="light" /></div>
+              <h3>Markweave</h3>
+              <p className={styles.projectTagline}>好的编辑体验，也可以成为你的起点。</p>
+              <p className={styles.projectDescription}>开源、免费的 Markdown-first 所见即所得编辑器，也是 Markune 的底层编辑器。提供 React、Vue 2 与 Vue 3 适配，让开发者在自己的产品里接入完整的编辑能力。</p>
+              <ul aria-label="Markweave 特点" className={styles.tags}><li>MIT 开源</li><li>React / Vue</li><li>Markdown-first</li></ul>
+              <a className={styles.cardLink} href={`${github}/markweave`} rel="noreferrer" target="_blank">探索 Markweave <ArrowUpRight aria-hidden size={22} /></a>
+            </article>
+            <article className={styles.projectCard}>
+              <div className={styles.projectMeta}><span>03 / AI AGENT 平台</span><Stack aria-hidden size={25} weight="light" /></div>
+              <h3>AgentArk <span className={styles.developmentBadge}>开发中</span></h3>
+              <p className={styles.projectTagline}>从 Agent 代码，走向可管理的应用。</p>
+              <p className={styles.projectDescription}>面向 Java 生态的 AI Agent 应用平台。基于 AgentScope Java，探索 Agent 的构建、版本管理、运行与治理，把后端工程实践带到 AI 应用的完整生命周期。</p>
+              <ul aria-label="AgentArk 特点" className={styles.tags}><li>Java</li><li>AgentScope</li><li>应用生命周期</li></ul>
+              <a className={styles.cardLink} href={`${github}/agentark`} rel="noreferrer" target="_blank">了解 AgentArk <ArrowUpRight aria-hidden size={22} /></a>
+            </article>
+          </div>
+          <p className={styles.projectFootnote}><GithubLogo aria-hidden size={16} /> 项目介绍、代码与最新进展，都在各自的 GitHub 仓库里。</p>
         </div>
-        <div className="container values-grid scroll-reveal">{values.map((value) => { const ValueIcon = value.icon; return <article key={value.title}><span className="value-icon"><ValueIcon aria-hidden size={20} weight="regular" /></span><div className="value-copy"><h3>{value.title}</h3><p>{value.text}</p></div></article>; })}</div>
       </section>
-      <section className="section about-testimonials">
-        <div className="container section-heading scroll-reveal"><p className="eyebrow eyebrow--light"><Hexagon aria-hidden size={12} />团队评价</p><h2>获得众多团队的信任。</h2></div>
-        <div className="container quote-list scroll-reveal">{quotes.map((item) => <blockquote key={item.name}><div className="quote-copy"><span aria-hidden>“</span><p>{item.quote}</p></div><footer><Image alt="" height={48} src={item.image} width={48} /><div><strong>{item.name}</strong><span>{item.role}</span></div></footer></blockquote>)}</div>
+      <section aria-labelledby="principles-title" className={styles.principles}>
+        <div className="container">
+          <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>做工具时，我在意什么 <span className={styles.eyebrowEnglish}>BUILT WITH INTENTION</span></p><h2 id="principles-title">有用，也值得长久使用。</h2></div><p>技术是起点，使用体验是落点。</p></div>
+          <div className={styles.principleGrid}>{principles.map(({ number, icon: Icon, title, text }) => (
+            <article key={number}><div className={styles.principleTop}><Icon aria-hidden size={28} weight="light" /><span>{number}</span></div><h3>{title}</h3><p>{text}</p></article>
+          ))}</div>
+        </div>
       </section>
-      <section className="section team-section">
-        <div className="container section-heading scroll-reveal"><p className="eyebrow"><Hexagon aria-hidden size={12} />我们的团队</p><h2>Markune 背后的团队。</h2></div>
-        <div className="container team-grid scroll-reveal">{team.map((person) => <article key={person.name}><div className="team-image"><Image alt={person.name} fill sizes="(max-width: 809px) 50vw, 33vw" src={person.image} /></div><div className="team-info"><h3>{person.name}</h3><p>{person.role}</p></div></article>)}</div>
+      <section aria-labelledby="connect-title" className={`${styles.connect} container`} id="connect">
+        <div className={styles.connectIdentity}><Image alt="" aria-hidden height={64} loading="eager" src="/assets/about/refinex-avatar.png" width={64} /><span>屏幕的另一边，<br />是一个真实的开发者。</span></div>
+        <p className={styles.eyebrow}>保持联系 <span className={styles.eyebrowEnglish}>LET’S TALK</span></p>
+        <h2 id="connect-title">好想法，值得聊聊。</h2>
+        <p className={styles.connectDescription}>关于产品的反馈、开源交流，或一个值得做的想法，<br className={styles.desktopBreak} />都欢迎写信给我。也可以在 GitHub 上，一起把工具打磨得更好。</p>
+        <div className={styles.emailRow}><a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}<ArrowUpRight aria-hidden size={26} /></a><CopyEmailButton email={siteConfig.contactEmail} /></div>
+        <a className={styles.quietLink} href={github} rel="noreferrer" target="_blank"><GithubLogo aria-hidden size={19} /> 在 GitHub 上找到我 <ArrowUpRight aria-hidden size={15} /></a>
+        <div className={styles.signoff}><span>感谢你，愿意了解这些工具背后的人。</span><span className={styles.signature}>Refinex</span></div>
       </section>
-      <FaqSection />
-      <CallToAction />
-    </>
+    </div>
   );
 }

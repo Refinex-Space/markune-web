@@ -19,6 +19,7 @@ const routes = [
 ];
 
 const requiredAssets = [
+  "about/refinex-avatar.png",
   "flowline-logo.svg",
   "markune-workspace-hero.png",
   "feature-automation.webp",

@@ -2,10 +2,10 @@ import type { AssetKey, NavItem, SiteConfig } from "@/types/site";
 
 export const siteConfig: SiteConfig = {
   name: "Markune",
-  description: "面向高效交付与紧密协作团队的项目管理平台。",
+  description: "以本地 Markdown 为核心，连接写作、知识整理与 AI 协作的桌面工作区。",
   downloadHref: "/download/",
   githubHref: "https://github.com/Refinex-Space/markune",
-  contactEmail: "hello@flowline.com",
+  contactEmail: "refinexcn@gmail.com",
   icpNumber: "黔ICP备2026002771号",
   icpHref: "https://beian.miit.gov.cn/",
 };
@@ -14,7 +14,7 @@ export const navItems: NavItem[] = [
   { label: "功能", href: "/#features" },
   { label: "定价", href: "/#pricing" },
   { label: "更新日志", href: "/changelog/" },
-  { label: "关于我们", href: "/about/" },
+  { label: "关于我", href: "/about/" },
 ];
 
 export const assets: Record<AssetKey, string> = {
