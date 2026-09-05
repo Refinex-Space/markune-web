@@ -19,7 +19,7 @@ describe("Footer navigation", () => {
       服务条款: "/legal/terms-of-service",
     };
     for (const [name, href] of Object.entries(destinations)) {
-      expect(footer.getByRole("link", { name, exact: true })).toHaveAttribute("href", href);
+      expect(footer.getByRole("link", { name })).toHaveAttribute("href", href);
     }
     expect(footer.queryByRole("link", { name: "优势" })).not.toBeInTheDocument();
     expect(footer.queryByRole("link", { name: "关于开发者" })).not.toBeInTheDocument();
