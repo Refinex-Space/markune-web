@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { changelogEntries, formatReleaseDate } from "./changelog";
 
 describe("changelogEntries", () => {
-  it("lists the two verified releases newest first with dated source links", () => {
-    expect(changelogEntries.map((entry) => entry.version)).toEqual(["0.2.4", "0.2.3"]);
+  it("lists releases newest first with dated source links", () => {
+    expect(changelogEntries.map((entry) => entry.version)).toEqual(["0.2.5", "0.2.4", "0.2.3"]);
     for (const entry of changelogEntries) {
       expect(entry.releaseHref).toBe(`https://github.com/Refinex-Space/markune/releases/tag/v${entry.version}`);
       expect(Number.isNaN(Date.parse(entry.publishedAt))).toBe(false);

@@ -17,6 +17,45 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.2.5",
+    "status": "改进",
+    "publishedAt": "2026-09-09T16:04:21Z",
+    "title": "文档同步与存储更灵活，Codex 问答和编辑更直接。",
+    "summary": "改进工作区同步、附件存储和文档保真，完善图谱与知识整理，并简化 Codex 问答和编辑体验。",
+    "changes": [
+      {
+        "title": "外部修改自动同步",
+        "description": "改进工作区文件监听与刷新，支持刷新目录及其子目录；在文件树空白处可刷新或新建根目录文档、目录，外部修改与未保存草稿冲突时提供明确提示。"
+      },
+      {
+        "title": "附件保存位置可配置",
+        "description": "保留内置资产库作为默认位置，新增当前目录、assets、文档专属资源目录和指定路径；支持本地及网络图片处理规则、相对路径偏好与恢复默认值。"
+      },
+      {
+        "title": "保留文档元数据与链接",
+        "description": "改善 YAML 元数据兼容与保存保真，保留自定义字段、注释和原有格式；优化重命名、移动后的文档及附件引用更新。"
+      },
+      {
+        "title": "图谱关系更准确",
+        "description": "改进 Markdown、Wiki 链接、别名和锚点解析，减少代码等内容产生的错误关系，并支持外部变更后的图谱更新和未解析链接提示。"
+      },
+      {
+        "title": "新增知识整理与研究入口",
+        "description": "支持属性视图、任务视图、文档模板和更细致的搜索筛选，并提供文档关系、来源查看及 PDF 研究阅读入口。"
+      },
+      {
+        "title": "Codex 问答与编辑更直接",
+        "description": "统一输入框权限选择，移除独立文档预审流程；支持按请求问答或编辑，改善消息发送、历史任务恢复、工具执行反馈与回答渲染，修复工作区读取工具启动问题。"
+      },
+      {
+        "title": "修复图片列表与表格的编辑问题",
+        "description": "升级 Markweave 至 0.10.4，统一 Markdown 加载与更新逻辑，修复图片开头的列表及含图片表格在加载、保存和重开时的结构问题。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.2.5",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。"
+  },
+  {
     version: "0.2.4",
     status: "修复",
     publishedAt: "2026-09-02T13:50:54Z",
