@@ -17,6 +17,33 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.2.6",
+    "status": "改进",
+    "title": "资源浏览更清晰，关联笔记更易辨认。",
+    "summary": "改进文档资源浏览、图片预览与下载，重新整理关联面板的信息层级和交互。",
+    "changes": [
+      {
+        "title": "资源列表更清晰",
+        "description": "集中展示缩略图、文件名、格式、分辨率和大小，精简搜索区与行内操作，改善菜单换行、缩略图底色和窄侧栏排版。"
+      },
+      {
+        "title": "图片预览与下载更方便",
+        "description": "支持大图预览、方向键切换、原始尺寸与适应窗口，并可保存本地原图；关闭预览后恢复键盘焦点。"
+      },
+      {
+        "title": "关联笔记更易辨认",
+        "description": "入链、出链和未链接提及优先显示笔记标题，同名时补充文件夹；摘录转为纯文本，隐藏编码地址和完整路径，修复长文字溢出。"
+      },
+      {
+        "title": "关联切换更稳定",
+        "description": "精简关系页签和说明文字，移除造成布局抖动的刷新图标；支持键盘切换、查询失败重试，并避免重复查询和旧文档结果干扰。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.2.6",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。",
+    "publishedAt": "2026-09-11T06:04:11Z"
+  },
+  {
     "version": "0.2.5",
     "status": "改进",
     "publishedAt": "2026-09-09T16:04:21Z",
