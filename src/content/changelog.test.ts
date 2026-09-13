@@ -3,7 +3,7 @@ import { changelogEntries, formatReleaseDate } from "./changelog";
 
 describe("changelogEntries", () => {
   it("lists releases newest first with dated source links", () => {
-    expect(changelogEntries.map((entry) => entry.version)).toEqual(["0.2.6", "0.2.5", "0.2.4", "0.2.3"]);
+    expect(changelogEntries.map((entry) => entry.version)).toEqual(["0.2.7", "0.2.6", "0.2.5", "0.2.4", "0.2.3"]);
     for (const entry of changelogEntries) {
       expect(entry.releaseHref).toBe(`https://github.com/Refinex-Space/markune/releases/tag/v${entry.version}`);
       expect(Number.isNaN(Date.parse(entry.publishedAt))).toBe(false);

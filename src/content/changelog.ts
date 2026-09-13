@@ -17,6 +17,33 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.2.7",
+    "status": "改进",
+    "title": "工作区入口更集中，可用系统打开 Markdown。",
+    "summary": "改进工作区导航与界面，支持从系统打开 Markdown 文件，并修复视图页与编辑器拖拽条问题。",
+    "changes": [
+      {
+        "title": "支持系统打开 Markdown",
+        "description": "安装后可在「打开方式」中选择 Markune 打开 .md / .mdx，不会抢占默认应用。从文件打开会进入对应工作区并选中该文档；应用已在运行时转到同一窗口。"
+      },
+      {
+        "title": "搜索与工作区切换并入侧栏",
+        "description": "将搜索和工作区切换放到侧栏系统入口和底栏，减少顶部入口分散。"
+      },
+      {
+        "title": "界面更贴齐窗口",
+        "description": "分栏卡片改为贴齐窗口的连续外壳，Git 面板和日志入口标明 Beta。"
+      },
+      {
+        "title": "修复视图页与编辑器拖拽",
+        "description": "统一视图页下拉并对齐分组表格；文档编辑器不再盖住左侧宽度拖拽条。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.2.7",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。",
+    "publishedAt": "2026-09-13T06:16:00Z"
+  },
+  {
     "version": "0.2.6",
     "status": "改进",
     "title": "资源浏览更清晰，关联笔记更易辨认。",
