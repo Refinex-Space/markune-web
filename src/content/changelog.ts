@@ -17,6 +17,25 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.2.8",
+    "status": "修复",
+    "title": "搜索跳转保持 Live，AI 画图不再被浏览器自动化干扰。",
+    "summary": "修复全局搜索打开文档时误切源码，并避免 AI 画图被捆绑浏览器自动化干扰。",
+    "changes": [
+      {
+        "title": "全局搜索打开文档保持 Live",
+        "description": "从搜索结果跳转文档时不再自动切换到源码模式，并滚动到匹配位置；命中 YAML 标题时定位到对应标题。同时去掉搜索框下的语法示例提示。"
+      },
+      {
+        "title": "修复 AI 画图被浏览器自动化干扰",
+        "description": "桌面端关闭 Codex 捆绑的 Chrome / Browser Use，避免图稿任务卡住；sidecar 缺少配套程序时给出明确提示。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.2.8",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。",
+    "publishedAt": "2026-09-15T09:30:00Z"
+  },
+  {
     "version": "0.2.7",
     "status": "改进",
     "title": "工作区入口更集中，可用系统打开 Markdown。",
