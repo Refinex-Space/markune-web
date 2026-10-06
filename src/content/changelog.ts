@@ -17,6 +17,33 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.2.9",
+    "status": "改进",
+    "title": "终端退出更明确，更新可走代理。",
+    "summary": "改进终端退出提示与会话清理，检查更新可走系统代理，并升级编辑器、整理工作区界面。",
+    "changes": [
+      {
+        "title": "终端退出状态更明确",
+        "description": "进程退出后保留最后一屏并显示退出码，可直接新建标签。折叠面板不结束正在运行的命令；关闭最后一个标签不会立刻自动再建；切换工作区会结束旧终端。输出按完整字符显示，启动时不继承密钥型环境变量。"
+      },
+      {
+        "title": "检查更新支持代理",
+        "description": "更新检查和下载读取系统 HTTP(S) 代理，也支持进程中的 SOCKS 代理。切换系统代理后再次检查即可生效。"
+      },
+      {
+        "title": "编辑器升级到 Markweave 0.10.8",
+        "description": "改进本地 Markdown 链接解析。目录树按文件名显示并保留编号前缀；编辑器中的文档链接先打开预览。"
+      },
+      {
+        "title": "界面滚动与设置更稳",
+        "description": "页面根节点不再跟着引用浮层滚动。设置切换分类时内容回到顶部，可用 Escape 清空搜索。文档元信息面板和 Inbox 菜单的对齐与操作更整齐。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.2.9",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。",
+    "publishedAt": "2026-10-06T14:30:00Z"
+  },
+  {
     "version": "0.2.8",
     "status": "修复",
     "title": "搜索跳转保持 Live，AI 画图不再被浏览器自动化干扰。",
