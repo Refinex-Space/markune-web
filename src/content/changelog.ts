@@ -17,6 +17,33 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.3.0",
+    "status": "改进",
+    "title": "智能体连接本机程序，文档树可以排序和移动。",
+    "summary": "智能体改为连接本机独立程序，文档树支持排序和移动，视图只保留文档与附件。",
+    "changes": [
+      {
+        "title": "本地智能体",
+        "description": "可安装 Claude、Codex、Cursor、GitHub Copilot、GLM、Grok、Kimi、MiniMax、OpenCode、Codebuddy、Qoder，或使用本机已有程序。在 Markune 中登录、对话、批准工具并查看历史。新会话从这里开始；原来的 Codex 会话仍留在 Codex 中。模型请求由各智能体自己发出。"
+      },
+      {
+        "title": "文档树排序与移动",
+        "description": "可按名称或时间排序，文件夹可单独设置；可移动文档和文件夹，并撤销这次移动。"
+      },
+      {
+        "title": "视图只保留文档和附件",
+        "description": "去掉任务和研究页签。"
+      },
+      {
+        "title": "全宽页面不再挡住侧栏",
+        "description": "全宽内容只覆盖主区域，侧栏保持可操作。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.3.0",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。智能体以本机权限运行，可访问工作区并执行本地命令，请只安装信任的程序。",
+    "publishedAt": "2026-10-07T12:00:00Z"
+  },
+  {
     "version": "0.2.9",
     "status": "改进",
     "title": "终端退出更明确，更新可走代理。",
@@ -179,6 +206,48 @@ export const changelogEntries: ChangelogEntry[] = [
     summary: "本版本包含功能改进、体验优化和问题修复。",
     changes: [],
     releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.2.3",
+  },
+  {
+    version: "0.2.2",
+    status: "改进",
+    publishedAt: "2026-09-01T10:28:30Z",
+    title: "应用更名为 Markune，并加入脑图。",
+    summary: "桌面应用由 Madora 更名为 Markune，新增脑图，并改进工作区刷新、Git 同步和 Windows 路径显示。",
+    changes: [
+      { title: "更名为 Markune", description: "应用名称、安装包和迁移说明由 Madora 改为 Markune。" },
+      { title: "新增脑图", description: "可以在工作区使用脑图；绘图界面跟随系统外观。编辑器升级到 Markweave 0.10.1。" },
+      { title: "工作区刷新与 Git 同步", description: "目录树按变更增量刷新，右键刷新只作用于对应范围。Git 同步减少漂移，并统一调度。" },
+      { title: "修复 Windows 与链接问题", description: "用户可见路径不再带 \\\\?\\ 前缀；脑图工具栏不再与全局按钮重叠。普通点击外链不会误开浏览器。分页加载历史会话时，AI 面板不再崩溃。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.2.2",
+  },
+  {
+    version: "0.2.1",
+    status: "改进",
+    publishedAt: "2026-08-10T10:49:48Z",
+    title: "Codex 可使用自定义接口，macOS 菜单可检查更新。",
+    summary: "Codex 支持自定义 Responses API，发送和恢复最近会话更稳，macOS 可从系统菜单打开设置并检查更新。",
+    changes: [
+      { title: "自定义 Responses API", description: "可在设置中配置自定义 Responses API 提供方。" },
+      { title: "发送与恢复更稳", description: "加固 Codex 发送流程，并可恢复最近一次会话。" },
+      { title: "macOS 系统菜单", description: "可从原生菜单打开设置和检查更新。" },
+      { title: "Windows 侧栏焦点", description: "去掉置顶项和文件夹上多余的焦点环。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.2.1",
+  },
+  {
+    version: "0.2.0",
+    status: "改进",
+    publishedAt: "2026-08-09T09:34:20Z",
+    title: "目录总览、每日笔记和窗口外观。",
+    summary: "新增文件夹总览与目录网格，完善每日笔记和文档树，并支持窗口透明度与字数统计。",
+    changes: [
+      { title: "文件夹总览与目录网格", description: "工作区文件夹提供总览，目录页改为网格浏览，并可固定总览。" },
+      { title: "每日笔记", description: "每日笔记支持快速编辑；日历可展开，并可设置一周从哪一天开始。" },
+      { title: "文档树", description: "文件夹标题可快速新建，支持根级折叠，并可自定义树图标和外观。" },
+      { title: "窗口与文档信息", description: "桌面端可调节窗口透明度并记住设置。文档显示字数，并可控制 Git 入口是否显示。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.2.0",
   },
 ];
 

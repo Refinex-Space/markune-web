@@ -7,7 +7,7 @@ import styles from "./changelog.module.css";
 
 export const metadata: Metadata = {
   title: "更新日志",
-  description: "查看 Markune 0.2.4 与 0.2.3 的正式发布记录、大文档加载修复、编辑器更新与升级说明。",
+  description: "查看 Markune 正式发布记录、本地智能体、文档树与编辑器更新，以及升级说明。",
 };
 
 export default function ChangelogPage() {
@@ -38,7 +38,7 @@ export default function ChangelogPage() {
         <section aria-labelledby="upgrade-title" className={styles.upgrade}>
           <h2 id="upgrade-title">更新前，记得保存当前工作。</h2>
           <p>{releaseGuidance.upgrade}</p>
-          <ul aria-label="这两个版本支持的平台" className={styles.platforms}>{releaseGuidance.platforms.map((platform) => <li key={platform}>{platform}</li>)}</ul>
+          <ul aria-label="支持的平台" className={styles.platforms}>{releaseGuidance.platforms.map((platform) => <li key={platform}>{platform}</li>)}</ul>
           <div className={styles.actions}>
             <ButtonLink href="/download/">下载 Markune <ArrowRight aria-hidden size={16} /></ButtonLink>
             <a className={styles.releaseLink} href={releaseGuidance.releasesHref} rel="noreferrer" target="_blank">查看所有 GitHub Releases <ArrowUpRight aria-hidden size={15} /></a>
