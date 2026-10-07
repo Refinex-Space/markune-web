@@ -17,6 +17,29 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.3.1",
+    "status": "修复",
+    "title": "搜索跳转等待文档就绪，旧定位不再打断。",
+    "summary": "搜索、图谱和来源跳转会等当前文档准备好再定位，加载过程中的旧请求不再抢滚动位置。",
+    "changes": [
+      {
+        "title": "跳转等待文档就绪",
+        "description": "从搜索、图谱或来源打开位置时，Live 模式会等当前编辑器装载完成后再滚动。文档还在加载时不会提前定位。"
+      },
+      {
+        "title": "取消过期定位",
+        "description": "切换文档、切换源码模式或重新加载后，上一份文档的定位请求会被取消，不会覆盖当前光标。"
+      },
+      {
+        "title": "布局稳定后再核对位置",
+        "description": "定位后会等内容高度稳定；目标被挤出可视区域时只校正滚动。使用鼠标、滚轮或键盘时会停止这次自动定位。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.3.1",
+    "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。智能体以本机权限运行，可访问工作区并执行本地命令，请只安装信任的程序。",
+    "publishedAt": "2026-10-07T15:00:00Z"
+  },
+  {
     "version": "0.3.0",
     "status": "改进",
     "title": "智能体连接本机程序，文档树可以排序和移动。",
@@ -248,6 +271,158 @@ export const changelogEntries: ChangelogEntry[] = [
       { title: "窗口与文档信息", description: "桌面端可调节窗口透明度并记住设置。文档显示字数，并可控制 Git 入口是否显示。" },
     ],
     releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.2.0",
+  },
+  {
+    version: "0.1.19",
+    status: "修复",
+    publishedAt: "2026-08-07T15:23:07Z",
+    title: "损坏的目录不再挡住打开工作区。",
+    summary: "打开工作区时跳过无法读取的条目，失效的自动恢复不再挡住可用工作区。",
+    changes: [
+      { title: "打开工作区更稳", description: "使用系统文件夹选择器。自动恢复遇到失效路径时不再阻断；真正的加载错误仍会显示。" },
+      { title: "跳过无法读取的条目", description: "损坏的符号链接不会阻止整棵目录树打开。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.19",
+  },
+  {
+    version: "0.1.18",
+    status: "改进",
+    publishedAt: "2026-08-07T13:26:52Z",
+    title: "可以导出每日笔记，侧栏导航可以折叠。",
+    summary: "每日笔记和标签栏文档可以导出，编辑器支持附件上传，系统导航可以折叠。",
+    changes: [
+      { title: "导出每日笔记和标签文档", description: "可以从每日笔记和标签栏导出文档。" },
+      { title: "附件上传", description: "编辑器升级到 Markweave 0.5.2，支持上传附件。" },
+      { title: "系统导航可折叠", description: "侧栏系统导航支持可折叠布局。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.18",
+  },
+  {
+    version: "0.1.17",
+    status: "改进",
+    publishedAt: "2026-08-04T03:46:24Z",
+    title: "编辑器升级到 Markweave 0.4.3。",
+    summary: "桌面应用当时名为 Madora。本版同步编辑器到 Markweave 0.4.3。",
+    changes: [
+      { title: "升级编辑器", description: "Markweave 与 @markweave/react 升级到 0.4.3。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.17",
+  },
+  {
+    version: "0.1.16",
+    status: "改进",
+    publishedAt: "2026-08-01T08:46:43Z",
+    title: "加入图谱、每日笔记和源码模式。",
+    summary: "新增知识图谱和每日笔记，编辑器支持源码模式与 AI 编辑，目录可查看数量并复制路径。",
+    changes: [
+      { title: "知识图谱与每日笔记", description: "工作区可以查看图谱，并使用带日历的每日笔记。" },
+      { title: "目录与画板", description: "侧栏增加笔记入口，目录显示文档数量，右键可复制相对或绝对路径。画板侧栏会打开当前图稿所在的上级画册。" },
+      { title: "编辑器", description: "支持切换源码模式，并提供 AI 编辑。编辑器升级到 Markweave 0.3.7。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.16",
+  },
+  {
+    version: "0.1.15",
+    status: "修复",
+    publishedAt: "2026-07-28T03:12:48Z",
+    title: "切换文档后，macOS 窗口按钮回到原位。",
+    summary: "修复切换文档标题后 macOS 红绿灯位置不重置的问题，并升级编辑器。",
+    changes: [
+      { title: "红绿灯位置", description: "标题栏按 macOS 红绿灯位置对齐；切换文档标题后位置会重置。" },
+      { title: "升级编辑器", description: "Markweave 升级到 0.3.3。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.15",
+  },
+  {
+    version: "0.1.14",
+    status: "改进",
+    publishedAt: "2026-07-26T04:25:15Z",
+    title: "对话框更通透，Git 面板在 macOS 上显示正常。",
+    summary: "对话框支持透明和模糊背景，并修复 Git 面板在 macOS 上的样式。",
+    changes: [
+      { title: "对话框背景", description: "对话框内容可以使用透明背景和模糊效果。" },
+      { title: "Git 面板", description: "修复 Git 面板在 macOS 上的样式渲染。" },
+      { title: "升级编辑器", description: "Markweave 升级到 0.3.1。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.14",
+  },
+  {
+    version: "0.1.13",
+    status: "改进",
+    publishedAt: "2026-07-24T13:20:23Z",
+    title: "AI 面板发送和报错更清楚。",
+    summary: "改进 AI 面板的消息发送与错误处理，并修正面板样式。",
+    changes: [
+      { title: "AI 面板", description: "消息发送和错误提示更明确，面板样式可以正确渲染。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.13",
+  },
+  {
+    version: "0.1.12",
+    status: "改进",
+    publishedAt: "2026-07-24T05:05:24Z",
+    title: "发布包开始核对安装文件。",
+    summary: "此版本主要完善安装包校验，没有单独的编辑功能。",
+    changes: [
+      { title: "安装包校验", description: "发布流程增加对安装文件的核对。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.12",
+  },
+  {
+    version: "0.1.11",
+    status: "改进",
+    publishedAt: "2026-07-24T02:46:33Z",
+    title: "调整桌面发布预检。",
+    summary: "此版本调整发布预检的构建方式，没有单独的编辑功能。",
+    changes: [
+      { title: "发布预检", description: "预检改为准备桌面配套程序，并降低构建资源占用。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.11",
+  },
+  {
+    version: "0.1.10",
+    status: "改进",
+    publishedAt: "2026-07-23T16:54:19Z",
+    title: "发布流程改为从开发分支校验版本。",
+    summary: "此版本调整发布分支和版本校验，没有单独的编辑功能。",
+    changes: [
+      { title: "版本校验", description: "发布工作流支持开发分支，并在发布前核对版本。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.10",
+  },
+  {
+    version: "0.1.9",
+    status: "改进",
+    publishedAt: "2026-07-23T16:38:01Z",
+    title: "升级发布运行时。",
+    summary: "此版本升级发布所用运行时，没有单独的编辑功能。",
+    changes: [
+      { title: "发布运行时", description: "更新发布环境，为后续安装包构建做准备。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.9",
+  },
+  {
+    version: "0.1.8",
+    status: "改进",
+    publishedAt: "2026-07-23T16:12:41Z",
+    title: "与 0.1.7 为同一版本内容。",
+    summary: "0.1.8 标签与 0.1.7 指向同一提交，没有额外功能。",
+    changes: [
+      { title: "没有额外变化", description: "安装内容与 0.1.7 相同。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.8",
+  },
+  {
+    version: "0.1.7",
+    status: "改进",
+    publishedAt: "2026-07-23T16:12:41Z",
+    title: "可以检查更新，并导出 PDF 与 Word。",
+    summary: "桌面应用当时名为 Madora。本版支持检查、下载和安装更新，并可将文档导出为 PDF 或 Word。",
+    changes: [
+      { title: "应用更新", description: "可以检查更新、下载并安装新版本。" },
+      { title: "导出 PDF 与 Word", description: "支持按页面宽度导出 PDF 和 Word。" },
+    ],
+    releaseHref: "https://github.com/Refinex-Space/markune/releases/tag/v0.1.7",
   },
 ];
 
