@@ -37,7 +37,7 @@ export const changelogEntries: ChangelogEntry[] = [
     ],
     "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.3.1",
     "notice": "macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode，首次安装时系统可能显示安全确认提示；自动更新包仍使用独立 minisign 签名校验。智能体以本机权限运行，可访问工作区并执行本地命令，请只安装信任的程序。",
-    "publishedAt": "2026-10-07T15:00:00Z"
+    "publishedAt": "2026-10-07T15:25:24Z"
   },
   {
     "version": "0.3.0",
