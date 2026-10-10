@@ -17,6 +17,29 @@ export const releaseGuidance = {
 
 export const changelogEntries: ChangelogEntry[] = [
   {
+    "version": "0.3.2",
+    "status": "修复",
+    "publishedAt": "2026-10-10T05:01:02Z",
+    "title": "新建文档改名更稳，界面可以更紧凑。",
+    "summary": "修复中文输入法确认候选词时提前结束文档或目录改名的问题，新增可保存的界面缩放设置。",
+    "changes": [
+      {
+        "title": "中文输入法改名",
+        "description": "确认候选词的回车不再提前结束改名；输入完成后再次回车提交名称，避免保留“未命名文档”或“未命名目录”。"
+      },
+      {
+        "title": "改名失败可重试",
+        "description": "显示失败原因并保留已输入的名称，避免无提示地恢复默认名称；回车和失焦不会重复提交。"
+      },
+      {
+        "title": "界面缩放",
+        "description": "在“设置 → 外观 → 界面与阅读”选择 80%、90%、100%、110%、125%、150%。80% 和 90% 适合紧凑布局，默认 100%；即时生效，重启后保留，仅影响 Markune。"
+      }
+    ],
+    "releaseHref": "https://github.com/Refinex-Space/markune/releases/tag/v0.3.2",
+    "notice": "本次已执行 macOS 本机自动化验证；Windows WebView2 中文输入法、不同系统 DPI 下的实机交互和三平台安装升级仍需验证。macOS 安装包使用 ad-hoc 签名，Windows 安装包暂未使用 Authenticode；自动更新包仍使用独立 minisign 签名校验。"
+  },
+  {
     "version": "0.3.1",
     "status": "修复",
     "title": "搜索跳转等待文档就绪，旧定位不再打断。",
